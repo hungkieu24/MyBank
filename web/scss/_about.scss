@@ -8,6 +8,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 */
 
 .about {
+    
     &-banner.mil-banner {
         padding-top: 0; 
     }
@@ -17,6 +18,64 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
             flex-shrink: 0;
         }
     }
+    
+    &-section__title, &-section__desc {
+        font-family: sans-serif;
+        text-align: center;
+    }
+    
+    &-section__title {
+        font-size: 30px;
+        margin: 50px 0 30px;
+    }
+    
+    &-section__desc {
+        margin-left: auto;
+        margin-right: auto;
+        width: 800px;
+    }
+    
+    &-introduction {
+        &__list {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        &__item {
+            color: #000;
+            background-color: #ccc;
+            border-radius: 99px; 
+            padding: 10px 20px;
+            cursor: context-menu;
+            
+            &--current {
+                color: #fff;
+            background-color: green;
+            }
+        }
+        
+        &__item:hover:not(&__item--current) {
+            color: #a1c76d;
+            background: #f8ffec;
+            cursor: pointer;
+        }
+        
+        &__content {
+            display: none;
+            
+            &--current {
+                display: block;
+            }
+        }
+        
+        
+        
+        
+    }
+    
+    
 }
 
 .menu {

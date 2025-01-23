@@ -2747,6 +2747,47 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 .about-footer__logo {
   flex-shrink: 0;
 }
+.about-section__title, .about-section__desc {
+  font-family: sans-serif;
+  text-align: center;
+}
+.about-section__title {
+  font-size: 30px;
+  margin: 50px 0 30px;
+}
+.about-section__desc {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+.about-introduction__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.about-introduction__item {
+  color: #000;
+  background-color: #ccc;
+  border-radius: 99px;
+  padding: 10px 20px;
+  cursor: context-menu;
+}
+.about-introduction__item--current {
+  color: #fff;
+  background-color: green;
+}
+.about-introduction__item:hover:not(.about-introduction__item--current) {
+  color: #a1c76d;
+  background: #f8ffec;
+  cursor: pointer;
+}
+.about-introduction__content {
+  display: none;
+}
+.about-introduction__content--current {
+  display: block;
+}
 
 .menu {
   margin-top: 130px;
