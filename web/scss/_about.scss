@@ -1,0 +1,55 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit this template
+*/
+/*
+    Created on : Jan 23, 2025, 9:59:58 AM
+    Author     : hungk
+*/
+
+.about {
+    &-banner.mil-banner {
+        padding-top: 0; 
+    }
+}
+
+.menu {
+    margin-top: $mil-top-panel-heigh;
+    padding: 20px;
+    
+    &-list {
+        display: flex;
+        align-items: center;
+        
+    }
+    
+    &-item {
+        list-style-type: none;
+        display: flex;
+    }
+    
+    &-label {
+        font-weight: 600;
+        color: rgb(137, 141, 150);
+    }
+    
+    &-label + &-label {
+        margin-left: 50px;
+    }
+    
+    &-label:hover {
+        color: #008000;
+    }
+    
+    &-form__search {
+        display: flex;
+        justify-content: flex-end;
+        
+        &-input {
+            width: 200px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+    }
+}

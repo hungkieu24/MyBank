@@ -3,6 +3,11 @@
 preloader
 
 ------------------------------------------- */
+:root {
+    --mil-top-panel-height: 130px;
+}
+
+$mil-top-panel-heigh: 130px;
 
 .mil-preloader{
     position:fixed;
@@ -102,7 +107,7 @@ top panel
     top: 0;
     left: 0;
     width: 100%;
-    height: 130px;
+    height: var(--mil-top-panel-height);
     display: flex;
     align-items: center;
     transition: $t-md;

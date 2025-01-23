@@ -447,6 +447,10 @@ buttons
 .mil-btn.mil-fw {
   width: 100%;
 }
+.mil-btn.mil-ssm {
+  padding: 0 16px;
+  height: 38px;
+}
 .mil-btn.mil-sm {
   padding: 0 20px;
   height: 48px;
@@ -819,6 +823,10 @@ space
 preloader
 
 ------------------------------------------- */
+:root {
+  --mil-top-panel-height: 130px;
+}
+
 .mil-preloader {
   position: fixed;
   left: 0px;
@@ -911,7 +919,7 @@ top panel
   top: 0;
   left: 0;
   width: 100%;
-  height: 130px;
+  height: var(--mil-top-panel-height);
   display: flex;
   align-items: center;
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
@@ -2691,6 +2699,51 @@ footer.mil-footer-dark-2 .mil-footer-bottom {
 }
 .mil-subscripe-form-footer button i.mil-dark {
   color: rgb(13, 81, 82);
+}
+
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit this template
+*/
+/*
+    Created on : Jan 23, 2025, 9:59:58 AM
+    Author     : hungk
+*/
+.about-banner.mil-banner {
+  padding-top: 0;
+}
+
+.menu {
+  margin-top: 130px;
+  padding: 20px;
+}
+.menu-list {
+  display: flex;
+  align-items: center;
+}
+.menu-item {
+  list-style-type: none;
+  display: flex;
+}
+.menu-label {
+  font-weight: 600;
+  color: rgb(137, 141, 150);
+}
+.menu-label + .menu-label {
+  margin-left: 50px;
+}
+.menu-label:hover {
+  color: #008000;
+}
+.menu-form__search {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-form__search-input {
+  width: 200px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
