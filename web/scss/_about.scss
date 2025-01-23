@@ -11,6 +11,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
     &-banner.mil-banner {
         padding-top: 0; 
     }
+    
+    &-footer {
+        &__logo {
+            flex-shrink: 0;
+        }
+    }
 }
 
 .menu {

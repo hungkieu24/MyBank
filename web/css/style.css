@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* -------------------------------------------
 
 Name:       Plax
@@ -2612,60 +2613,91 @@ price
 footer
 
 ------------------------------------------- */
-footer .mil-footer-logo {
+.footer .mil-footer-top {
+  overflow: hidden; /* Ẩn nội dung khi chiều cao là 0 */
+  height: auto; /* Chiều cao ban đầu */
+  transition: height 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi chiều cao */
+}
+.footer .mil-footer-top.hidden {
+  height: 0; /* Chiều cao khi ẩn */
+}
+.footer--toggle--btn {
+  display: flex;
+  justify-self: flex-end;
+  padding: 10px 20px;
+  opacity: 0.9;
+}
+.footer--toggle--btn .text-expand, .footer--toggle--btn .text-collapsed {
+  color: #fff;
+  margin-right: 10px;
+}
+.footer--toggle--btn .icon-arrow-right:before {
+  content: "";
+  display: inline-block; /* Giữ nó nằm cùng dòng nếu cần */
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent; /* Viền trái trong suốt */
+  border-right: 6px solid transparent; /* Viền phải trong suốt */
+  border-top: 6px solid #fff; /* Màu của tam giác */
+  transition: border 0.2s;
+}
+.footer--toggle--btn .icon-arrow-right.rotated {
+  transform: rotate(180deg); /* Xoay 180 độ */
+}
+.footer .mil-footer-logo {
   display: inline-block;
 }
-footer .mil-footer-list li {
+.footer .mil-footer-list li {
   list-style-type: none;
 }
-footer .mil-footer-list li a {
+.footer .mil-footer-list li a {
   transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
 }
-footer .mil-footer-list li a:hover {
+.footer .mil-footer-list li a:hover {
   color: rgb(13, 81, 82);
 }
-footer .mil-footer-list.mil-footer-list-2 {
+.footer .mil-footer-list.mil-footer-list-2 {
   display: flex;
 }
-footer .mil-footer-list.mil-footer-list-2 li {
+.footer .mil-footer-list.mil-footer-list-2 li {
   margin-right: 30px;
   margin-bottom: 0;
 }
-footer .mil-footer-list.mil-footer-list-2 li a {
+.footer .mil-footer-list.mil-footer-list-2 li a {
   transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
 }
-footer .mil-footer-list.mil-footer-list-2 li a:hover {
+.footer .mil-footer-list.mil-footer-list-2 li a:hover {
   color: rgb(255, 255, 255);
 }
 @media (max-width: 768px) {
-  footer .mil-footer-list.mil-footer-list-2 {
+  .footer .mil-footer-list.mil-footer-list-2 {
     flex-direction: column;
   }
-  footer .mil-footer-list.mil-footer-list-2 li {
+  .footer .mil-footer-list.mil-footer-list-2 li {
     margin-bottom: 15px;
   }
 }
-footer .mil-footer-bottom {
+.footer .mil-footer-bottom {
   padding-top: 60px;
   padding-bottom: 60px;
   border-top: solid 1px rgba(137, 141, 150, 0.2);
 }
-footer.mil-footer-with-bg {
+.footer.mil-footer-with-bg {
   background-color: rgb(242, 250, 250);
 }
-footer.mil-footer-with-bg .mil-footer-bottom {
+.footer.mil-footer-with-bg .mil-footer-bottom {
   border-top: solid 1px rgba(137, 141, 150, 0.2);
 }
-footer.mil-footer-dark {
+.footer.mil-footer-dark {
   background-color: rgb(13, 81, 82);
 }
-footer.mil-footer-dark .mil-footer-bottom {
+.footer.mil-footer-dark .mil-footer-bottom {
   border-top: solid 1px rgba(3, 166, 166, 0.2);
 }
-footer.mil-footer-dark-2 {
+.footer.mil-footer-dark-2 {
   background-color: rgb(39, 38, 38);
 }
-footer.mil-footer-dark-2 .mil-footer-bottom {
+.footer.mil-footer-dark-2 .mil-footer-bottom {
   border-top: solid 1px rgba(137, 141, 150, 0.2);
 }
 
@@ -2711,6 +2743,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 */
 .about-banner.mil-banner {
   padding-top: 0;
+}
+.about-footer__logo {
+  flex-shrink: 0;
 }
 
 .menu {

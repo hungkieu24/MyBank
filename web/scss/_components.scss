@@ -2146,7 +2146,48 @@ footer
 
 ------------------------------------------- */
 
-footer {
+.footer {
+    & .mil-footer-top {
+        overflow: hidden; /* Ẩn nội dung khi chiều cao là 0 */
+        height: auto; /* Chiều cao ban đầu */
+        transition: height 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi chiều cao */
+    }
+
+    & .mil-footer-top.hidden {
+        height: 0; /* Chiều cao khi ẩn */
+    }
+
+    &--toggle--btn {
+        display: flex;
+        justify-self: flex-end;
+        padding: 10px 20px;
+        opacity: 0.9;
+
+        .text-expand, .text-collapsed {
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .icon-arrow-right:before {
+            content: "";
+            display: inline-block; /* Giữ nó nằm cùng dòng nếu cần */
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent; /* Viền trái trong suốt */
+            border-right: 6px solid transparent; /* Viền phải trong suốt */
+            border-top: 6px solid #fff; /* Màu của tam giác */
+            transition: border 0.2s;
+        }
+
+        .icon-arrow-right.rotated {
+            
+            transform: rotate(180deg); /* Xoay 180 độ */
+        }
+
+    }
+
+
+
 
     & .mil-footer-logo {
         display: inline-block;
