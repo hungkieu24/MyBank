@@ -2802,6 +2802,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
   display: flex;
 }
 .menu-label {
+  position: relative;
   font-weight: 600;
   color: rgb(137, 141, 150);
 }
@@ -2820,6 +2821,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
   border-radius: 8px;
   border: 1px solid #ccc;
   margin-right: 10px;
+}
+.menu-label:hover .sub-menu-item {
+  display: block;
+}
+.menu .sub-menu-item {
+  display: none;
+  position: absolute;
+  z-index: 992;
+  width: 250px;
+  background: #fff;
+  border-radius: 8px;
+  list-style-type: none;
+  box-shadow: 0px 0.5px 3px 0px #000;
+  overflow: hidden;
+}
+.menu .sub-menu-link {
+  display: block;
+  color: rgb(137, 141, 150);
+  padding: 15px 20px;
+  border-bottom: 1px solid #ccc;
+}
+.menu .sub-menu-link:hover {
+  border-radius: 8px;
+  color: #008000;
+  background-color: rgb(242, 250, 250);
 }
 
 /*# sourceMappingURL=style.css.map */

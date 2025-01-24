@@ -130,6 +130,14 @@
                                         </li>
                                         <li class="menu-label">
                                             Công cụ
+                                            <ul class="sub-menu-item">
+                                                <li>
+                                                    <a class="sub-menu-link" href="congcu.jsp">Lãi suất tiết kiệm</a>
+                                                </li>
+                                                <li>
+                                                    <a class="sub-menu-link" href="congcuvay.jsp">Lãi vay ngân hàng</a>
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li class="menu-label">
                                             Ưu đãi

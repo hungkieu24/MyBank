@@ -7,61 +7,119 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-   <head>
-    <meta charset="UTF-8">
-    <title>Công cụ tính lãi suất</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<style>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>TIMI - Công cụ tính lãi suất</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="author" content="bslthemes" />
+
+        <!-- switzer font css -->
+        <link rel="stylesheet" href="fonts/css/switzer.css" type="text/css" media="all">
+        <!-- font awesome css -->
+        <link rel="stylesheet" href="fonts/css/font-awesome.min.css" type="text/css" media="all">
+        <!-- bootstrap grid css -->
+        <link rel="stylesheet" href="css/plugins/bootstrap-grid.css" type="text/css" media="all">
+        <!-- swiper css -->
+        <link rel="stylesheet" href="css/plugins/swiper.min.css" type="text/css" media="all">
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="css/plugins/magnific-popup.css" type="text/css" media="all">
+        <!-- plax css -->
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+        <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    </head>
+    <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
+            width: 100vw;
         }
-        .container {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
+
+        .cal-container {
+            width: calc(100% - 200px);
+            margin: 130px auto 20px;
             background-color: #fff;
             padding: 20px;
+            border-radius: 16px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            font-size: 20px;
+
+        .cal-content {
+            display: flex;
+            gap: 50px;
+        }
+
+        .title {
             text-align: center;
+            font-size: 24px;
+            font-weight: bold;
             margin-bottom: 20px;
         }
+
+        .description {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
         .tabs {
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
         }
-        .tabs a {
+        .tab {
             text-decoration: none;
-            color: #000;
-            padding: 10px 20px;
-            border-bottom: 2px solid transparent;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
         }
-        .tabs a.active {
-            color: #c00;
-            border-bottom: 2px solid #c00;
+        .tab.active {
+            color: #d4af37;
+            border-bottom: 2px solid #d4af37;
+
         }
         .form-group {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
+            align-items: center;
+
         }
-        .form-group label {
-            flex: 1;
+
+        .form-group + .form-group {
+            margin-top: 30px;
+        }
+
+        .form-group__label {
+            width: 150px;
+            font-weight: bold;
             margin-right: 10px;
         }
-        .form-group input {
-            flex: 2;
-            padding: 5px;
+
+        .form-group__input-wrap {
+            display: flex;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 5px;
+            width: 100%;
         }
+
+        .form-group__input {
+            border: none;
+            outline: none;
+            font-size: 18px;
+        }
+
+        .sub-text-input {
+            color: #ccc;
+            margin-left: auto;
+        }
+
         .form-group .radio-group {
             display: flex;
             align-items: center;
@@ -71,6 +129,9 @@
         }
         .form-group .radio-group label {
             margin-right: 20px;
+        }
+        .radio-label {
+            font-size: 18px;
         }
         .btn-submit {
             display: block;
@@ -82,7 +143,33 @@
             border-radius: 4px;
             font-size: 16px;
             cursor: pointer;
+            margin-top: 50px;
         }
+        
+        .cal-form {
+            width: 50%;
+        }
+
+        .result-table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .result-table th, .result-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .result-table th {
+            background-color: #f2f2f2;
+        }
+
+        .result-table td {
+            background-color: #f9f9f9;
+        }
+
         .result {
             margin-top: 20px;
             padding: 10px;
@@ -99,6 +186,13 @@
         .details {
             margin-top: 20px;
         }
+
+        .details-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+
         .details table {
             width: 100%;
             border-collapse: collapse;
@@ -122,128 +216,287 @@
             color: #666;
         }
     </style>
-<body>
-<!--    <h2>Công cụ tính lãi suất vay ngân hàng</h2>
-    <form action="congcu2" method="post">
-        <label for="loanAmount">Số tiền vay (VNĐ):</label>
-        <input type="number" id="loanAmount" name="loanAmount" required><br><br>
-
-        <label for="loanRate">Lãi suất vay (%/năm):</label>
-        <input type="number" step="0.01" id="loanRate" name="loanRate" required><br><br>
-
-        <label for="loanMonths">Kỳ hạn vay (tháng):</label>
-        <input type="number" id="loanMonths" name="loanMonths" required><br><br>
-
-        <label>Phương pháp tính:</label><br>
-        <input type="radio" id="reducingBalance" name="calculationMethod" value="reducing" checked>
-        <label for="reducingBalance">Trả trên dư nợ giảm dần</label><br>
-        <input type="radio" id="initialBalance" name="calculationMethod" value="initial">
-        <label for="initialBalance">Trả trên dư nợ ban đầu</label><br><br>
-
-        <button type="submit">Thực hiện</button>
-    </form>
-
-    <hr>
-    <h3>Kết quả:</h3>
-    <p>${loanResult}</p>-->
-<div class="container">
-    <div class="tabs">
-        <div class="tab">LÃI SUẤT TIẾT KIỆM</div>
-        <div class="tab active">LÃI VAY NGÂN HÀNG</div>
-    </div>
-    <div class="title">CÔNG CỤ TÍNH LÃI SUẤT VAY NGÂN HÀNG</div>
-    <div class="description"><br/>
-        Công cụ tính lãi suất vay ngân hàng của LuatVietnam giúp bạn dự tính được số tiền lãi phải trả định kỳ, 
-        tổng gốc và lãi trong từng thời điểm. Từ đó dễ dàng hoạch định tài chính tốt nhất cho mình.<br/><br/>
-    </div>
-    <form action="congcu2" method="post">
-        <div class="form-group">
-            <label for="loanAmount">Số tiền vay</label>
-            <input type="number" id="loanAmount" name="loanAmount" required>
-            <span>VNĐ</span>
-        </div>
-        <div class="form-group">
-            <label for="loanRate">Lãi suất vay</label>
-            <input type="number" step="0.01" id="loanRate" name="loanRate" required>
-            <span>%/năm</span>
-        </div>
-        <div class="form-group">
-            <label for="loanMonths">Kỳ hạn vay</label>
-            <input type="number" id="loanMonths" name="loanMonths" required>
-            <span>Tháng</span>
-        </div>
-        <div class="form-group">
-            <label>Phương pháp tính:</label>
-            <div class="radio-group">
-                <input type="radio" id="reducingBalance" name="calculationMethod" value="reducing" checked>
-                <label for="reducingBalance" class="radio-label">Trả trên dư nợ giảm dần</label>
-                <input type="radio" id="initialBalance" name="calculationMethod" value="initial">
-                <label for="initialBalance" class="radio-label">Trả trên dư nợ ban đầu</label>
+    <body>
+        <div id="smooth-wrapper" class="mil-wrapper">
+            <!-- scroll progress -->
+            <div class="mil-progress-track">
+                <div class="mil-progress"></div>
             </div>
+            <!-- scroll progress end -->
+
+            <!-- back to top -->
+            <div class="progress-wrap active-progress"></div>
+
+            <!-- top panel end -->
+            <div class="mil-top-panel cal-panel" id="mil-top-panel">
+                <div class="container">
+                    <a href="index.jsp" class="mil-logo">
+                        <img src="img/logo1.png" alt="Plax" width="200">
+                    </a>
+                    <nav class="mil-top-menu">
+                        <ul>
+                            <li class="mil-has-children">
+                                <a href="#.">Home</a>
+                                <ul>
+                                    <li><a href="index.jsp">Mở tài khoản</a></li>
+                                    <li><a href="home-2.jsp">Gửi tiết kiệm</a></li>
+                                    <li><a href="home-3.jsp">Type 3</a></li>
+                                    <li><a href="home-4.jsp">Type 4</a></li>
+                                    <li><a href="home-5.jsp">Type 5</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="mil-active">
+                                <a href="about.jsp">About</a>
+                            </li>
+                            <li>
+                                <a href="services.jsp">Services</a>
+                            </li>
+                            <li class="mil-has-children">
+                                <a href="#.">Blog</a>
+                                <ul>
+                                    <li><a href="blog.jsp">Blog list</a></li>
+                                    <li><a href="publication.jsp">Blog details</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="contact.jsp">Contact</a>
+                            </li>
+                            <li class="mil-has-children">
+                                <a href="#.">Pages</a>
+                                <ul>
+                                    <li><a href="career.jsp">Career</a></li>
+                                    <li><a href="career-details.jsp">Career details</a></li>
+                                    <li><a href="price.jsp">Pricing</a></li>
+                                    <li><a href="register.jsp">Register</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="mil-menu-buttons">
+                        <a href="login.jsp" class="mil-btn mil-sm">Log in</a>
+                        <div class="mil-menu-btn">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- top panel end -->
+
+            <!-- content -->
+            <div id="smooth-content">
+                <div class="cal-container">
+                    <div class="tabs">
+                        <a href="congcu.jsp" class="tab">LÃI SUẤT TIẾT KIỆM</a>
+                        <a href="congcuvay.jsp" class="tab active">LÃI VAY NGÂN HÀNG</a>
+                    </div>
+                    <div class="title">CÔNG CỤ TÍNH LÃI SUẤT VAY NGÂN HÀNG</div>
+                    <div class="description"><br/>
+                        Công cụ tính lãi suất vay ngân hàng của LuatVietnam giúp bạn dự tính được số tiền lãi phải trả định kỳ, 
+                        tổng gốc và lãi trong từng thời điểm. Từ đó dễ dàng hoạch định tài chính tốt nhất cho mình.<br/><br/>
+                    </div>
+                    <div class="cal-content ">
+                        <form action="congcu2" method="post" class="cal-form">
+                            <div class="form-group">
+                                <label for="loanAmount" class="form-group__label">Số tiền vay</label>
+                                <div class="form-group__input-wrap">
+                                    <input type="text" class="form-group__input" id="loanAmount" name="loanAmount" value="${loanAmount}" required>
+                                    <span class="sub-text-input">VNĐ</span>
+                                </div>
+                            </div>
+                            <div class="form-group" >
+                                <label for="loanRate" class="form-group__label">Lãi suất vay</label>
+                                <div class="form-group__input-wrap">
+                                    <input type="number" class="form-group__input" step="0.01" value="${loanRate}" id="loanRate" name="loanRate" required>
+                                    <span class="sub-text-input">%/năm</span>
+                                </div>
+                            </div>
+                            <div class="form-group" >
+                                <label for="loanMonths" class="form-group__label">Kỳ hạn vay</label>
+                                <div class="form-group__input-wrap">
+                                    <input type="text" class="form-group__input" value="${loanMonths}" id="loanMonths" name="loanMonths" required>
+                                    <span class="sub-text-input">Tháng</span>
+                                </div>
+                            </div>
+                            <div class="form-group" >
+                                <label class="form-group__label">Phương pháp tính:</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="reducingBalance" name="calculationMethod" value="reducing" checked>
+                                    <label for="reducingBalance" class="radio-label">Trả trên dư nợ giảm dần</label>
+                                    <input type="radio" id="initialBalance" name="calculationMethod" value="initial">
+                                    <label for="initialBalance" class="radio-label">Trả trên dư nợ ban đầu</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-submit">THỰC HIỆN</button>
+                        </form>
+                        <table class="result-table">
+                            <tr>
+                                <th>Số tiền vay</th>
+                                <td>${loanAmount} VNĐ</td>
+                            </tr>
+                            <tr>
+                                <th>Số tiền lãi phải trả</th>
+                                <td>${loanResult} VNĐ</td>
+                            </tr>
+                            <tr>
+                                <th>Tổng số gốc và lãi phải trả</th>
+                                <td style="color: red;">${total} VNĐ</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="details-title">DIỄN GIẢI CHI TIẾT CÁCH TÍNH LÃI SUẤT VAY NGÂN HÀNG:</div>
+                    <br/>
+                    <div>
+                        Cách 1: Cách tính lãi suất vay theo số dư nợ gốc
+                        <p>Với cách tính lãi suất vay theo số dư nợ gốc, tiền lãi của mỗi kỳ trả lãi sẽ bằng nhau trong toàn bộ quá trình vay và được tính theo số tiền gốc ban đầu.
+
+                            <br/>Tiền lãi hàng tháng = Dư nợ gốc x Lãi suất vay/Thời gian vay<br/>
+
+                            Ví dụ:<br/>
+
+                            A vay 300 triệu đồng trong 12 tháng với mức lãi suất là 12%/năm.<br/>
+
+                            Số tiền gốc phải trả ngân hàng hàng tháng là: 300 triệu/12 tháng = 25.000.000 đồng<br/>
+
+                            Số lãi phải trả ngân hàng hàng tháng là: (300 triệu x 12%)/12 tháng = 3.000.000 đồng<br/>
+
+                            Số tiền phải trả hàng tháng là 28.000.000 đồng </p><br/>
+                    </div>
+                    <div>
+                        Cách 2: Cách tính lãi suất vay theo số dư nợ giảm dần<br/>
+                        <p>
+                            Trường hợp tính lãi suất vay theo số dư nợ giảm dần thì số dư nợ dựa trên số tiền thực tế còn nợ sau khi đã trừ đi phần nợ gốc người vay đã trả trong những tháng trước đó. Số dư nợ giảm dần thì tiền lãi mà người vay phải trả cũng giảm dần.<br/>
+
+                            Công thức tính lãi suất theo dư nợ giảm dần cụ thể như sau:<br/>
+
+                            - Tiền gốc hàng tháng = Số tiền vay/số tháng vay<br/>
+
+                            - Tiền lãi tháng đầu = Số tiền vay x Lãi suất vay theo tháng<br/>
+
+                            - Tiền lãi các tháng tiếp theo = Số tiền gốc còn lại x Lãi suất vay<br/><br/>
+
+                            Ví dụ:<br/>
+
+                            B vay 300 triệu đồng thời hạn trong 12 tháng với mức lãi suất 12%/năm<br/>
+
+                            Tiền gốc trả hàng tháng = 300triệu/12 = 25.000.000 đồng<br/>
+
+                            Tiền lãi tháng đầu = (300 triệu x 12%)/12 = 3.000.000 đồng. <br/>Tổng số tiền phải trả tháng đầu là 25 triệu + 3 triệu = 28.000.000 đồng.<br/>
+
+                            Tiền lãi tháng thứ 2 = (300 triệu - 25 triệu) x 12%/12 = 2.750.000 đồng. Tổng tiền phải trả tháng thứ 2 là 25 triệu + 2.750.000 = 27.750.000 đồng.<br/>
+
+                            Tiền lãi tháng thứ 3 = (275 triệu - 25 triệu) x 12%/12 = 2.500.000 đồng. Tổng tiền phải trả tháng thứ 3 là 25 triệu + 2,5 triệu = 27.500.000 đồng.<br/>
+
+                            Các tháng tiếp theo tính tương tự như vậy cho đến khi hết nợ.<br/>
+                        </p>  
+                    </div>
+
+                </div>
+                <!-- footer -->
+                <footer class="mil-p-160-0 footer" id="footer">
+                    <div class="container">
+                        <div class="row mil-footer-top">
+                            <div class="col-xl-3">
+                                <a href="#." class=" mil-footer-logo mil-mb-60">
+                                    <img src="img/logo1.png" alt="Plax" width="150">
+                                </a>
+                            </div>
+                            <div class="col-xl-3 mil-mb-60">
+                                <h6 class="mil-mb-60">Usefull Links</h6>
+                                <ul class="mil-footer-list">
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="index.jsp">Home</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="about.jsp">About Us</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="contact.jsp">Contact Us</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="services.jsp">Services</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="price.jsp">Pricing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-3 mil-mb-60">
+                                <h6 class="mil-mb-60">Help</h6>
+                                <ul class="mil-footer-list">
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        999 Rue du Cherche-Midi, 7755500666 Paris, <br>France
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        +001 (808) 555-0111
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        support@plax.network
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-3 mil-mb-80">
+                                <h6 class="mil-mb-60">Newsletter</h6>
+                                <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news form us</p>
+                                <form class="mil-subscripe-form-footer">
+                                    <input class="mil-input" type="email" placeholder="Email">
+                                    <button type="submit"><i class="far fa-envelope-open mil-dark"></i></button>
+                                    <div class="mil-checkbox-frame mil-mt-15">
+                                        <div class="mil-checkbox">
+                                            <input type="checkbox" id="checkbox" checked>
+                                            <label for="checkbox"></label>
+                                        </div>
+                                        <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="mil-footer-bottom">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <p class="mil-text-s mil-soft">© 2024 Plax Finance & Fintech Design</p>
+                                </div>
+                                <div class="col-xl-6">
+                                    <button type="button" class=" mil-btn mil-ssm btn btn-fade footer--toggle--btn" onclick="toggleFooter()">
+                                        <span class="text-expand">Thu gọn chân trang</span>
+                                        <span class="text-collapsed" style="display: none">Mở rộng chân trang</span>
+                                        <span class="icon-arrow-right">
+
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- footer end -->
+
+            </div>
+            <!-- content end -->
         </div>
-        <button type="submit" class="btn-submit">THỰC HIỆN</button>
-    </form><br/>
-    <table class="result-table">
-        <tr>
-            <th>Số tiền vay</th>
-            <td>${loanAmount} VNĐ</td>
-        </tr>
-        <tr>
-            <th>Số tiền lãi phải trả</th>
-            <td>${loanResult} </td>
-        </tr>
-        <tr>
-            <th>Tổng số gốc và lãi phải trả</th>
-            <td style="color: red;">${total}</td>
-        </tr>
-    </table><br/>
-    <div class="details-title">DIỄN GIẢI CHI TIẾT CÁCH TÍNH LÃI SUẤT VAY NGÂN HÀNG:</div>
-    <br/>
-    <div>
-        Cách 1: Cách tính lãi suất vay theo số dư nợ gốc
-    <p>Với cách tính lãi suất vay theo số dư nợ gốc, tiền lãi của mỗi kỳ trả lãi sẽ bằng nhau trong toàn bộ quá trình vay và được tính theo số tiền gốc ban đầu.
+        <!-- wrapper end -->
 
-    <br/>Tiền lãi hàng tháng = Dư nợ gốc x Lãi suất vay/Thời gian vay<br/>
+        <!-- jquery js -->
+        <script src="js/plugins/jquery.min.js"></script>
 
-Ví dụ:<br/>
+        <!-- swiper css -->
+        <script src="js/plugins/swiper.min.js"></script>
+        <!-- gsap js -->
+        <script src="js/plugins/gsap.min.js"></script>
+        <!-- scroll smoother -->
+        <script src="js/plugins/ScrollSmoother.min.js"></script>
+        <!-- scroll trigger js -->
+        <script src="js/plugins/ScrollTrigger.min.js"></script>
+        <!-- scroll to js -->
+        <script src="js/plugins/ScrollTo.min.js"></script>
+        <!-- magnific -->
+        <script src="js/plugins/magnific-popup.js"></script>
+        <!-- plax js -->
+        <script src="js/main.js"></script>
 
-A vay 300 triệu đồng trong 12 tháng với mức lãi suất là 12%/năm.<br/>
-
-Số tiền gốc phải trả ngân hàng hàng tháng là: 300 triệu/12 tháng = 25.000.000 đồng<br/>
-
-Số lãi phải trả ngân hàng hàng tháng là: (300 triệu x 12%)/12 tháng = 3.000.000 đồng<br/>
-
-Số tiền phải trả hàng tháng là 28.000.000 đồng </p><br/>
-    </div>
-    <div>
-        Cách 2: Cách tính lãi suất vay theo số dư nợ giảm dần<br/>
-        <p>
-            Trường hợp tính lãi suất vay theo số dư nợ giảm dần thì số dư nợ dựa trên số tiền thực tế còn nợ sau khi đã trừ đi phần nợ gốc người vay đã trả trong những tháng trước đó. Số dư nợ giảm dần thì tiền lãi mà người vay phải trả cũng giảm dần.<br/>
-
-Công thức tính lãi suất theo dư nợ giảm dần cụ thể như sau:<br/>
-
-- Tiền gốc hàng tháng = Số tiền vay/số tháng vay<br/>
-
-- Tiền lãi tháng đầu = Số tiền vay x Lãi suất vay theo tháng<br/>
-
-- Tiền lãi các tháng tiếp theo = Số tiền gốc còn lại x Lãi suất vay<br/><br/>
-
-Ví dụ:<br/>
-
-B vay 300 triệu đồng thời hạn trong 12 tháng với mức lãi suất 12%/năm<br/>
-
-Tiền gốc trả hàng tháng = 300triệu/12 = 25.000.000 đồng<br/>
-
-Tiền lãi tháng đầu = (300 triệu x 12%)/12 = 3.000.000 đồng. <br/>Tổng số tiền phải trả tháng đầu là 25 triệu + 3 triệu = 28.000.000 đồng.<br/>
-
-Tiền lãi tháng thứ 2 = (300 triệu - 25 triệu) x 12%/12 = 2.750.000 đồng. Tổng tiền phải trả tháng thứ 2 là 25 triệu + 2.750.000 = 27.750.000 đồng.<br/>
-
-Tiền lãi tháng thứ 3 = (275 triệu - 25 triệu) x 12%/12 = 2.500.000 đồng. Tổng tiền phải trả tháng thứ 3 là 25 triệu + 2,5 triệu = 27.500.000 đồng.<br/>
-
-Các tháng tiếp theo tính tương tự như vậy cho đến khi hết nợ.<br/>
-        </p>  
-    </div>
-   
-</div>
-</body>
+        <script src="./js/scripts.js"></script>
+    </body>
 </html>
