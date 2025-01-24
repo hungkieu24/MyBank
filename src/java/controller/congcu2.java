@@ -81,6 +81,7 @@ public class congcu2 extends HttpServlet {
             // Tính toán
             DecimalFormat df = new DecimalFormat("#,###.##");
             String result;
+            String rs;
 
             if ("reducing".equals(calculationMethod)) {
                 // Tính theo dư nợ giảm dần
@@ -93,23 +94,30 @@ public class congcu2 extends HttpServlet {
                 }
 
                 double totalPayment = loanAmount + totalInterest;
-                result = "Tổng số tiền lãi: " + df.format(totalInterest) + " VNĐ<br>" +
-                         "Tổng số tiền phải trả: " + df.format(totalPayment) + " VNĐ";
+                result = "Tổng số tiền lãi: " + df.format(totalInterest) + " VNĐ<br>" ;
+                
+                 rs=         "Tổng số tiền phải trả: " + df.format(totalPayment) + " VNĐ";
             } else {
                 // Tính theo dư nợ ban đầu
                 double monthlyInterest = (loanAmount * (annualRate / 100)) / 12;
                 double totalInterest = monthlyInterest * months;
                 double totalPayment = loanAmount + totalInterest;
 
-                result = "Tổng số tiền lãi: " + df.format(totalInterest) + " VNĐ<br>" +
-                         "Tổng số tiền phải trả: " + df.format(totalPayment) + " VNĐ";
+                result =  df.format(totalInterest) + " VNĐ<br>" ;
+                       
+                        rs=   df.format(totalPayment) + " VNĐ";
             }
 
             // Gửi kết quả về JSP
+        request.setAttribute("loanAmount", loanAmountStr);
+            request.setAttribute("total", rs);
+
             request.setAttribute("loanResult", result);
             request.getRequestDispatcher("congcuvay.jsp").forward(request, response);
         } catch (NumberFormatException e) {
             // Xử lý lỗi nhập liệu
+            
+            
             request.setAttribute("loanResult", "Dữ liệu nhập không hợp lệ. Vui lòng kiểm tra lại!");
             request.getRequestDispatcher("congcuvay.jsp").forward(request, response);
         }

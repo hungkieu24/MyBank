@@ -78,16 +78,22 @@ public class congcu extends HttpServlet {
             int months = Integer.parseInt(monthsStr);
 
             // Tính lãi suất
+            double interestMonth= amount * (rate / 100) / 12 ;
             double interest = amount * (rate / 100) / 12 * months;
-
+            double totalAmount= interest+ amount;
             // Định dạng số
             DecimalFormat df = new DecimalFormat("#,###.##");
-
+              
             // Kết quả
-            String result = "Số tiền lãi là: " + df.format(interest) + " VNĐ";
-
+            String s=df.format(totalAmount);
+            String result = df.format(interest) ;
+            String resultM= df.format(interestMonth);
             // Gửi kết quả về JSP
-            request.setAttribute("result", result);
+            request.setAttribute("amount", amountStr);
+            request.setAttribute("monthlyInterest", interestMonth);
+            
+            request.setAttribute("totalInterest", result);
+            request.setAttribute("totalAmount",s );
             request.getRequestDispatcher("congcu.jsp").forward(request, response);
         } catch (NumberFormatException e) {
             // Trường hợp lỗi nhập liệu
