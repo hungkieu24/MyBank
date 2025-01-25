@@ -430,6 +430,14 @@ buttons
         padding: 0 16px;
         height: 38px;
     }
+    
+    &.mil-empty {
+        color: green;
+        border: 1px solid #ccc;
+        background: #fff;
+        padding: 0 16px;
+        height: 38px;
+    }
 
     &.mil-sm {
         padding: 0 20px;

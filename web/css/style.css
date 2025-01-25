@@ -452,6 +452,13 @@ buttons
   padding: 0 16px;
   height: 38px;
 }
+.mil-btn.mil-empty {
+  color: green;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 0 16px;
+  height: 38px;
+}
 .mil-btn.mil-sm {
   padding: 0 20px;
   height: 48px;
@@ -2639,7 +2646,6 @@ footer
   border-left: 6px solid transparent; /* Viền trái trong suốt */
   border-right: 6px solid transparent; /* Viền phải trong suốt */
   border-top: 6px solid #fff; /* Màu của tam giác */
-  transition: border 0.2s;
 }
 .footer--toggle--btn .icon-arrow-right.rotated {
   transform: rotate(180deg); /* Xoay 180 độ */
@@ -2747,13 +2753,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 .about-footer__logo {
   flex-shrink: 0;
 }
-.about-section__title, .about-section__desc {
+.about-section__title, .about-section__desc, .about-section__sub-title {
   font-family: sans-serif;
   text-align: center;
 }
 .about-section__title {
   font-size: 30px;
   margin: 50px 0 30px;
+  cursor: context-menu;
+}
+.about-section__sub-title {
+  font-size: 16px;
+}
+.about-section__sub-title.active {
+  color: #fff;
+  background: green;
+  border-radius: 99px;
+  padding: 10px 20px;
 }
 .about-section__desc {
   margin-left: auto;
@@ -2765,6 +2781,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+.about-introduction__desc {
+  margin: 20px 0;
+  text-align: justify;
+}
+.about-introduction__more {
+  display: none;
+  margin: 0 0 20px 20px;
+}
+.about-introduction__more.show {
+  display: block;
 }
 .about-introduction__item {
   color: #000;
@@ -2787,6 +2814,101 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 }
 .about-introduction__content--current {
   display: block;
+}
+.about-history {
+  border-radius: 8px;
+  padding: 20px;
+}
+.about-history__btn-more {
+  display: block;
+  margin: auto;
+}
+.about-history .text-expand, .about-history .text-collapsed {
+  color: #074c31;
+  margin-right: 10px;
+}
+.about-history .icon-arrow-right {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #074c31;
+  transform: rotate(0deg); /* Mặc định không xoay */
+  transition: transform 0.1s; /* Thêm hiệu ứng mượt */
+}
+.about-history .icon-arrow-right.rotated {
+  transform: rotate(180deg); /* Xoay 180 độ */
+}
+.about-timeline {
+  margin-top: 50px;
+}
+.about-timeline__num-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: 50px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+.about-timeline__num {
+  position: relative;
+  font-size: 30px;
+  padding: 0 24px;
+  cursor: pointer;
+  color: #ccc;
+}
+.about-timeline__num--current {
+  color: #fff;
+  background: #008000;
+  border-radius: 8px;
+}
+.about-timeline__num--current::before {
+  border-color: #008000 !important;
+}
+.about-timeline__num--current::after {
+  background: #008000 !important;
+}
+.about-timeline__num::before, .about-timeline__num::after {
+  position: absolute;
+  content: "";
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about-timeline__num::before {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: #fff;
+}
+.about-timeline__num::after {
+  bottom: -28px;
+  width: 15px;
+  height: 15px;
+  background: #ccc;
+  border-radius: 50%;
+}
+.about-timeline__content {
+  margin-top: 50px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  display: none;
+}
+.about-timeline__content--current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-timeline__heading {
+  font-family: sans-serif;
+}
+.about-timeline__desc {
+  margin-top: 20px;
+  width: 600px;
+  text-align: center;
 }
 
 .menu {
@@ -2811,6 +2933,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 }
 .menu-label:hover {
   color: #008000;
+  cursor: context-menu;
 }
 .menu-form__search {
   display: flex;
@@ -2818,9 +2941,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 }
 .menu-form__search-input {
   width: 200px;
+  padding: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
   margin-right: 10px;
+  font-size: 16px;
 }
 .menu-label:hover .sub-menu-item {
   display: block;

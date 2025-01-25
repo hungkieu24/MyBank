@@ -241,37 +241,69 @@
                 </div>
                 <!-- facts end -->
 
-                <!-- call to action -->
+                <!-- about - history -->
                 <div class="mil-cta mil-up">
                     <div class="container">
-                        <div class="mil-out-frame mil-p-160-100">
+                        <div class="mil-out-frame about-history">
                             <div class="row justify-content-center mil-text-center">
-                                <div class="col-xl-8 mil-mb-80-adaptive-30">
-                                    <h2 class="mil-up">Our Strengths: The Trust <br>Base of our users</h2>
+                                <div class="col-xl-8 ">
+                                    <h2 class="about-section__title">Lịch sử phát triển</h2>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xl-4 mil-mb-60">
-                                    <div class="mil-icon-box">
-                                        <img src="img/inner-pages/icons/1.svg" alt="icon" class="mil-mb-30 mil-up">
-                                        <h5 class="mil-mb-20 mil-up">Connected Global Network</h5>
-                                        <p class="mil-text-m mil-soft mil-up">Discover how our global network, spanning more than 170 countries, facilitates international transactions and connects people around the world.</p>
-                                    </div>
+                            <div class="about-introduction js-tabs">
+                                <ul class="about-introduction__list">
+                                    <li class="about-introduction__item about-introduction__item--current">
+                                        Quá trình hình thành và phát triển
+                                    </li>
+                                    <li class="about-introduction__item ">
+                                        Các cột mốc quan trọng
+                                    </li>
+                                </ul>
+
+                                <div class="about-introduction__contents">
+                                    <div class="about-introduction__content about-introduction__content--current">
+                                        <p class="about-introduction__desc">
+                                            60 năm qua, Vietcombank đã có những đóng góp quan trọng cho sự nghiệp đấu tranh thống nhất đất nước, xây dựng chủ nghĩa xã hội ở miền Bắc; tham gia khắc phục, tháo gỡ khó khăn trong thời kỳ bao cấp; là ngân hàng tiên phong trong giai đoạn đổi mới, hội nhập và phát triển. Đặc biệt, 10 năm gần đây đánh dấu sự chuyển mình, bứt phá đầy ngoạn mục của Vietcombank với sự tăng trưởng ấn tượng về quy mô, chất lượng và hiệu quả kinh doanh, thiết lập đỉnh cao cùng những thành công tiếp nối, mở ra vận hội lớn trong giai đoạn phát triển kế tiếp, đóng góp cho sự thịnh vượng chung của Việt Nam.
+                                        </p>
+                                        <ul class="about-introduction__more">
+                                            <li class="about-introduction__more-item">
+                                                Ngân hàng Ngoại thương Việt Nam trước đây, nay là Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank) được thành lập và chính thức đi vào hoạt động ngày 01/04/1963 với tổ chức tiền thân là Sở Quản lý Ngoại hối Trung ương (thuộc Ngân hàng Quốc gia Việt Nam).
+                                            </li>
+                                            <li class="about-introduction__more-item">
+                                                Là ngân hàng thương mại nhà nước đầu tiên được Chính phủ lựa chọn thực hiện thí điểm cổ phần hóa, Vietcombank chính thức hoạt động với tư cách là một ngân hàng thương mại cổ phần vào ngày 02/06/2008 sau khi thực hiện thành công kế hoạch cổ phần hóa thông qua việc phát hành cổ phiếu lần đầu ra công chúng. Ngày 30/6/2009, cổ phiếu Vietcombank (mã chứng khoán VCB) chính thức được niêm yết tại Sở Giao dịch chứng khoán TP.HCM.
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="about-history__btn-more mil-btn mil-ssm mil-empty history--toggle--btn" onclick="toggleHistory()">
+                                            <span class="text-collapsed" style="display: none">Thu gọn</span>
+                                            <span class="text-expand" >Xem thêm</span>
+
+                                            <span class="icon-arrow-right">
+                                            </span>
+                                        </button>
+                                    </div>  
+                                    <div class="about-introduction__content">
+                                        <div class="about-timeline js-tabs">
+                                            <ul class="about-timeline__num-list">
+                                                <li class="about-timeline__num about-timeline__num--current">
+                                                    2024
+                                                </li>
+                                                <li class="about-timeline__num">
+                                                    2025
+                                                </li>
+                                            </ul>
+
+                                            <div class="about-timeline__content about-timeline__content--current">
+                                                <h3 class="about-timeline__heading">Dẫn đầu về sáng tạo và chuyển đổi số</h3>
+                                                <p class="about-timeline__desc">Vietcombank được trao tặng các giải thưởng uy tín: là ngân hàng sáng tạo và kinh doanh hiệu quả nhất Việt Nam; ngân hàng chuyển đổi số tiêu biểu</p>
+                                            </div>
+                                            <div class="about-timeline__content">
+                                                <h3 class="about-timeline__heading">Dẫn đầu về sáng tạo và chuyển đổi số 2025</h3>
+                                                <p class="about-timeline__desc">Vietcombank được trao tặng các giải thưởng uy tín: là ngân hàng sáng tạo và kinh doanh hiệu quả nhất Việt Nam; ngân hàng chuyển đổi số tiêu biểu</p>
+                                            </div>
+                                        </div>
+                                    </div>  
                                 </div>
-                                <div class="col-xl-4 mil-mb-60">
-                                    <div class="mil-icon-box">
-                                        <img src="img/inner-pages/icons/2.svg" alt="icon" class="mil-mb-30 mil-up">
-                                        <h5 class="mil-mb-20 mil-up">Robust Security</h5>
-                                        <p class="mil-text-m mil-soft mil-up">Learn about the security standards that are at the heart of Plax, guaranteeing the protection of our users' financial and personal information.</p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 mil-mb-60">
-                                    <div class="mil-icon-box">
-                                        <img src="img/inner-pages/icons/3.svg" alt="icon" class="mil-mb-30 mil-up">
-                                        <h5 class="mil-mb-20 mil-up">Continuous Innovation</h5>
-                                        <p class="mil-text-m mil-soft mil-up">Explore how constant innovation drives our growth, allowing us to offer advanced and accessible financial solutions.</p>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -481,7 +513,7 @@
                                     <p class="mil-text-s mil-soft">© 2024 Plax Finance & Fintech Design</p>
                                 </div>
                                 <div class="col-xl-6">
-                                    <button type="button" class=" mil-btn mil-ssm btn btn-fade footer--toggle--btn" onclick="toggleFooter()">
+                                    <button type="button" class=" mil-btn mil-ssm footer--toggle--btn" onclick="toggleFooter()">
                                         <span class="text-expand">Thu gọn chân trang</span>
                                         <span class="text-collapsed" style="display: none">Mở rộng chân trang</span>
                                         <span class="icon-arrow-right">
