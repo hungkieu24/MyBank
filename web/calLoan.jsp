@@ -214,6 +214,14 @@
             margin-top: 10px;
             font-size: 12px;
             color: #666;
+              
+        }
+        .red{
+            color: red;
+        }
+        .congthuc{
+            font-weight: bold;
+            color: black;
         }
     </style>
     <body>
@@ -289,8 +297,8 @@
             <div id="smooth-content">
                 <div class="cal-container">
                     <div class="tabs">
-                        <a href="congcu.jsp" class="tab">LÃI SUẤT TIẾT KIỆM</a>
-                        <a href="congcuvay.jsp" class="tab active">LÃI VAY NGÂN HÀNG</a>
+                        <a href="calSaving.jsp" class="tab">LÃI SUẤT TIẾT KIỆM</a>
+                        <a href="calLoan.jsp" class="tab active">LÃI VAY NGÂN HÀNG</a>
                     </div>
                     <div class="title">CÔNG CỤ TÍNH LÃI SUẤT VAY NGÂN HÀNG</div>
                     <div class="description"><br/>
@@ -348,34 +356,35 @@
                     </div>
                     <div class="details-title">DIỄN GIẢI CHI TIẾT CÁCH TÍNH LÃI SUẤT VAY NGÂN HÀNG:</div>
                     <br/>
+                    <div class="congthuc"> <div>
+                            <h3>Cách 1: Cách tính lãi suất vay theo số dư nợ gốc</h3> <br/>
+                            Với cách tính lãi suất vay theo số dư nợ gốc, tiền lãi của mỗi kỳ trả lãi sẽ bằng nhau trong toàn bộ quá trình vay và được tính theo số tiền gốc ban đầu.
+
+                            <br/> <div class="red">Tiền lãi hàng tháng = Dư nợ gốc x Lãi suất vay/Thời gian vay</div> <br/>
+
+                                Ví dụ:<br/>
+
+                                A vay 300 triệu đồng trong 12 tháng với mức lãi suất là 12%/năm.<br/>
+
+                                Số tiền gốc phải trả ngân hàng hàng tháng là: 300 triệu/12 tháng = 25.000.000 đồng<br/>
+
+                                Số lãi phải trả ngân hàng hàng tháng là: (300 triệu x 12%)/12 tháng = 3.000.000 đồng<br/>
+
+                                Số tiền phải trả hàng tháng là 28.000.000 đồng <br/>
+                        </div><br/><!-- comment -->
                     <div>
-                        Cách 1: Cách tính lãi suất vay theo số dư nợ gốc
-                        <p>Với cách tính lãi suất vay theo số dư nợ gốc, tiền lãi của mỗi kỳ trả lãi sẽ bằng nhau trong toàn bộ quá trình vay và được tính theo số tiền gốc ban đầu.
-
-                            <br/>Tiền lãi hàng tháng = Dư nợ gốc x Lãi suất vay/Thời gian vay<br/>
-
-                            Ví dụ:<br/>
-
-                            A vay 300 triệu đồng trong 12 tháng với mức lãi suất là 12%/năm.<br/>
-
-                            Số tiền gốc phải trả ngân hàng hàng tháng là: 300 triệu/12 tháng = 25.000.000 đồng<br/>
-
-                            Số lãi phải trả ngân hàng hàng tháng là: (300 triệu x 12%)/12 tháng = 3.000.000 đồng<br/>
-
-                            Số tiền phải trả hàng tháng là 28.000.000 đồng </p><br/>
-                    </div>
-                    <div>
-                        Cách 2: Cách tính lãi suất vay theo số dư nợ giảm dần<br/>
-                        <p>
+                        <h3> Cách 2: Cách tính lãi suất vay theo số dư nợ giảm dần</h3><br/>
+                        
                             Trường hợp tính lãi suất vay theo số dư nợ giảm dần thì số dư nợ dựa trên số tiền thực tế còn nợ sau khi đã trừ đi phần nợ gốc người vay đã trả trong những tháng trước đó. Số dư nợ giảm dần thì tiền lãi mà người vay phải trả cũng giảm dần.<br/>
 
                             Công thức tính lãi suất theo dư nợ giảm dần cụ thể như sau:<br/>
-
-                            - Tiền gốc hàng tháng = Số tiền vay/số tháng vay<br/>
+                        <div class="red"> - Tiền gốc hàng tháng = Số tiền vay/số tháng vay<br/>
 
                             - Tiền lãi tháng đầu = Số tiền vay x Lãi suất vay theo tháng<br/>
 
-                            - Tiền lãi các tháng tiếp theo = Số tiền gốc còn lại x Lãi suất vay<br/><br/>
+                            - Tiền lãi các tháng tiếp theo = Số tiền gốc còn lại x Lãi suất vay<br/></div>
+
+                           <br/>
 
                             Ví dụ:<br/>
 
@@ -390,8 +399,9 @@
                             Tiền lãi tháng thứ 3 = (275 triệu - 25 triệu) x 12%/12 = 2.500.000 đồng. Tổng tiền phải trả tháng thứ 3 là 25 triệu + 2,5 triệu = 27.500.000 đồng.<br/>
 
                             Các tháng tiếp theo tính tương tự như vậy cho đến khi hết nợ.<br/>
-                        </p>  
-                    </div>
+                        
+                    </div></div>
+                   
 
                 </div>
                 <!-- footer -->

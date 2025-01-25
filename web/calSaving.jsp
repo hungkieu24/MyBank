@@ -51,7 +51,7 @@
             border-radius: 16px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .cal-content {
             display: flex;
             gap: 50px;
@@ -132,7 +132,7 @@
             cursor: pointer;
             margin-top: 50px;
         }
-        
+
         .cal-form {
             width: 50%;
         }
@@ -194,6 +194,13 @@
             margin-top: 10px;
             font-size: 12px;
             color: #666;
+        }
+         .red{
+            color: red;
+        }
+        .congthuc{
+            font-weight: bold;
+            color: black;
         }
     </style>
     <body>
@@ -270,8 +277,8 @@
             <div id="smooth-content">
                 <div class="cal-container">
                     <div class="tabs">
-                        <a href="congcu.jsp" class="tab active">LÃI SUẤT TIẾT KIỆM</a>
-                        <a href="congcuvay.jsp" class="tab">LÃI VAY NGÂN HÀNG</a>
+                        <a href="calSaving.jsp" class="tab active">LÃI SUẤT TIẾT KIỆM</a>
+                        <a href="calLoan.jsp" class="tab">LÃI VAY NGÂN HÀNG</a>
                     </div>
                     <div class="title">CÔNG CỤ TÍNH LÃI SUẤT VAY NGÂN HÀNG</div>
                     <div class="description"><br/>
@@ -281,7 +288,7 @@
                     <div class="cal-content">
                         <form action="congcu" method="post" class="cal-form">
                             <div class="form-group">
-                                <label for="loanAmount" class="form-group__label">Số tiền gửi/vay</label>
+                                <label for="loanAmount" class="form-group__label">Số tiền gửi</label>
                                 <div class="form-group__input-wrap">
                                     <input type="text" class="form-group__input" id="amount" name="amount" value="${amount}" required>
                                     <span class="sub-text-input">VNĐ</span>
@@ -305,7 +312,7 @@
                         </form>
                         <table class="result-table" >
                             <tr>
-                                <th>Số tiền gửi/vay</th>
+                                <th>Số tiền gửi</th>
                                 <td>${amount} VNĐ</td>
                             </tr>
                             <tr>
@@ -317,7 +324,19 @@
                                 <td style="color: red;">${totalAmount} VNĐ</td>
                             </tr>
                         </table>
+                       
                     </div>
+                            <br/>
+                            <div class="congthuc">Công thức tính lãi suất tiết kiệm có kỳ hạn:</div><br/><!-- comment -->
+                        <div class="red">Số tiền lãi = Số tiền gửi x lãi suất (%năm)/12 x số tháng gửi.</div> <br/>
+
+                        Ví dụ:<br/>
+
+                        Gửi tiết kiệm 30.000.000 đồng với kỳ hạn 12 tháng tại ngân hàng có mức lãi suất 6,8%/năm, thì cách tính lãi suất ngân hàng cho số tiền tiết kiệm trong trường hợp này như sau:<br/>
+
+                        * Lãi suất hàng tháng là 30.000.000 x 6,8/100/12 x 1 = 170.000 đồng<br/>
+
+                        * Lãi suất sau 12 tháng gửi là 30.000.000 x 6,8/100/12 x 12 = 2.040.000 đồng<br/>
                 </div>
                 <!-- footer -->
                 <footer class="mil-p-160-0 footer" id="footer">

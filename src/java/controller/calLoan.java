@@ -16,7 +16,7 @@ import java.text.DecimalFormat;
  *
  * @author ADMIN
  */
-public class congcu2 extends HttpServlet {
+public class calLoan extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -121,12 +121,12 @@ public class congcu2 extends HttpServlet {
             request.setAttribute("total", rs);
 
             request.setAttribute("loanResult", result);
-            request.getRequestDispatcher("congcuvay.jsp").forward(request, response);
+            request.getRequestDispatcher("calLoan.jsp").forward(request, response);
         } catch (NumberFormatException e) {
             // Xử lý lỗi nhập liệu
 
             request.setAttribute("loanResult", "Dữ liệu nhập không hợp lệ. Vui lòng kiểm tra lại!");
-            request.getRequestDispatcher("congcuvay.jsp").forward(request, response);
+            request.getRequestDispatcher("calLoan.jsp").forward(request, response);
         }
     }
 

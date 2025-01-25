@@ -3,58 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_dropdown.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_bootstrap-timepicker.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_widgets.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_select2.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_toaster.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_form-wizard.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_popover.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/scss/_components.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_flatpickr.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_calendar.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_maps.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_simplebar.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/pages/_error.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/pages/_tasks.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_rateit.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_dragula.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_daterange.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/config/_variables-custom.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/partials/head-css.html</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_datatable.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_root.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_ion-rangeslider.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_nav.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_tooltip.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_typehead.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/partials/left-sidebar.html</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/pages/_email.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_steps.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/partials/html.html</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/structure/_topbar.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_card.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/src/java/dal/DBContext.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_buttons.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/pages/_timeline.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/pages-starter.html</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/config/_theme-mode.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/structure/_page-head.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_custom-forms.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_badge.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_tables.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/pages/_components-demo.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_apexcharts.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/config/_variables.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_forms.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/pages/_faq.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_avatar.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/plugins/_datepicker.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/partials/footer-scripts.html</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_social.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/components/_preloader.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/custom/structure/_footer.scss</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/admin/assets/scss/config/_variables-dark.scss</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/congcuvay.jsp</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/src/java/controller/congcu.java</file>
+            <file>file:/C:/Users/ADMIN/Documents/GitHub/MyBank/web/congcu.jsp</file>
         </group>
     </open-files>
 </project-private>

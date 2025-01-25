@@ -2,11 +2,11 @@
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <servlet>
         <servlet-name>congcu</servlet-name>
-        <servlet-class>controller.congcu</servlet-class>
+        <servlet-class>controller.calSaving</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>congcu2</servlet-name>
-        <servlet-class>controller.congcu2</servlet-class>
+        <servlet-class>controller.calLoan</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>tinhvay</servlet-name>

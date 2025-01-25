@@ -126,16 +126,16 @@
                                 <div class="menu-list">
                                     <ul class="menu-item">
                                         <li class="menu-label">
-                                            Sản phẩm
+                                            Dịch vụ
                                         </li>
                                         <li class="menu-label">
                                             Công cụ
                                             <ul class="sub-menu-item">
                                                 <li>
-                                                    <a class="sub-menu-link" href="congcu.jsp">Lãi suất tiết kiệm</a>
+                                                    <a class="sub-menu-link" href="calSaving.jsp">Lãi suất tiết kiệm</a>
                                                 </li>
                                                 <li>
-                                                    <a class="sub-menu-link" href="congcuvay.jsp">Lãi vay ngân hàng</a>
+                                                    <a class="sub-menu-link" href="calLoan.jsp">Lãi vay ngân hàng</a>
                                                 </li>
                                             </ul>
                                         </li>
