@@ -42,7 +42,7 @@ function toggleFooter() {
         iconArrowRight.classList.remove("rotated");
 
         // Trượt xuống cuối trang
-        footer.scrollIntoView({ behavior: "smooth", block: "end" });
+        footer.scrollIntoView({behavior: "smooth", block: "end"});
     }
 }
 
@@ -73,3 +73,68 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+const data = [
+  { text: "1) Số 1 về quy mô lợi nhuận", img: "./img/about/number1.svg" },
+  { text: "Dẫn đầu về chuyển đổi số trong ngành ngân hàng", img: "./img/about/number2.svg" },
+  { text: "Ngân hàng hàng đầu về quản trị rủi ro", img: "./img/about/number3.svg" },
+  { text: "Dẫn đầu về chất lượng nguồn nhân lực", img: "./img/about/number4.svg" },
+  { text: "Dẫn đầu về quản trị môi trường, xã hội & doanh nghiệp", img: "./img/about/number5.svg" },
+  { text: "Phấn đấu phát hành cổ phiếu và niêm yết trên TTCK quốc tế", img: "./img/about/number6.svg" }
+];
+const itemsPerPage = 3;
+let currentPage = 1;
+
+function renderCards() {
+  const container1 = document.querySelector(".container1");
+  container1.innerHTML = "";
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = data.slice(start, end);
+
+  pageItems.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${item.img}" alt="${item.text}" />
+      <p>${item.text}</p>
+    `;
+    container1.appendChild(card);
+  });
+}
+
+function renderPagination() {
+  const pagination = document.querySelector(".pagination");
+  pagination.innerHTML = "";
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+
+  // Previous button
+  const prevButton = document.createElement("button");
+  prevButton.textContent = "<=";
+  prevButton.disabled = currentPage === 1;
+  prevButton.classList.toggle("disabled", currentPage === 1);
+  prevButton.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      renderCards();
+      renderPagination();
+    }
+  });
+  pagination.appendChild(prevButton);
+
+  // Next button
+  const nextButton = document.createElement("button");
+  nextButton.textContent = "=>";
+  nextButton.disabled = currentPage === totalPages;
+  nextButton.classList.toggle("disabled", currentPage === totalPages);
+  nextButton.addEventListener("click", () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderCards();
+      renderPagination();
+    }
+  });
+  pagination.appendChild(nextButton);
+}
+
+renderCards();
+renderPagination();

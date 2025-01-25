@@ -34,9 +34,63 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
         <link rel="icon" href="img/favicon.png" type="image/x-icon">
-
+        
+     
     </head>
-
+<style>
+    .pagi {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    .container1 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to right, #e0f7fa, #e0f2f1);
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+    }
+    .card p {
+      margin: 0;
+      font-size: 16px;
+      color: #333;
+    }
+    .pagination {
+      display: flex;
+      gap: 10px;
+    }
+    .pagination button {
+      padding: 5px 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .pagination button.disabled {
+      background-color: #d6d6d6;
+      cursor: not-allowed;
+    }
+  </style>
     <body>
 
 
@@ -202,6 +256,11 @@
                                     <p class="about-section__desc">
                                         Ngân hàng số 1 tại Việt Nam, một trong 100 ngân hàng lớn nhất khu vực Châu Á, một trong 300 tập đoàn tài chính ngân hàng lớn nhất thế giới, một trong 1000 doanh nghiệp niêm yết lớn nhất toàn cầu, đóng góp lớn vào sự phát triển bền vững của Việt Nam
                                     </p>
+                                    <div class="pagi"> 
+                                        <div class="container1"></div>
+                                        <div class="pagination"></div>
+
+                                    </div>
                                 </div>  
                                 <div class="about-introduction__content">
                                     <h3 class="about-section__title">
