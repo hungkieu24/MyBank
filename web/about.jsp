@@ -4,6 +4,7 @@
     Author     : ADMIN
 --%>
 
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -505,6 +506,61 @@
                         </div>
                     </div>
                 </div>
+                <br/><br/>
+                <!-- feedback -->
+          <div class="mil-menu-buttons container">
+                        <a href="#" class="mil-btn mil-sm">Đánh giá về TIMIBANK</a>
+                        <div class="mil-menu-btn">
+                            <span></span>
+                        </div>
+                        
+        
+
+    <!-- Form tìm feedback theo ID -->
+    <h3>Find Feedback by ID</h3>
+    <form action="feedback" method="post">
+        <label for="id">Enter Feedback ID:</label>
+        <input type="text" name="id" id="id" required />
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Form tìm feedback theo ngày -->
+    <h3>Find Feedback by Date</h3>
+    <form action="feedback" method="post">
+        <label for="date">Enter Date (yyyy-MM-dd):</label>
+        <input type="date" name="date" id="date" required />
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Hiển thị danh sách feedback -->
+    <h3>Feedback List</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID Feedback</th>
+                <th>ID Customer</th>
+                <th>Message</th>
+                <th>Response</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <c:forEach items="${list}" var="c">
+                <tr>
+                    <td>${c.getFeedbackID()}</td>
+                    <td>${c.getCustomerID()}</td>
+                    <td>${c.getMessage()}</td>
+                    <td>${c.getResponse()}</td>
+                    <td>${c.isStatus() == true ? 'Done' : 'Not'}</td>
+                    <td><fmt:formatDate value="${c.getCreatedAt()}" pattern="yyyy/MM/dd" /></td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
+                    </div>
+                                <!-- feedback -->
+
                 <!-- call to action end -->
 
                 <!-- footer -->
