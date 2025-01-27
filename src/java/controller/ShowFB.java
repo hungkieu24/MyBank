@@ -59,7 +59,15 @@ public class ShowFB extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+          HttpSession session = request.getSession();
+
+        FeedbackDAO dao = new FeedbackDAO();
+
+        List<Feedback> list = dao.selectAllFeedback();
+
+        session.setAttribute("list", list);
+
+        request.getRequestDispatcher("about.jsp").forward(request, response);
     }
 
     /**
@@ -73,15 +81,11 @@ public class ShowFB extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession();
-
-        FeedbackDAO dao = new FeedbackDAO();
-
-        List<Feedback> list = dao.selectAllFeedback();
-
-        session.setAttribute("list", list);
-
-        request.getRequestDispatcher("about.jsp").forward(request, response);
+      String email = request.getParameter("email");
+      String tieude = request.getParameter("tieude");
+      String noidung= request.getParameter("noidung");
+      sendMail.guiSupport( noidung, tieude, email);
+      response.sendRedirect("showfb");
     }
 
     /**

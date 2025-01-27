@@ -35,63 +35,63 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
         <link rel="icon" href="img/favicon.png" type="image/x-icon">
-        
-     
+
+
     </head>
-<style>
-    .pagi {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f5f5f5;
-    }
-    .container1 {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .card {
-      display: flex;
-      align-items: center;
-      background: linear-gradient(to right, #e0f7fa, #e0f2f1);
-      border-radius: 10px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .card img {
-      width: 40px;
-      height: 40px;
-      margin-right: 20px;
-    }
-    .card p {
-      margin: 0;
-      font-size: 16px;
-      color: #333;
-    }
-    .pagination {
-      display: flex;
-      gap: 10px;
-    }
-    .pagination button {
-      padding: 5px 10px;
-      border: none;
-      background-color: #007bff;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .pagination button.disabled {
-      background-color: #d6d6d6;
-      cursor: not-allowed;
-    }
-  </style>
+    <style>
+        .pagi {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .card {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #e0f7fa, #e0f2f1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+        }
+        .card p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .pagination {
+            display: flex;
+            gap: 10px;
+        }
+        .pagination button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pagination button.disabled {
+            background-color: #d6d6d6;
+            cursor: not-allowed;
+        }
+    </style>
     <body>
 
 
@@ -181,12 +181,13 @@
                                 <div class="menu-list">
                                     <ul class="menu-item">
                                         <li class="menu-label">
-                                            Dịch vụ
+                                                    <a href="service.jsp">Dịch vụ</a>
                                         </li>
                                         <li class="menu-label">
                                             Công cụ
                                             <ul class="sub-menu-item">
                                                 <li>
+                                                    
                                                     <a class="sub-menu-link" href="calSaving.jsp">Lãi suất tiết kiệm</a>
                                                 </li>
                                                 <li>
@@ -508,58 +509,58 @@
                 </div>
                 <br/><br/>
                 <!-- feedback -->
-          <div class="mil-menu-buttons container">
-                        <a href="#" class="mil-btn mil-sm">Đánh giá về TIMIBANK</a>
-                        <div class="mil-menu-btn">
-                            <span></span>
-                        </div>
-                        
-        
-
-    <!-- Form tìm feedback theo ID -->
-    <h3>Find Feedback by ID</h3>
-    <form action="feedback" method="post">
-        <label for="id">Enter Feedback ID:</label>
-        <input type="text" name="id" id="id" required />
-        <button type="submit">Search</button>
-    </form>
-
-    <!-- Form tìm feedback theo ngày -->
-    <h3>Find Feedback by Date</h3>
-    <form action="feedback" method="post">
-        <label for="date">Enter Date (yyyy-MM-dd):</label>
-        <input type="date" name="date" id="date" required />
-        <button type="submit">Search</button>
-    </form>
-
-    <!-- Hiển thị danh sách feedback -->
-    <h3>Feedback List</h3>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>ID Feedback</th>
-                <th>ID Customer</th>
-                <th>Message</th>
-                <th>Response</th>
-                <th>Status</th>
-                <th>Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <c:forEach items="${list}" var="c">
-                <tr>
-                    <td>${c.getFeedbackID()}</td>
-                    <td>${c.getCustomerID()}</td>
-                    <td>${c.getMessage()}</td>
-                    <td>${c.getResponse()}</td>
-                    <td>${c.isStatus() == true ? 'Done' : 'Not'}</td>
-                    <td><fmt:formatDate value="${c.getCreatedAt()}" pattern="yyyy/MM/dd" /></td>
-                </tr>
-            </c:forEach>
-        </tbody>
-    </table>
+                <div class="mil-menu-buttons container">
+                    <a href="#" class="mil-btn mil-sm">Đánh giá về TIMIBANK</a>
+                    <div class="mil-menu-btn">
+                        <span></span>
                     </div>
-                                <!-- feedback -->
+
+
+
+                    <!-- Form tìm feedback theo ID -->
+                    <h3>Find Feedback by ID</h3>
+                    <form action="feedback" method="post">
+                        <label for="id">Enter Feedback ID:</label>
+                        <input type="text" name="id" id="id" required />
+                        <button type="submit">Search</button>
+                    </form>
+
+                    <!-- Form tìm feedback theo ngày -->
+                    <h3>Find Feedback by Date</h3>
+                    <form action="feedback" method="post">
+                        <label for="date">Enter Date (yyyy-MM-dd):</label>
+                        <input type="date" name="date" id="date" required />
+                        <button type="submit">Search</button>
+                    </form>
+
+                    <!-- Hiển thị danh sách feedback -->
+                    <h3>Feedback List</h3>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>ID Feedback</th>
+                                <th>ID Customer</th>
+                                <th>Message</th>
+                                <th>Response</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <c:forEach items="${list}" var="c">
+                                <tr>
+                                    <td>${c.getFeedbackID()}</td>
+                                    <td>${c.getCustomerID()}</td>
+                                    <td>${c.getMessage()}</td>
+                                    <td>${c.getResponse()}</td>
+                                    <td>${c.isStatus() == true ? 'Done' : 'Not'}</td>
+                                    <td><fmt:formatDate value="${c.getCreatedAt()}" pattern="yyyy/MM/dd" /></td>
+                                </tr>
+                            </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- feedback -->
 
                 <!-- call to action end -->
 
@@ -606,21 +607,54 @@
                                     </li>
                                 </ul>
                             </div>
+                            <!--                            <div class="col-xl-3 mil-mb-80">
+                                                            <h6 class="mil-mb-60">Newsletter</h6>
+                                                            <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news form us</p>
+                                                            <form class="mil-subscripe-form-footer">
+                                                                <input class="mil-input" type="email" placeholder="Email">
+                                                                <button type="submit"><i class="far fa-envelope-open mil-dark"></i></button>
+                                                                <div class="mil-checkbox-frame mil-mt-15">
+                                                                    <div class="mil-checkbox">
+                                                                        <input type="checkbox" id="checkbox" checked>
+                                                                        <label for="checkbox"></label>
+                                                                    </div>
+                                                                    <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
+                                                                </div>
+                                                            </form>
+                                                        </div>-->
+                           <!--  gửi gmail -->
                             <div class="col-xl-3 mil-mb-80">
                                 <h6 class="mil-mb-60">Newsletter</h6>
-                                <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news form us</p>
-                                <form class="mil-subscripe-form-footer">
-                                    <input class="mil-input" type="email" placeholder="Email">
-                                    <button type="submit"><i class="far fa-envelope-open mil-dark"></i></button>
+                                <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news from us</p>
+                                <form action="showfb" method="post" class="mil-subscripe-form-footer">
+                                    <!-- Email Input -->
+                                    <div class="mb-3">
+                                        <input style="font-family: Montserrat-ExtraLight" class="form-control mil-input" type="email" placeholder="Email" name="email" required>
+                                    </div>
+                                    <!-- Tiêu đề Input -->
+                                    <div class="mb-3">
+                                        <input  style="font-family: Montserrat-ExtraLight" class="form-control mil-input" type="text" placeholder="Tiêu đề" name="tieude" required>
+                                    </div>
+                                    <!-- Nội dung Input -->
+                                    <div class="mb-3">
+                                        <textarea  style="font-family: Montserrat-ExtraLight"  class="form-control mil-accent" rows="3" placeholder="Nội dung" name="noidung" required></textarea>                                    </div>
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="btn btn-dark">
+                                        <i class="far fa-envelope-open mil-dark"></i> Gửi
+                                    </button>
+                                    <!-- Checkbox -->
                                     <div class="mil-checkbox-frame mil-mt-15">
                                         <div class="mil-checkbox">
                                             <input type="checkbox" id="checkbox" checked>
                                             <label for="checkbox"></label>
                                         </div>
                                         <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
+                                        
                                     </div>
+                                       
                                 </form>
                             </div>
+
                         </div>
                         <div class="mil-footer-bottom">
                             <div class="row">
