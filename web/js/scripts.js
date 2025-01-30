@@ -158,7 +158,7 @@ function renderPagination() {
 
   // Previous button
   const prevButton = document.createElement("button");
-  prevButton.textContent = "<=";
+  prevButton.innerHTML = `<i class="fa-solid fa-arrow-left-long pagination__icon"></i>`;
   prevButton.disabled = currentPage === 1;
   prevButton.classList.toggle("disabled", currentPage === 1);
   prevButton.addEventListener("click", () => {
@@ -172,7 +172,7 @@ function renderPagination() {
 
   // Next button
   const nextButton = document.createElement("button");
-  nextButton.textContent = "=>";
+  nextButton.innerHTML = `<i class="fa-solid fa-arrow-right-long pagination__icon"></i>`;
   nextButton.disabled = currentPage === totalPages;
   nextButton.classList.toggle("disabled", currentPage === totalPages);
   nextButton.addEventListener("click", () => {
@@ -187,3 +187,7 @@ function renderPagination() {
 
 renderCards();
 renderPagination();
+
+document.getElementById("date").addEventListener("click", function() {
+    this.showPicker();
+});

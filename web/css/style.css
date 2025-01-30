@@ -2975,4 +2975,125 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
   background-color: rgb(242, 250, 250);
 }
 
+.pagi {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin: 50px 0;
+  background-color: transparent;
+  border-radius: 16px;
+}
+.pagi .container1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.pagi .card {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #e0f7fa, #e0f2f1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.pagi .card img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.pagi .card p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+.pagi .pagination {
+  display: flex;
+  gap: 10px;
+}
+.pagi .pagination button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #008000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagi .pagination button.disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+.pagi .pagination__icon {
+  color: #fff;
+}
+
+.about-feedback {
+  margin-top: 20px;
+}
+.about-feedback__label {
+  margin-bottom: 10px;
+}
+.about-feedback__table-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+.about-feedback__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.about-feedback__table-head {
+  background: #008000;
+}
+.about-feedback__table-head th {
+  color: #fff;
+  padding: 8px;
+}
+.about-feedback__table-body tr:nth-child(even) {
+  background: rgb(242, 250, 250);
+}
+.about-feedback__table-body td {
+  padding: 8px;
+}
+
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit this template
+*/
+/*
+    Created on : Jan 30, 2025, 9:50:27 AM
+    Author     : hungk
+*/
+.form-control {
+  font-family: Montserrat-ExtraLight;
+  font-size: 18px;
+}
+.form-control__flex {
+  display: flex;
+  gap: 16px;
+}
+.form-control__input {
+  font-size: 18px;
+}
+.form-control__input[type=date] {
+  appearance: none;
+  cursor: pointer;
+}
+.form-control .input--small {
+  padding: 10px 30px;
+  border-radius: 8px;
+}
+.form-control__textarea {
+  resize: none;
+  font-weight: bold;
+}
+.form-control__btn {
+  font-family: Montserrat-ExtraLight;
+}
+
 /*# sourceMappingURL=style.css.map */

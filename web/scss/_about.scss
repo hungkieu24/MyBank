@@ -148,7 +148,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
             padding: 0 24px;
             cursor: pointer;
             color: #ccc;
-            
+
             &--current {
                 color: #fff;
                 background: #008000;
@@ -293,5 +293,110 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 
 
 }
+
+.pagi {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin: 50px 0;
+    background-color: transparent;
+    border-radius: 16px;
+
+    .container1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right, #e0f7fa, #e0f2f1);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        img {
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+    }
+
+    .pagination {
+        display: flex;
+        gap: 10px;
+
+        button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #008000;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &.disabled {
+                background-color: #d6d6d6;
+                cursor: not-allowed;
+            }
+        }
+
+        &__icon {
+            color: #fff;
+        }
+    }
+}
+
+.about-feedback {
+    margin-top: 20px;
+    &__label {
+        margin-bottom: 10px;
+    }
+
+    &__table-wrapper {
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+
+        &-head {
+            background: #008000;
+            th {
+                color: #fff;
+                padding: 8px;
+            }
+        }
+
+        &-body {
+            tr:nth-child(even) {
+                background: rgb(242, 250, 250);
+            }
+
+            td {
+                padding: 8px;
+            }
+
+        }
+    }
+
+
+}
+
 
 
