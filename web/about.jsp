@@ -292,23 +292,59 @@
                                         <div class="about-timeline js-tabs">
                                             <ul class="about-timeline__num-list">
                                                 <li class="about-timeline__num about-timeline__num--current">
-                                                    2024
+                                                    04/2023
+                                                </li>
+                                                <li class="about-timeline__num ">
+                                                    06/2023
                                                 </li>
                                                 <li class="about-timeline__num">
-                                                    2025
+                                                    12/2023
                                                 </li>
-                                            </ul>
+                                                <li class="about-timeline__num ">
+                                                    03/2024
+                                                </li>
+                                                <li class="about-timeline__num">
+                                                    07/2024
+                                                </li>
+                                                <li class="about-timeline__num ">
+                                                    11/2024
+                                                </li>
+                                                <li class="about-timeline__num">
+                                                    01/2025
+                                                </li>
 
+                                            </ul>
                                             <div class="about-timeline__content about-timeline__content--current">
-                                                <h3 class="about-timeline__heading">Dẫn đầu về sáng tạo và chuyển đổi số</h3>
-                                                <p class="about-timeline__desc">Vietcombank được trao tặng các giải thưởng uy tín: là ngân hàng sáng tạo và kinh doanh hiệu quả nhất Việt Nam; ngân hàng chuyển đổi số tiêu biểu</p>
+                                                <h3 class="about-timeline__heading">TIMIBANK được thành lập và chính thức đi vào hoạt động</h3>
+                                                <p class="about-timeline__desc">  Tổ chức tiền thân là Sở Quản lý Ngoại hối Trung ương, trực thuộc Ngân hàng Quốc gia Việt Nam.</p>
+                                            </div>
+
+                                            <div class="about-timeline__content ">
+                                                <h3 class="about-timeline__heading">Cổ phiếu của TIMIBANK (mã chứng khoán: TM)</h3>
+                                                <p class="about-timeline__desc">Được niêm yết trên Sở Giao dịch Chứng khoán TP.Hà Nội (HNX), đánh dấu sự gia nhập của TIMIBANK vào thị trường chứng khoán Việt Nam.</p>
                                             </div>
                                             <div class="about-timeline__content">
-                                                <h3 class="about-timeline__heading">Dẫn đầu về sáng tạo và chuyển đổi số 2025</h3>
-                                                <p class="about-timeline__desc">Vietcombank được trao tặng các giải thưởng uy tín: là ngân hàng sáng tạo và kinh doanh hiệu quả nhất Việt Nam; ngân hàng chuyển đổi số tiêu biểu</p>
+                                                <h3 class="about-timeline__heading"> TIMIBANK ký kết thỏa thuận hợp tác chiến lược</h3>
+                                                <p class="about-timeline__desc"> Hợp tác chiến lược với Visa và Mastercard, mở rộng mạng lưới thanh toán và phát triển các sản phẩm thẻ tín dụng ưu việt, giúp khách hàng tiếp cận các dịch vụ tài chính hiện đại theo chuẩn quốc tế.</p>
+                                            </div>
+                                            <div class="about-timeline__content ">
+                                                <h3 class="about-timeline__heading">TIMIBANK cán mốc quan trọng</h3>
+                                                <p class="about-timeline__desc"> TIMIBANK cán mốc 1 triệu khách hàng cá nhân và 10.000 doanh nghiệp sử dụng dịch vụ, khẳng định tốc độ tăng trưởng ấn tượng và sự tin tưởng của khách hàng chỉ sau chưa đầy một năm hoạt động dưới mô hình ngân hàng thương mại cổ phần.</p>
+                                            </div>
+                                            <div class="about-timeline__content">
+                                                <h3 class="about-timeline__heading"> TIMIBANK ra mắt nền tảng ngân hàng số</h3>
+                                                <p class="about-timeline__desc"> TIMIBANK ra mắt nền tảng ngân hàng số tích hợp AI mang tên "TIMISMART", cung cấp dịch vụ tài chính thông minh, tối ưu hóa trải nghiệm cá nhân hóa cho khách hàng trên toàn quốc, đánh dấu bước tiến lớn trong chiến lược chuyển đổi số.</p>
+                                            </div>
+                                            <div class="about-timeline__content ">
+                                                <h3 class="about-timeline__heading">TIMIBANK chính thức mở rộng hoạt động quốc tế</h3>
+                                                <p class="about-timeline__desc">TIMIBANK chính thức mở rộng hoạt động quốc tế với việc khai trương chi nhánh đầu tiên tại Singapore, khẳng định vị thế là ngân hàng Việt Nam tiên phong trên thị trường tài chính khu vực Đông Nam Á.</p>
+                                            </div>
+                                            <div class="about-timeline__content">
+                                                <h3 class="about-timeline__heading">TIMIBANK ra mắt Quỹ đầu tư TIMIFUND</h3>
+                                                <p class="about-timeline__desc">Cung cấp các giải pháp đầu tư đa dạng từ cổ phiếu, trái phiếu đến quỹ mở, giúp khách hàng cá nhân và doanh nghiệp tối ưu hóa nguồn vốn, khẳng định vị thế tiên phong trong lĩnh vực tài chính - đầu tư tại Việt Nam.</p>
                                             </div>
                                         </div>
-                                    </div>  
+                                    </div>
                                 </div>
 
                             </div>
