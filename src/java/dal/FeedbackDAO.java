@@ -59,7 +59,7 @@ public class FeedbackDAO extends DBContext{
 
 public List<Feedback> findFBByDate(Date date) {
     List<Feedback> feedbackList = new ArrayList<>();
-    String sql = "SELECT * FROM Feedback WHERE CreatedAt = ?";
+    String sql = "SELECT * FROM Feedback WHERE CONVERT(DATE, CreatedAt) = ?";
     try {
         PreparedStatement st = connection.prepareStatement(sql);
         st.setDate(1, new java.sql.Date(date.getTime()));

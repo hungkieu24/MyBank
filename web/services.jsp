@@ -175,25 +175,6 @@
             </div>
             <!-- service end -->
 
-            <!-- service -->
-            <div class="mil-features mil-p-0-80">
-                <div class="container">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-xl-5 mil-mb-80">
-                            <h2 class="mil-mb-30 mil-up">Financial Innovation, discover the Plax Virtual Card</h2>
-                            <p class="mil-text-m mil-soft mil-mb-30 mil-up">Discover how this innovative tool boosts financial well-being and provides a safe and affordable alternative for financial inclusion in the region.</p>
-                            <div class="mil-up"><a href="register.jsp" class="mil-btn mil-m mil-add-arrow">Learn more</a></div>
-                        </div>
-                        <div class="col-xl-6 mil-mb-80">
-                            <div class="mil-image-frame mil-up">
-                                <img src="img/inner-pages/5.png" alt="image" class="mil-scale-img" data-value-1="1" data-value-2="1.2">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- service end -->
-
             <!-- call to action -->
             <div class="mil-cta mil-up">
                 <div class="container">
@@ -286,77 +267,101 @@
             <!-- call to action end -->
 
             <!-- footer -->
-            <footer class="mil-p-160-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3">
-                            <a href="#." class="mil-footer-logo mil-mb-60">
-                                <img src="img/logo-2.png" alt="Plax" width="28" height="32">
-                            </a>
-                        </div>
-                        <div class="col-xl-3 mil-mb-60">
-                            <h6 class="mil-mb-60">Usefull Links</h6>
-                            <ul class="mil-footer-list">
-                                <li class="mil-text-m mil-soft mil-mb-15">
-                                    <a href="index.jsp">Home</a>
-                                </li>
-                                <li class="mil-text-m mil-soft mil-mb-15">
-                                    <a href="about.jsp">About Us</a>
-                                </li>
-                                <li class="mil-text-m mil-soft mil-mb-15">
-                                    <a href="contact.jsp">Contact Us</a>
-                                </li>
-                                <li class="mil-text-m mil-soft mil-mb-15">
-                                    <a href="services.jsp">Services</a>
-                                </li>
-                                <li class="mil-text-m mil-soft mil-mb-15">
-                                    <a href="price.jsp">Pricing</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-xl-3 mil-mb-60">
-                            <h6 class="mil-mb-60">Help</h6>
-                            <ul class="mil-footer-list">
-                                <li class="mil-text-m mil-soft mil-mb-15">
-                                    999 Rue du Cherche-Midi, 7755500666 Paris, <br>France
-                                </li>
-                                <li class="mil-text-m mil-soft mil-mb-15">
-                                    +001 (808) 555-0111
-                                </li>
-                                <li class="mil-text-m mil-soft mil-mb-15">
-                                    support@plax.network
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-xl-3 mil-mb-80">
-                            <h6 class="mil-mb-60">Newsletter</h6>
-                            <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news form us</p>
-                            <form class="mil-subscripe-form-footer">
-                                <input class="mil-input" type="email" placeholder="Email">
-                                <button type="submit"><i class="far fa-envelope-open mil-dark"></i></button>
-                                <div class="mil-checkbox-frame mil-mt-15">
-                                    <div class="mil-checkbox">
-                                        <input type="checkbox" id="checkbox" checked>
-                                        <label for="checkbox"></label>
+                <footer class="mil-p-160-0 footer" id="footer">
+                    <div class="container">
+                        <div class="row mil-footer-top">
+                            <div class="col-xl-2">
+                                <a href="#." class=" mil-footer-logo mil-mb-60">
+                                    <img src="img/logo1.png" alt="Plax" width="150">
+                                </a>
+                            </div>
+                            <div class="col-xl-3 mil-mb-60">
+                                <h6 class="mil-mb-60">Usefull Links</h6>
+                                <ul class="mil-footer-list">
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="index.jsp">Home</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="about.jsp">About Us</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="contact.jsp">Contact Us</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="services.jsp">Services</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="price.jsp">Pricing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-3 mil-mb-60">
+                                <h6 class="mil-mb-60">Help</h6>
+                                <ul class="mil-footer-list">
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        999 Rue du Cherche-Midi, 7755500666 Paris, <br>France
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        +001 (808) 555-0111
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        support@plax.network
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-4 mil-mb-80">
+                                <h6 class="mil-mb-60">Newsletter</h6>
+                                <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news from us</p>
+                                <form action="showfb" method="post" class="mil-subscripe-form-footer">
+                                    <!-- Email Input -->
+                                    <div class="mb-3">
+                                        <input class="form-control form-control__input mil-input" type="email" placeholder="Email" name="email" required>
                                     </div>
-                                    <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
+                                    <!-- Tiêu đề Input -->
+                                    <div class="mb-3">
+                                        <input  class="form-control form-control__input mil-input" type="text" placeholder="Tiêu đề" name="tieude" required>
+                                    </div>
+                                    <!-- Nội dung Input -->
+                                    <div class="mb-3">
+                                        <textarea class="form-control form-control__textarea" rows="3" placeholder="Nội dung" name="noidung" required></textarea>                                    </div>
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="form-control__btn btn btn-dark">
+                                        <i class="far fa-envelope-open mil-dark"></i> Gửi
+                                    </button>
+                                    <!-- Checkbox -->
+                                    <div class="mil-checkbox-frame mil-mt-15">
+                                        <div class="mil-checkbox">
+                                            <input type="checkbox" id="checkbox" checked>
+                                            <label for="checkbox"></label>
+                                        </div>
+                                        <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
+
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="mil-footer-bottom">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <p class="mil-text-s mil-soft">© 2024 Plax Finance & Fintech Design</p>
                                 </div>
-                            </form>
+                                <div class="col-xl-6">
+                                    <button type="button" class=" mil-btn mil-ssm footer--toggle--btn" onclick="toggleFooter()">
+                                        <span class="text-expand">Thu gọn chân trang</span>
+                                        <span class="text-collapsed" style="display: none">Mở rộng chân trang</span>
+                                        <span class="icon-arrow-right">
+
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="mil-footer-bottom">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <p class="mil-text-s mil-soft">© 2024 Plax Finance & Fintech Design</p>
-                            </div>
-                            <div class="col-xl-6">
-                                <p class="mil-text-s mil-text-right mil-sm-text-left mil-soft">Developed by <a href="https://bslthemes.com" target="blank">bslthemes</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- footer end -->
+                </footer>
+
+                <!-- footer end -->
 
         </div>
         <!-- content end -->
@@ -381,5 +386,6 @@
     <!-- plax js -->
     <script src="js/main.js"></script>
 
+    <script src="./js/scripts.js"></script>
 </body>
 </html>

@@ -127,7 +127,7 @@
                                 <div class="menu-list">
                                     <ul class="menu-item">
                                         <li class="menu-label">
-                                            <a href="service.jsp">Dịch vụ</a>
+                                            <a href="services.jsp">Dịch vụ</a>
                                         </li>
                                         <li class="menu-label">
                                             Công cụ
@@ -168,7 +168,7 @@
                             <div class="col-xl-8">
                                 <div class="mil-banner-text mil-text-center">
 
-                                    <h2>More than a Platform, a Financial Revolution</h2>
+                                    <h2>TIMI hơn cả một nền tảng, một cuộc cách mạng tài chính</h2>
                                     <ul class="mil-breadcrumbs mil-center">
                                         <li><a href="index.jsp">Home</a></li>
                                         <li><a href="about.jsp">About us</a></li>
@@ -270,14 +270,14 @@
                                 <div class="about-introduction__contents">
                                     <div class="about-introduction__content about-introduction__content--current">
                                         <p class="about-introduction__desc">
-                                            60 năm qua, Vietcombank đã có những đóng góp quan trọng cho sự nghiệp đấu tranh thống nhất đất nước, xây dựng chủ nghĩa xã hội ở miền Bắc; tham gia khắc phục, tháo gỡ khó khăn trong thời kỳ bao cấp; là ngân hàng tiên phong trong giai đoạn đổi mới, hội nhập và phát triển. Đặc biệt, 10 năm gần đây đánh dấu sự chuyển mình, bứt phá đầy ngoạn mục của Vietcombank với sự tăng trưởng ấn tượng về quy mô, chất lượng và hiệu quả kinh doanh, thiết lập đỉnh cao cùng những thành công tiếp nối, mở ra vận hội lớn trong giai đoạn phát triển kế tiếp, đóng góp cho sự thịnh vượng chung của Việt Nam.
+                                            10 năm qua, TIMIBANK đã có những đóng góp quan trọng cho sự nghiệp đấu tranh thống nhất đất nước, xây dựng chủ nghĩa xã hội ở miền Bắc; tham gia khắc phục, tháo gỡ khó khăn trong thời kỳ bao cấp; là ngân hàng tiên phong trong giai đoạn đổi mới, hội nhập và phát triển. Đặc biệt, 10 năm gần đây đánh dấu sự chuyển mình, bứt phá đầy ngoạn mục của TIMIBANK với sự tăng trưởng ấn tượng về quy mô, chất lượng và hiệu quả kinh doanh, thiết lập đỉnh cao cùng những thành công tiếp nối, mở ra vận hội lớn trong giai đoạn phát triển kế tiếp, đóng góp cho sự thịnh vượng chung của Việt Nam.
                                         </p>
                                         <ul class="about-introduction__more">
                                             <li class="about-introduction__more-item">
-                                                Ngân hàng Ngoại thương Việt Nam trước đây, nay là Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank) được thành lập và chính thức đi vào hoạt động ngày 01/04/1963 với tổ chức tiền thân là Sở Quản lý Ngoại hối Trung ương (thuộc Ngân hàng Quốc gia Việt Nam).
+                                                Ngân hàng TIMIBANK trước đây, Treasury Investment & Monetary Instruments (TIMIBANK) được thành lập và chính thức đi vào hoạt động ngày 01/04/2023 với tổ chức tiền thân là Sở Quản lý Ngoại hối Trung ương (thuộc Ngân hàng Quốc gia Việt Nam).
                                             </li>
                                             <li class="about-introduction__more-item">
-                                                Là ngân hàng thương mại nhà nước đầu tiên được Chính phủ lựa chọn thực hiện thí điểm cổ phần hóa, Vietcombank chính thức hoạt động với tư cách là một ngân hàng thương mại cổ phần vào ngày 02/06/2008 sau khi thực hiện thành công kế hoạch cổ phần hóa thông qua việc phát hành cổ phiếu lần đầu ra công chúng. Ngày 30/6/2009, cổ phiếu Vietcombank (mã chứng khoán VCB) chính thức được niêm yết tại Sở Giao dịch chứng khoán TP.HCM.
+                                                Là ngân hàng thương mại nhà nước đầu tiên được Chính phủ lựa chọn thực hiện thí điểm cổ phần hóa, TIMIBANK chính thức hoạt động với tư cách là một ngân hàng thương mại cổ phần vào ngày 02/06/2023 sau khi thực hiện thành công kế hoạch cổ phần hóa thông qua việc phát hành cổ phiếu lần đầu ra công chúng. Ngày 30/6/2023, cổ phiếu TIMIBANK (mã chứng khoán TM) chính thức được niêm yết tại Sở Giao dịch chứng khoán TP.HN.
                                             </li>
                                         </ul>
                                         <button type="button" class="about-history__btn-more mil-btn mil-ssm mil-empty history--toggle--btn" onclick="toggleHistory()">
@@ -358,26 +358,26 @@
                     <div class="container">
                         <div class="row flex-sm-row-reverse justify-content-between align-items-center">
                             <div class="col-xl-6 mil-mb-80">
-                                <h2 class="mil-mb-30 mil-up">Our Values are foundations of Trust</h2>
-                                <p class="mil-text-m mil-soft mil-mb-60 mil-up">Our values, from transparency to accountability, are the foundation of our organizational culture and reflect our unwavering.</p>
+                                <h2 class="mil-mb-30 mil-up">Giá trị của chúng tôi là nền tảng của sự tin tưởng</h2>
+                                <p class="mil-text-m mil-soft mil-mb-60 mil-up">Các giá trị của chúng tôi, từ tính minh bạch đến trách nhiệm giải trình, là nền tảng của văn hóa tổ chức và phản ánh sự kiên định của chúng tôi.</p>
                                 <ul class="mil-list-2 mil-type-2">
                                     <li>
                                         <div class="mil-up">
-                                            <h5 class="mil-mb-15">Absolute Transparency:</h5>
-                                            <p class="mil-text-m mil-soft">Discover how transparency is ingrained in our culture, providing our users with clarity and confidence in every transaction.</p>
+                                            <h5 class="mil-mb-15">Sự minh bạch tuyệt đối:</h5>
+                                            <p class="mil-text-m mil-soft">Khám phá cách tính minh bạch ăn sâu vào văn hóa của chúng tôi, mang đến cho người dùng sự rõ ràng và tự tin trong mọi giao dịch.</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="mil-up">
-                                            <h5 class="mil-mb-15">Commitment to Safety:</h5>
-                                            <p class="mil-text-m mil-soft">Explore our unwavering commitment to security, ensuring every transaction is conducted with the highest standards of protection.</p>
+                                            <h5 class="mil-mb-15">Cam kết về an toàn:</h5>
+                                            <p class="mil-text-m mil-soft">Khám phá cam kết vững chắc của chúng tôi về vấn đề bảo mật, đảm bảo mọi giao dịch đều được thực hiện với tiêu chuẩn bảo vệ cao nhất.</p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-xl-5 mil-mb-80">
                                 <div class="mil-image-frame mil-up">
-                                    <img src="img/inner-pages/2.png" alt="image" class="mil-scale-img" data-value-1="1" data-value-2="1.2">
+                                    <img src="img/about/value-about.jpg" alt="image" class="mil-scale-img" data-value-1="1" data-value-2="1.2">
                                 </div>
                             </div>
                         </div>
@@ -391,7 +391,7 @@
                         <div class="mil-out-frame mil-visible mil-image mil-p-160-130">
                             <div class="row justify-content-center mil-text-center">
                                 <div class="col-xl-8 mil-mb-80-adaptive-30">
-                                    <h2 class="mil-light mil-up">Meet Those Who Make Plax Possible</h2>
+                                    <h2 class="mil-light mil-up">Gặp gỡ những người tạo nên TIMIBANK</h2>
                                 </div>
                             </div>
                             <div class="row">
@@ -442,15 +442,15 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-xl-10">
-                                <h2 class="mil-mb-30">"At Plax, transparency is not just a promise; It is the cornerstone of our relationship with you. We believe that trust is built with clear policies and coherent actions."</h2>
-                                <p class="mil-text-m mil-soft mil-mb-60">- Plax Team</p>
+                                <h2 class="mil-mb-30">"Tại TIMIBANK, tính minh bạch không chỉ là lời hứa; Đó là nền tảng cho mối quan hệ của chúng tôi với bạn. Chúng tôi tin rằng niềm tin được xây dựng bằng chính sách rõ ràng và hành động nhất quán."</h2>
+                                <p class="mil-text-m mil-soft mil-mb-60">- TIMI Team</p>
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <ul class="mil-list-2 mil-type-2 mil-mb-30">
                                             <li>
                                                 <div class="mil-up">
-                                                    <h5 class="mil-mb-15">Privacy policies</h5>
-                                                    <p class="mil-text-m mil-soft">Your privacy is our priority. We never share your information with third parties without your express consent.</p>
+                                                    <h5 class="mil-mb-15">Chính sách bảo mật</h5>
+                                                    <p class="mil-text-m mil-soft">Quyền riêng tư của bạn là ưu tiên hàng đầu của chúng tôi. Chúng tôi không bao giờ chia sẻ thông tin của bạn với bên thứ ba mà không có sự đồng ý rõ ràng của bạn.</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -459,8 +459,8 @@
                                         <ul class="mil-list-2 mil-type-2 mil-mb-30">
                                             <li>
                                                 <div class="mil-up">
-                                                    <h5 class="mil-mb-15">Data protection</h5>
-                                                    <p class="mil-text-m mil-soft">We are committed to protecting your personal and financial data with the highest security measures</p>
+                                                    <h5 class="mil-mb-15">Bảo vệ dữ liệu</h5>
+                                                    <p class="mil-text-m mil-soft">Chúng tôi cam kết bảo vệ dữ liệu cá nhân và tài chính của bạn bằng các biện pháp bảo mật cao nhất</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -478,11 +478,11 @@
                         <div class="mil-out-frame mil-p-160-160" style="background-image: url(img/home-3/5.png)">
                             <div class="row justify-content-between align-items-center">
                                 <div class="col-xl-7 mil-sm-text-center">
-                                    <h2 class="mil-light mil-mb-30 mil-up">Discover the freedom <br>of Total Financial Control</h2>
-                                    <p class="mil-text-m mil-mb-60 mil-dark-soft mil-up">Join Plax and take the first step towards a more <br> balanced and hassle-free financial life.</p>
+                                    <h2 class="mil-light mil-mb-30 mil-up">Khám phá sự tự do của <br>Kiểm soát tài chính toàn diện</h2>
+                                    <p class="mil-text-m mil-mb-60 mil-dark-soft mil-up">Hãy tham gia TIMIBANK và thực hiện bước đầu tiên hướng đến một cuộc sống  <br> tài chính cân bằng và ít rắc rối hơn.</p>
                                     <div class="mil-buttons-frame mil-up">
-                                        <a href="#." class="mil-btn mil-md">App Store</a>
-                                        <a href="#." class="mil-btn mil-border mil-md">Google Play</a>
+                                        <a href="https://apps.apple.com/vn/app/vcb-digibank/id561433133?l=vi" class="mil-btn mil-md">App Store</a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.VCB" class="mil-btn mil-border mil-md">Google Play</a>
                                     </div>
                                 </div>
                             </div>
@@ -492,7 +492,7 @@
                 <br/><br/>
                 <!-- feedback -->
                 <div class="mil-menu-buttons container">
-                    <a href="#" class="mil-btn mil-sm">Đánh giá về TIMIBANK</a>
+                    <a href="showfb" class="mil-btn mil-sm">Đánh giá về TIMIBANK</a>
                     <div class="mil-menu-btn">
                         <span></span>
                     </div>
@@ -600,22 +600,6 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!--                            <div class="col-xl-3 mil-mb-80">
-                                                            <h6 class="mil-mb-60">Newsletter</h6>
-                                                            <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news form us</p>
-                                                            <form class="mil-subscripe-form-footer">
-                                                                <input class="mil-input" type="email" placeholder="Email">
-                                                                <button type="submit"><i class="far fa-envelope-open mil-dark"></i></button>
-                                                                <div class="mil-checkbox-frame mil-mt-15">
-                                                                    <div class="mil-checkbox">
-                                                                        <input type="checkbox" id="checkbox" checked>
-                                                                        <label for="checkbox"></label>
-                                                                    </div>
-                                                                    <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
-                                                                </div>
-                                                            </form>
-                                                        </div>-->
-                            <!--  gửi gmail -->
                             <div class="col-xl-4 mil-mb-80">
                                 <h6 class="mil-mb-60">Newsletter</h6>
                                 <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news from us</p>
