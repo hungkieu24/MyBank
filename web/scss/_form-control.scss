@@ -11,10 +11,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
     font-family: Montserrat-ExtraLight;
     font-size: 18px;
     
-    &__flex {
+    &__row {
         display: flex;
         gap: 16px;
+        
+        &--reverse {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between
+        }
     }
+    
+    
 
     &__input {
         font-size: 18px;
@@ -37,5 +45,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 
     &__btn {
         font-family: Montserrat-ExtraLight;
+        position: unset !important;
+     
+        &--green {
+            background: green !important;
+            color: #fff;
+        }
+    }
+    
+    &__icon {
+        margin-right: 8px;
     }
 }

@@ -1,0 +1,30 @@
+[
+    {
+        "image": "img/inner-pages/team/1.png",
+        "name": "Isabella Haugen 1",
+        "group": "SE1887 - GROUP 2",
+        "phone": "18009999",
+        "email": "isabella@example.com"
+    },
+    {
+        "image": "img/inner-pages/team/1.png",
+        "name": "Isabella Haugen 2",
+        "group": "SE1887 - GROUP 2",
+        "phone": "18009939",
+        "email": "isabella@example.com"
+    },
+    {
+        "image": "img/inner-pages/team/1.png",
+        "name": "Isabella Haugen 3",
+        "group": "SE1887 - GROUP 2",
+        "phone": "18002399",
+        "email": "isabella@example.com"
+    },
+    {
+        "image": "img/inner-pages/team/2.png",
+        "name": "Nguyễn Quang Thoại",
+        "group": "SE1887 - GROUP 2",
+        "phone": "18008888",
+        "email": "contact@grocerymart.com"
+    }
+]
