@@ -123,71 +123,157 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const data = [
-  { text: "1) Số 1 về quy mô lợi nhuận", img: "./img/about/number1.svg" },
-  { text: "Dẫn đầu về chuyển đổi số trong ngành ngân hàng", img: "./img/about/number2.svg" },
-  { text: "Ngân hàng hàng đầu về quản trị rủi ro", img: "./img/about/number3.svg" },
-  { text: "Dẫn đầu về chất lượng nguồn nhân lực", img: "./img/about/number4.svg" },
-  { text: "Dẫn đầu về quản trị môi trường, xã hội & doanh nghiệp", img: "./img/about/number5.svg" },
-  { text: "Phấn đấu phát hành cổ phiếu và niêm yết trên TTCK quốc tế", img: "./img/about/number6.svg" }
+    {text: "1) Số 1 về quy mô lợi nhuận", img: "./img/about/number1.svg"},
+    {text: "Dẫn đầu về chuyển đổi số trong ngành ngân hàng", img: "./img/about/number2.svg"},
+    {text: "Ngân hàng hàng đầu về quản trị rủi ro", img: "./img/about/number3.svg"},
+    {text: "Dẫn đầu về chất lượng nguồn nhân lực", img: "./img/about/number4.svg"},
+    {text: "Dẫn đầu về quản trị môi trường, xã hội & doanh nghiệp", img: "./img/about/number5.svg"},
+    {text: "Phấn đấu phát hành cổ phiếu và niêm yết trên TTCK quốc tế", img: "./img/about/number6.svg"}
 ];
 const itemsPerPage = 3;
 let currentPage = 1;
 
 function renderCards() {
-  const container1 = document.querySelector(".container1");
-  container1.innerHTML = "";
-  const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const pageItems = data.slice(start, end);
+    const container1 = document.querySelector(".container1");
+    container1.innerHTML = "";
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const pageItems = data.slice(start, end);
 
-  pageItems.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
+    pageItems.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
       <img src="${item.img}" alt="${item.text}" />
       <p>${item.text}</p>
     `;
-    container1.appendChild(card);
-  });
+        container1.appendChild(card);
+    });
 }
 
 function renderPagination() {
-  const pagination = document.querySelector(".pagination");
-  pagination.innerHTML = "";
-  const totalPages = Math.ceil(data.length / itemsPerPage);
+    const pagination = document.querySelector(".pagination");
+    pagination.innerHTML = "";
+    const totalPages = Math.ceil(data.length / itemsPerPage);
 
-  // Previous button
-  const prevButton = document.createElement("button");
-  prevButton.innerHTML = `<i class="fa-solid fa-arrow-left-long pagination__icon"></i>`;
-  prevButton.disabled = currentPage === 1;
-  prevButton.classList.toggle("disabled", currentPage === 1);
-  prevButton.addEventListener("click", () => {
-    if (currentPage > 1) {
-      currentPage--;
-      renderCards();
-      renderPagination();
-    }
-  });
-  pagination.appendChild(prevButton);
+    // Previous button
+    const prevButton = document.createElement("button");
+    prevButton.innerHTML = `<i class="fa-solid fa-arrow-left-long pagination__icon"></i>`;
+    prevButton.disabled = currentPage === 1;
+    prevButton.classList.toggle("disabled", currentPage === 1);
+    prevButton.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderCards();
+            renderPagination();
+        }
+    });
+    pagination.appendChild(prevButton);
 
-  // Next button
-  const nextButton = document.createElement("button");
-  nextButton.innerHTML = `<i class="fa-solid fa-arrow-right-long pagination__icon"></i>`;
-  nextButton.disabled = currentPage === totalPages;
-  nextButton.classList.toggle("disabled", currentPage === totalPages);
-  nextButton.addEventListener("click", () => {
-    if (currentPage < totalPages) {
-      currentPage++;
-      renderCards();
-      renderPagination();
-    }
-  });
-  pagination.appendChild(nextButton);
+    // Next button
+    const nextButton = document.createElement("button");
+    nextButton.innerHTML = `<i class="fa-solid fa-arrow-right-long pagination__icon"></i>`;
+    nextButton.disabled = currentPage === totalPages;
+    nextButton.classList.toggle("disabled", currentPage === totalPages);
+    nextButton.addEventListener("click", () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderCards();
+            renderPagination();
+        }
+    });
+    pagination.appendChild(nextButton);
 }
 
 renderCards();
 renderPagination();
 
-document.getElementById("date").addEventListener("click", function() {
+document.getElementById("date").addEventListener("click", function () {
     this.showPicker();
 });
+
+// Đóng mở modal
+window.addEventListener("DOMContentLoaded", initJsToggle);
+
+function initJsToggle() {
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+    $$(".js-toggle").forEach((button) => {
+        const target = button.getAttribute("toggle-target");
+        if (!target) {
+            document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
+        }
+        button.onclick = (e) => {
+            e.preventDefault();
+            if (!$(target)) {
+                return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
+            }
+            const isHidden = $(target).classList.contains("hide");
+
+            requestAnimationFrame(() => {
+                $(target).classList.toggle("hide", !isHidden);
+                $(target).classList.toggle("show", isHidden);
+            });
+        };
+
+        document.onclick = function (e) {
+            if (!e.target.closest(target)) {
+                const isHidden = $(target).classList.contains("hide");
+                if (!isHidden) {
+                    button.click();
+                }
+            }
+        };
+
+    });
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+    try {
+        const response = await fetch("data/team.json");
+        const teamMembers = await response.json();
+
+        const teamHTML = teamMembers.map((member, index) => `
+            <div class="col-xl-3 col-md-6 col-sm-6">
+                <div class="mil-team-card mil-mb-30 mil-up">
+                    <div class="mil-portrait mil-mb-30">
+                        <img src="${member.image}" alt="portrait">
+                    </div>
+                    <h5 class="mil-light mil-mb-15">${member.name}</h5>
+                    <button class="mil-btn mil-ssm js-toggle" toggle-target="#modal-${index}">Xem thêm</button>
+                </div>
+            </div>
+        `).join("");
+
+        const modalHTML = teamMembers.map((member, index) => `
+            <div id="modal-${index}" class="modal modal--large hide">
+                <div class="modal__content">
+                    <button class="modal__close js-toggle" toggle-target="#modal-${index}">&times;</button>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="modal__img-wrap">
+                                <img class="modal__img" src="${member.image}" alt="portrait">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="modal__info">
+                                <div class="modal__text">${member.name}</div>
+                                <div class="modal__text">${member.group}</div>
+                                <a href="tel:${member.phone}" class="modal__link">Liên hệ: ${member.phone}</a>
+                                <a href="mailto:${member.email}" class="modal__link">Email: ${member.email}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__overlay js-toggle" toggle-target="#modal-${index}"></div>
+            </div>
+        `).join("");
+
+        document.getElementById("team-list").innerHTML = teamHTML;
+        document.getElementById("modal-container").innerHTML = modalHTML;
+        initJsToggle();
+    } catch (error) {
+        console.error("Lỗi khi tải dữ liệu:", error);
+    }
+});
+

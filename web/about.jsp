@@ -36,7 +36,7 @@
         <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
         <link rel="icon" href="img/favicon.png" type="image/x-icon">
 
-        <<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     </head>
     <body>
 
@@ -394,48 +394,18 @@
                                     <h2 class="mil-light mil-up">Gặp gỡ những người tạo nên TIMIBANK</h2>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xl-3 col-md-6 col-sm-6">
-                                    <div class="mil-team-card mil-mb-30 mil-up">
-                                        <div class="mil-portrait mil-mb-30">
-                                            <img src="img/inner-pages/team/1.png" alt="portrait">
-                                        </div>
-                                        <h5 class="mil-light mil-mb-15">Isabella Haugen</h5>
-                                        <p class="mil-text-xs mil-soft">CEO & Founder</p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-6 col-sm-6">
-                                    <div class="mil-team-card mil-mb-30 mil-up">
-                                        <div class="mil-portrait mil-mb-30">
-                                            <img src="img/inner-pages/team/2.png" alt="portrait">
-                                        </div>
-                                        <h5 class="mil-light mil-mb-15">Alexandr Dahl</h5>
-                                        <p class="mil-text-xs mil-soft">Chief Technology Officer (CTO)</p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-6 col-sm-6">
-                                    <div class="mil-team-card mil-mb-30 mil-up">
-                                        <div class="mil-portrait mil-mb-30">
-                                            <img src="img/inner-pages/team/3.png" alt="portrait">
-                                        </div>
-                                        <h5 class="mil-light mil-mb-15">Lucia Knutsen</h5>
-                                        <p class="mil-text-xs mil-soft">Director of Operations (COO)</p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-6 col-sm-6">
-                                    <div class="mil-team-card mil-mb-30 mil-up">
-                                        <div class="mil-portrait mil-mb-30">
-                                            <img src="img/inner-pages/team/4.png" alt="portrait">
-                                        </div>
-                                        <h5 class="mil-light mil-mb-15">Carlos Martinez</h5>
-                                        <p class="mil-text-xs mil-soft">Chief Information Security Officer (CISO)</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- Danh sách thành viên -->
+                            <div id="team-list" class="row"></div>
                         </div>
                     </div>
                 </div>
-                <!-- team -->
+                <!-- end team -->
+
+                <!-- Modal team -->
+                <!-- Modal: show info của thành viên -->
+                <div id="modal-container"></div>
+
+                <!-- end Modal team -->
 
                 <!-- quote -->
                 <div class="mil-quote mil-p-160-130">
@@ -503,7 +473,7 @@
                     <div class="about-feedback">
                         <h3 class="about-feedback__label">Find Feedback by ID: </h3>
                         <form class="form-control" action="feedback" method="post">
-                            <div class="form-control__flex">
+                            <div class="form-control__row">
                                 <input class="form-control__input input--small " type="text" name="id" id="id" required placeholder="Feedback ID"/>
                                 <button class="mil-btn mil-sm" type="submit">Search</button>
                             </div>
@@ -514,7 +484,7 @@
                     <div class="about-feedback">
                         <h3 class="about-feedback__label">Find Feedback by Date: </h3>
                         <form class="form-control" action="feedback" method="post">
-                            <div class="form-control__flex">
+                            <div class="form-control__row">
                                 <input class="form-control__input input--small " type="date" name="date" id="date" required/>
                                 <button class="mil-btn mil-sm" type="submit">Search</button>
                             </div>
@@ -614,19 +584,23 @@
                                     </div>
                                     <!-- Nội dung Input -->
                                     <div class="mb-3">
-                                        <textarea class="form-control form-control__textarea" rows="3" placeholder="Nội dung" name="noidung" required></textarea>                                    </div>
-                                    <!-- Submit Button -->
-                                    <button type="submit" class="form-control__btn btn btn-dark">
-                                        <i class="far fa-envelope-open mil-dark"></i> Gửi
-                                    </button>
-                                    <!-- Checkbox -->
-                                    <div class="mil-checkbox-frame mil-mt-15">
-                                        <div class="mil-checkbox">
-                                            <input type="checkbox" id="checkbox" checked>
-                                            <label for="checkbox"></label>
-                                        </div>
-                                        <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
+                                        <textarea class="form-control form-control__textarea" rows="3" placeholder="Nội dung" name="noidung" required></textarea>                                    
+                                    </div>
 
+                                    <div class="form-control__row--reverse">
+                                        <!-- Submit Button -->
+                                        <button type="submit" class="form-control__btn form-control__btn--green mil-btn mil-ssm">
+                                            <i class="far fa-envelope-open form-control__icon"></i> Gửi
+                                        </button>
+                                        <!-- Checkbox -->
+                                        <div class="mil-checkbox-frame">
+                                            <div class="mil-checkbox">
+                                                <input type="checkbox" id="checkbox" checked>
+                                                <label for="checkbox"></label>
+                                            </div>
+                                            <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
+
+                                        </div>
                                     </div>
 
                                 </form>
@@ -658,6 +632,8 @@
             <!-- content end -->
         </div>
         <!-- wrapper end -->
+
+
 
         <!-- jquery js -->
         <script src="js/plugins/jquery.min.js"></script>
