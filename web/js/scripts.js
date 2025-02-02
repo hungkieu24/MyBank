@@ -277,3 +277,26 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
+// Khi trang được load lại, cuộn tới vị trí của form
+window.onload = function () {
+    var form = document.getElementById('feedback-form');
+    if (form) {
+        form.scrollIntoView({behavior: 'auto'});
+    }
+};
+
+// Khi nhấn vào liên kết, cuộn tới form tìm feedback
+document.getElementById('feedback-link').addEventListener('click', function (event) {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết (chuyển trang)
+
+    var form = document.getElementById('feedback-form');
+    if (form) {
+        form.scrollIntoView({behavior: 'auto'});
+    }
+
+    // Nếu bạn muốn sau khi cuộn, trang vẫn chuyển đến "showfb", hãy thêm đoạn này:
+    setTimeout(function () {
+        window.location.href = "showfb"; // Chuyển hướng đến "showfb" sau khi cuộn
+    }, 100); // Thời gian trễ để cuộn trang trước khi chuyển hướng
+});
+

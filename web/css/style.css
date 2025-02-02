@@ -3172,6 +3172,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
   border-radius: 20px;
   background: linear-gradient(to right, #e0f7fa, #e0f2f1);
   box-shadow: 0px 20px 60px 10px var(--modal-shadow);
+  overflow-y: auto;
 }
 .modal__info {
   padding: 30px 0;
@@ -3188,6 +3189,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 }
 .modal--large .modal__content {
   --content-width: 1100;
+}
+.modal--xl .modal__content {
+  --content-width: 1290;
 }
 .modal--fill .modal__content {
   width: 100%;

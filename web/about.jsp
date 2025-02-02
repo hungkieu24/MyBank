@@ -462,7 +462,7 @@
                 <br/><br/>
                 <!-- feedback -->
                 <div class="mil-menu-buttons container">
-                    <a href="showfb" class="mil-btn mil-sm">Đánh giá về TIMIBANK</a>
+                    <a href="showfb" class="mil-btn mil-sm" id="feedback-link">Đánh giá về TIMIBANK</a>
                     <div class="mil-menu-btn">
                         <span></span>
                     </div>
@@ -470,7 +470,7 @@
 
 
                     <!-- Form tìm feedback theo ID -->
-                    <div class="about-feedback">
+                    <div class="about-feedback" id="feedback-form">
                         <h3 class="about-feedback__label">Find Feedback by ID: </h3>
                         <form class="form-control" action="feedback" method="post">
                             <div class="form-control__row">
@@ -481,7 +481,7 @@
                     </div>
 
                     <!-- Form tìm feedback theo ngày -->
-                    <div class="about-feedback">
+                    <div class="about-feedback" id="feedback-form">
                         <h3 class="about-feedback__label">Find Feedback by Date: </h3>
                         <form class="form-control" action="feedback" method="post">
                             <div class="form-control__row">
