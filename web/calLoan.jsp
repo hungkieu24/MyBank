@@ -33,6 +33,8 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
         <link rel="icon" href="img/favicon.png" type="image/x-icon">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     </head>
     <style>
         body {
@@ -82,8 +84,8 @@
             padding: 10px;
         }
         .tab.active {
-            color: #d4af37;
-            border-bottom: 2px solid #d4af37;
+            color: #008000;
+            border-bottom: 2px solid #008000;
 
         }
         .form-group {
@@ -296,6 +298,7 @@
             <!-- content -->
             <div id="smooth-content">
                 <div class="cal-container">
+                    <a href="about.jsp"><i class="fa-solid fa-arrow-left-long"></i></a>
                     <div class="tabs">
                         <a href="calSaving.jsp" class="tab">LÃI SUẤT TIẾT KIỆM</a>
                         <a href="calLoan.jsp" class="tab active">LÃI VAY NGÂN HÀNG</a>

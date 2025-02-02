@@ -143,6 +143,15 @@
                                         </li>
                                         <li class="menu-label">
                                             Ưu đãi
+                                            <ul class="sub-menu-item">
+                                                <li>
+
+                                                    <a class="sub-menu-link" href="calSaving.jsp">Thẻ TIMI - Chi tiêu giảm giá hàng đầu Việt Nam</a>
+                                                </li>
+                                                <li>
+                                                    <a class="sub-menu-link" href="calLoan.jsp">Tất cả ưu đãi</a>
+                                                </li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </div>
@@ -197,30 +206,34 @@
                             </ul>
 
                             <div class="about-introduction__contents">
-                                <div class="about-introduction__content about-introduction__content--current">
-                                    <h3 class="about-section__title">
-                                        Tầm nhìn & Sứ mệnh
-                                    </h3>
+                                <div class="about-introduction__content about-introduction__content--current" data-section="vision">
+                                    <h3 class="about-section__title">Tầm nhìn & Sứ mệnh</h3>
                                     <p class="about-section__desc">
                                         Ngân hàng số 1 tại Việt Nam, một trong 100 ngân hàng lớn nhất khu vực Châu Á, một trong 300 tập đoàn tài chính ngân hàng lớn nhất thế giới, một trong 1000 doanh nghiệp niêm yết lớn nhất toàn cầu, đóng góp lớn vào sự phát triển bền vững của Việt Nam
                                     </p>
                                     <div class="pagi"> 
-                                        <div class="container1"></div>
-                                        <div class="pagination"></div>
-
+                                        <div class="container1" id="container-vision"></div>
+                                        <div class="pagination" id="pagination-vision"></div>
                                     </div>
                                 </div>  
-                                <div class="about-introduction__content">
-                                    <h3 class="about-section__title">
-                                        Giá trị cốt lõi
-                                    </h3>
+
+                                <div class="about-introduction__content" data-section="core-values">
+                                    <h3 class="about-section__title">Giá trị cốt lõi</h3>
+                                    <div class="pagi"> 
+                                        <div class="container1" id="container-core-values"></div>
+                                        <div class="pagination" id="pagination-core-values"></div>
+                                    </div>
                                 </div>  
-                                <div class="about-introduction__content">
-                                    <h3 class="about-section__title">
-                                        Bản sắc văn hóa
-                                    </h3>
+
+                                <div class="about-introduction__content" data-section="culture">
+                                    <h3 class="about-section__title">Bản sắc văn hóa</h3>
+                                    <div class="pagi"> 
+                                        <div class="container1" id="container-culture"></div>
+                                        <div class="pagination" id="pagination-culture"></div>
+                                    </div>
                                 </div>  
                             </div>
+
 
                         </div>
                     </div>

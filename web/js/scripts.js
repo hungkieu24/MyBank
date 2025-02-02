@@ -122,71 +122,110 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const data = [
-    {text: "1) Số 1 về quy mô lợi nhuận", img: "./img/about/number1.svg"},
-    {text: "Dẫn đầu về chuyển đổi số trong ngành ngân hàng", img: "./img/about/number2.svg"},
-    {text: "Ngân hàng hàng đầu về quản trị rủi ro", img: "./img/about/number3.svg"},
-    {text: "Dẫn đầu về chất lượng nguồn nhân lực", img: "./img/about/number4.svg"},
-    {text: "Dẫn đầu về quản trị môi trường, xã hội & doanh nghiệp", img: "./img/about/number5.svg"},
-    {text: "Phấn đấu phát hành cổ phiếu và niêm yết trên TTCK quốc tế", img: "./img/about/number6.svg"}
-];
+const dataSections = {
+    vision: [
+        { text: "1) Số 1 về quy mô lợi nhuận", img: "./img/about/number1.svg" },
+        { text: "Dẫn đầu về chuyển đổi số trong ngành ngân hàng", img: "./img/about/number2.svg" },
+        { text: "Ngân hàng hàng đầu về quản trị rủi ro", img: "./img/about/number3.svg" },
+        { text: "Dẫn đầu về chất lượng nguồn nhân lực", img: "./img/about/number4.svg" },
+        { text: "Dẫn đầu về quản trị môi trường, xã hội & doanh nghiệp", img: "./img/about/number5.svg" },
+        { text: "Phấn đấu phát hành cổ phiếu và niêm yết trên TTCK quốc tế", img: "./img/about/number6.svg" }
+    ],
+    "core-values": [
+        { text: "Trách nhiệm xã hội và sự bền vững", img: "./img/about/value1.svg" },
+        { text: "Sáng tạo và đổi mới", img: "./img/about/value2.svg" },
+        { text: "Trách nhiệm xã hội và sự bền vững", img: "./img/about/value1.svg" },
+        { text: "Sáng tạo và đổi mới", img: "./img/about/value2.svg" },
+        { text: "Trách nhiệm xã hội và sự bền vững", img: "./img/about/value1.svg" },
+        { text: "Chuyên nghiệp và tận tâm", img: "./img/about/value3.svg" }
+    ],
+    culture: [
+        { text: "Tinh thần đồng đội", img: "./img/about/culture1.svg" },
+        { text: "Tôn trọng khách hàng", img: "./img/about/culture2.svg" },
+        { text: "Tinh thần đồng đội", img: "./img/about/culture1.svg" },
+        { text: "Tôn trọng khách hàng", img: "./img/about/culture2.svg" },
+        { text: "Trung thực và minh bạch", img: "./img/about/culture3.svg" },
+        { text: "Trung thực và minh bạch", img: "./img/about/culture3.svg" }
+    ]
+};
+
 const itemsPerPage = 3;
-let currentPage = 1;
 
-function renderCards() {
-    const container1 = document.querySelector(".container1");
-    container1.innerHTML = "";
-    const start = (currentPage - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    const pageItems = data.slice(start, end);
+function createCarousel(sectionId, data) {
+    let currentIndex = 0;
+    let direction = 1; // 1: Sang phải, -1: Sang trái
 
-    pageItems.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-      <img src="${item.img}" alt="${item.text}" />
-      <p>${item.text}</p>
-    `;
-        container1.appendChild(card);
-    });
+    function renderCards() {
+        const container = document.querySelector(`#container-${sectionId}`);
+        container.innerHTML = "";
+
+        const pageItems = data.slice(currentIndex, currentIndex + itemsPerPage);
+
+        pageItems.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+                <img src="${item.img}" alt="${item.text}" />
+                <p>${item.text}</p>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    function renderPagination() {
+        const pagination = document.querySelector(`#pagination-${sectionId}`);
+        pagination.innerHTML = "";
+
+        const prevButton = document.createElement("button");
+        prevButton.innerHTML = `<i class="fa-solid fa-arrow-left-long pagination__icon"></i>`;
+        prevButton.disabled = currentIndex === 0;
+        prevButton.classList.toggle("disabled", currentIndex === 0);
+        prevButton.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderCards();
+                renderPagination();
+            }
+        });
+        pagination.appendChild(prevButton);
+
+        const nextButton = document.createElement("button");
+        nextButton.innerHTML = `<i class="fa-solid fa-arrow-right-long pagination__icon"></i>`;
+        nextButton.disabled = currentIndex + itemsPerPage >= data.length;
+        nextButton.classList.toggle("disabled", currentIndex + itemsPerPage >= data.length);
+        nextButton.addEventListener("click", () => {
+            if (currentIndex + itemsPerPage < data.length) {
+                currentIndex++;
+                renderCards();
+                renderPagination();
+            }
+        });
+        pagination.appendChild(nextButton);
+    }
+
+    function autoSlide() {
+        if (currentIndex + itemsPerPage >= data.length) {
+            direction = -1; // Đổi hướng sang trái
+        } else if (currentIndex === 0) {
+            direction = 1; // Đổi hướng sang phải
+        }
+
+        currentIndex += direction;
+        renderCards();
+        renderPagination();
+    }
+
+    renderCards();
+    renderPagination();
+    setInterval(autoSlide, 3000);
 }
 
-function renderPagination() {
-    const pagination = document.querySelector(".pagination");
-    pagination.innerHTML = "";
-    const totalPages = Math.ceil(data.length / itemsPerPage);
+// Khởi tạo carousel cho từng phần
+Object.keys(dataSections).forEach(sectionId => {
+    createCarousel(sectionId, dataSections[sectionId]);
+});
 
-    // Previous button
-    const prevButton = document.createElement("button");
-    prevButton.innerHTML = `<i class="fa-solid fa-arrow-left-long pagination__icon"></i>`;
-    prevButton.disabled = currentPage === 1;
-    prevButton.classList.toggle("disabled", currentPage === 1);
-    prevButton.addEventListener("click", () => {
-        if (currentPage > 1) {
-            currentPage--;
-            renderCards();
-            renderPagination();
-        }
-    });
-    pagination.appendChild(prevButton);
 
-    // Next button
-    const nextButton = document.createElement("button");
-    nextButton.innerHTML = `<i class="fa-solid fa-arrow-right-long pagination__icon"></i>`;
-    nextButton.disabled = currentPage === totalPages;
-    nextButton.classList.toggle("disabled", currentPage === totalPages);
-    nextButton.addEventListener("click", () => {
-        if (currentPage < totalPages) {
-            currentPage++;
-            renderCards();
-            renderPagination();
-        }
-    });
-    pagination.appendChild(nextButton);
-}
-
-renderCards();
-renderPagination();
 
 document.getElementById("date").addEventListener("click", function () {
     this.showPicker();
@@ -277,13 +316,17 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
-// Khi trang được load lại, cuộn tới vị trí của form
-window.onload = function () {
-    var form = document.getElementById('feedback-form');
-    if (form) {
-        form.scrollIntoView({behavior: 'auto'});
+document.addEventListener("DOMContentLoaded", function () {
+    var feedbackButton = document.getElementById("feedback-button"); // Nút mở form
+    var form = document.getElementById("feedback-form");
+
+    if (feedbackButton && form) {
+        feedbackButton.addEventListener("click", function () {
+            form.scrollIntoView({ behavior: "smooth" });
+        });
     }
-};
+});
+
 
 // Khi nhấn vào liên kết, cuộn tới form tìm feedback
 document.getElementById('feedback-link').addEventListener('click', function (event) {
