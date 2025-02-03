@@ -542,22 +542,22 @@
 
                         <!-- Form tìm feedback theo ID -->
                         <div class="about-feedback" id="feedback-form">
-                            <h3 class="about-feedback__label">Find Feedback by ID: </h3>
+                            <h3 class="about-feedback__label">Tìm đánh giá theo ID khách hàng: </h3>
                             <form class="form-control" action="feedback" method="post">
                                 <div class="form-control__row">
                                     <input class="form-control__input input--small " type="text" name="id" id="id" required placeholder="Feedback ID"/>
-                                    <button class="mil-btn mil-sm" type="submit">Search</button>
+                                    <button class="mil-btn mil-sm" type="submit">Tìm kiếm</button>
                                 </div>
                             </form>
                         </div>
 
                         <!-- Form tìm feedback theo ngày -->
                         <div class="about-feedback" id="feedback-form">
-                            <h3 class="about-feedback__label">Find Feedback by Date: </h3>
+                            <h3 class="about-feedback__label">Tìm đánh giá theo thời gian: </h3>
                             <form class="form-control" action="feedback" method="post">
                                 <div class="form-control__row">
                                     <input class="form-control__input input--small " type="date" name="date" id="date" required/>
-                                    <button class="mil-btn mil-sm" type="submit">Search</button>
+                                    <button class="mil-btn mil-sm" type="submit">Tìm kiếm</button>
                                 </div>
                             </form>
                         </div>
@@ -608,7 +608,7 @@
                                     </a>
                                 </div>
                                 <div class="col-xl-3 mil-mb-60">
-                                    <h6 class="mil-mb-60">Usefull Links</h6>
+                                    <h6 class="mil-mb-60">Liên kết hữu ích</h6>
                                     <ul class="mil-footer-list">
                                         <li class="mil-text-m mil-soft mil-mb-15">
                                             <a href="index.jsp">Home</a>
@@ -620,7 +620,7 @@
                                             <a href="contact.jsp">Contact Us</a>
                                         </li>
                                         <li class="mil-text-m mil-soft mil-mb-15">
-                                            <a href="services.jsp">Services</a>
+                                            <a href="faq.jsp">FAQs</a>
                                         </li>
                                         <li class="mil-text-m mil-soft mil-mb-15">
                                             <a href="price.jsp">Pricing</a>
@@ -628,22 +628,19 @@
                                     </ul>
                                 </div>
                                 <div class="col-xl-3 mil-mb-60">
-                                    <h6 class="mil-mb-60">Help</h6>
+                                    <h6 class="mil-mb-60">Hỗ trợ</h6>
                                     <ul class="mil-footer-list">
-                                        <li class="mil-text-m mil-soft mil-mb-15">
-                                            999 Rue du Cherche-Midi, 7755500666 Paris, <br>France
+                                        <li class="mil-text-m mil-soft mil-mb-15" >
+                                            <a href="mailto:nguyenquangthoai04@gmail.com" class="modal__link">Email: nguyenquangthoai04@gmail.com</a> 
                                         </li>
                                         <li class="mil-text-m mil-soft mil-mb-15">
-                                            +001 (808) 555-0111
-                                        </li>
-                                        <li class="mil-text-m mil-soft mil-mb-15">
-                                            support@plax.network
-                                        </li>
+                                            <a href="tel:0967368980" class="modal__link">Liên hệ: 0967368980</a>                                        </li>
+
                                     </ul>
                                 </div>
                                 <div class="col-xl-4 mil-mb-80">
-                                    <h6 class="mil-mb-60">Newsletter</h6>
-                                    <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news from us</p>
+                                    <h6 class="mil-mb-60">Gửi Hỗ trợ</h6>
+                                    <p class="mil-text-xs mil-soft mil-mb-15">Hãy miêu tả những thứ bạn cần hỗ trợ </p>
                                     <form action="showfb" method="post" class="mil-subscripe-form-footer">
                                         <!-- Email Input -->
                                         <div class="mb-3">
@@ -669,7 +666,7 @@
                                                     <input type="checkbox" id="checkbox" checked>
                                                     <label for="checkbox"></label>
                                                 </div>
-                                                <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
+                                                <p class="mil-text-xs mil-soft">Đăng ký để nhận tin tức mới nhất</p>
 
                                             </div>
                                         </div>
@@ -681,7 +678,7 @@
                             <div class="mil-footer-bottom">
                                 <div class="row">
                                     <div class="col-xl-6">
-                                        <p class="mil-text-s mil-soft">© 2024 Plax Finance & Fintech Design</p>
+                                        <p class="mil-text-s mil-soft">© 2025 TIMI Finance & Fintech Design</p>
                                     </div>
                                     <div class="col-xl-6">
                                         <button type="button" class=" mil-btn mil-ssm footer--toggle--btn" onclick="toggleFooter()">
