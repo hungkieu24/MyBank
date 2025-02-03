@@ -31,6 +31,8 @@
         <link rel="stylesheet" href="css/plugins/magnific-popup.css" type="text/css" media="all">
         <!-- plax css -->
         <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
@@ -225,19 +227,69 @@
                                     </div>
                                 </div>  
 
-                                <div class="about-introduction__content" data-section="culture">
-                                    <h3 class="about-section__title">Bản sắc văn hóa</h3>
-                                    <div class="pagi"> 
-                                        <div class="container1" id="container-culture"></div>
-                                        <div class="pagination" id="pagination-culture"></div>
-                                    </div>
-                                </div>  
+                                <div class="about-introduction__content">
+                
+                                    <div class="container2">
+                                        <div >
+                                            <h3 class="about-section__title">Bản sắc văn hóa</h3>
+                                        </div>  
+                                        <div class="content2">
+                                            <div class="text2-section">
+                                                <div class="text2-item">
+                                                    <h3>
+                                                        Tin cậy
+                                                    </h3>
+                                                    <p>
+                                                        Giữ chữ Tín và lành nghề
+                                                    </p>
+                                                </div>
+                                                <div class="text2-item">
+                                                    <h3>
+                                                        Chuẩn mực
+                                                    </h3>
+                                                    <p>
+                                                        Tôn trọng nguyên tắc &amp; ứng xử chuẩn mực
+                                                    </p>
+                                                </div>
+                                                <div class="text2-item">
+                                                    <h3>
+                                                        Sẵn sàng đổi mới
+                                                    </h3>
+                                                    <p>
+                                                        Luôn hướng đến cái mới, hiện đại và văn minh
+                                                    </p>
+                                                </div>
+                                                <div class="text2-item">
+                                                    <h3>
+                                                        Bền vững
+                                                    </h3>
+                                                    <p>
+                                                        Vì lợi ích lâu dài
+                                                    </p>
+                                                </div>
+                                                <div class="text2-item">
+                                                    <h3>
+                                                        Nhân văn
+                                                    </h3>
+                                                    <p>
+                                                        Trọng đức, gần gũi và biết thông cảm, sẻ chia
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="image2-section">
+                                                <img alt="A modern skyscraper with a futuristic design and glowing lights" height="350" src="https://storage.googleapis.com/a1aa/image/YtBMsz32qwJtcKdSDITM2FgbsfS1U2NpIgSMVKPYqCo.jpg" width="700"/>
+                                            </div>
+                                        
+                                    </div> </div>
+                                     
                             </div>
 
 
                         </div>
                     </div>
                 </div>
+                    <br/><!-- comment -->
+                    <br/><!-- comment -->
                 <!-- about content end -->
 
                 <!-- facts -->

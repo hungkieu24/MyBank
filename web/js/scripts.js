@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const dataSections = {
     vision: [
-        { text: "1) Số 1 về quy mô lợi nhuận", img: "./img/about/number1.svg" },
+        { text: "Số 1 về quy mô lợi nhuận", img: "./img/about/number1.svg" },
         { text: "Dẫn đầu về chuyển đổi số trong ngành ngân hàng", img: "./img/about/number2.svg" },
         { text: "Ngân hàng hàng đầu về quản trị rủi ro", img: "./img/about/number3.svg" },
         { text: "Dẫn đầu về chất lượng nguồn nhân lực", img: "./img/about/number4.svg" },
@@ -132,20 +132,12 @@ const dataSections = {
         { text: "Phấn đấu phát hành cổ phiếu và niêm yết trên TTCK quốc tế", img: "./img/about/number6.svg" }
     ],
     "core-values": [
-        { text: "Trách nhiệm xã hội và sự bền vững", img: "./img/about/value1.svg" },
-        { text: "Sáng tạo và đổi mới", img: "./img/about/value2.svg" },
-        { text: "Trách nhiệm xã hội và sự bền vững", img: "./img/about/value1.svg" },
-        { text: "Sáng tạo và đổi mới", img: "./img/about/value2.svg" },
-        { text: "Trách nhiệm xã hội và sự bền vững", img: "./img/about/value1.svg" },
-        { text: "Chuyên nghiệp và tận tâm", img: "./img/about/value3.svg" }
-    ],
-    culture: [
-        { text: "Tinh thần đồng đội", img: "./img/about/culture1.svg" },
-        { text: "Tôn trọng khách hàng", img: "./img/about/culture2.svg" },
-        { text: "Tinh thần đồng đội", img: "./img/about/culture1.svg" },
-        { text: "Tôn trọng khách hàng", img: "./img/about/culture2.svg" },
-        { text: "Trung thực và minh bạch", img: "./img/about/culture3.svg" },
-        { text: "Trung thực và minh bạch", img: "./img/about/culture3.svg" }
+        { text: "TIMIBANK không ngừng sáng tạo để mang lại những giá trị thiết thực cho khách hàng", img: "./img/about/value1.svg" },
+        { text: "Nỗ lực mở rộng danh mục khách hàng, là nguồn tài sản quý giá và đáng tự hào của TIMIBANK", img: "./img/about/value2.svg" },
+        { text: "Lấy sự Chu đáo - Tận tâm với khách hàng làm tiêu chí phấn đấu.", img: "./img/about/value3.svg" },
+        { text: "Để xây dựng một ngân hàng quốc gia sánh tầm với khu vực và thế giới.", img: "./img/about/value4.svg" },
+        { text: "Luôn nỗ lực tìm kiếm sự Khác biệt trên nền tảng chất lượng và giá trị cao nhất.", img: "./img/about/value5.svg" },
+        { text: "Đề cao tính An toàn, bảo mật nhằm bảo vệ tối đa lợi ích của khách hàng, cổ đông", img: "./img/about/value6.svg" }
     ]
 };
 
