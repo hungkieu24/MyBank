@@ -2741,6 +2741,26 @@ footer
   color: rgb(13, 81, 82);
 }
 
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.navigation__prev, .navigation__next {
+  padding: 5px 10px;
+  border: none;
+  background-color: #008000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.navigation__prev.disabled, .navigation__next.disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+.navigation__icon {
+  color: #fff;
+}
+
 /*
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit this template
@@ -3061,6 +3081,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
   padding: 8px;
 }
 
+.team-list {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.team-item {
+  flex: 0 0 25%; /* Mỗi thành viên chiếm 25% chiều rộng */
+}
+
+.team-list--hidden {
+  transform: translateX(-100%);
+}
+
 .body2 {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -3249,6 +3283,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
   background: linear-gradient(to right, #e0f7fa, #e0f2f1);
   box-shadow: 0px 20px 60px 10px var(--modal-shadow);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .modal__info {
   padding: 30px 0;

@@ -21,6 +21,13 @@
         "email": "isabella@example.com"
     },
     {
+        "image": "img/inner-pages/team/1.png",
+        "name": "Isabella Haugen 4444",
+        "group": "SE1887 - GROUP 2",
+        "phone": "18002399",
+        "email": "isabella@example.com"
+    },
+    {
         "image": "img/inner-pages/team/2.png",
         "name": "Nguyễn Quang Thoại",
         "group": "SE1887 - GROUP 2",

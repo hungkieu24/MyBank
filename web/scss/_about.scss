@@ -394,77 +394,88 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 
         }
     }
+}
 
+.team-list {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-item {
+    flex: 0 0 25%; /* Mỗi thành viên chiếm 25% chiều rộng */
+}
+
+.team-list--hidden {
+    transform: translateX(-100%);
+}
+
+
+.body2 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 
 }
- .body2 {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-           
-        }
-        .container2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            padding: 20px;
-        }
-        
-        .content2 {
-            display: flex;
-            width: 100%;
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .text2-section {
-            flex: 1;
-            padding: 10px;
-        }
-        .text2-item {
-            background-color: #f9f9f9;
-            padding: 10px;
-            margin-bottom: 17px;
-            border-radius: 8px;
-        }
-        .text2-item:last-child {
-            margin-bottom: 0;
-        }
-        .text2-item h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-        }
-        .text2-item p {
-            font-size: 1rem;
-            margin: 0;
-        }
-        .image2-section {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #e0e0e0;
-        }
-        .image2-section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 0 8px 8px 0;
-        }
-        @media (max-width: 768px) {
-            .content2 {
-                flex-direction: column;
-            }
-            .image2-section {
-                border-radius: 0 0 8px 8px;
-            }
-        }
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
 
-
-
+.content2 {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.text2-section {
+    flex: 1;
+    padding: 10px;
+}
+.text2-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 17px;
+    border-radius: 8px;
+}
+.text2-item:last-child {
+    margin-bottom: 0;
+}
+.text2-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+.text2-item p {
+    font-size: 1rem;
+    margin: 0;
+}
+.image2-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+}
+.image2-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0 8px 8px 0;
+}
+@media (max-width: 768px) {
+    .content2 {
+        flex-direction: column;
+    }
+    .image2-section {
+        border-radius: 0 0 8px 8px;
+    }
+}
