@@ -396,19 +396,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
     }
 }
 
-.team-list {
+#team-list-wrapper {
+    width: 100%; /* Chiều rộng cố định hiển thị 4 người */
+    overflow: hidden; /* Ẩn phần bị tràn */
+    position: relative;
+}
+
+#team-list {
+    display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out; /* Hiệu ứng trượt */
 }
 
 .team-item {
-    flex: 0 0 25%; /* Mỗi thành viên chiếm 25% chiều rộng */
+    flex: 0 0 25%; /* Mỗi phần tử chiếm 25% (4 phần tử trên hàng) */
+    max-width: 25%;
+    transition: transform 0.3s ease-in-out;
 }
 
-.team-list--hidden {
-    transform: translateX(-100%);
-}
+/* Vô hiệu hóa nút 
+.navigation__prev.disabled,
+.navigation__next.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}*/
+
 
 
 .body2 {

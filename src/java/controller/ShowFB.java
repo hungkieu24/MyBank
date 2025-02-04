@@ -65,7 +65,7 @@ public class ShowFB extends HttpServlet {
 
         session.setAttribute("list", list);
 
-        request.getRequestDispatcher("about.jsp").forward(request, response);
+        request.getRequestDispatcher("about").forward(request, response);
     }
 
     /**

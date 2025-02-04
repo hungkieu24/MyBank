@@ -66,7 +66,7 @@ public class FindFeedback extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        request.getRequestDispatcher("about").forward(request, response);
     }
 
     /**
@@ -110,7 +110,7 @@ public class FindFeedback extends HttpServlet {
             }
 
             // Chuyển tiếp request tới JSP
-            request.getRequestDispatcher("about.jsp").forward(request, response);
+            request.getRequestDispatcher("about").forward(request, response);
 
         } catch (Exception e) {
 //            e.printStackTrace();

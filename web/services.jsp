@@ -78,7 +78,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="about.jsp">About</a>
+                                <a href="about">About</a>
                             </li>
                             <li class="mil-active">
                                 <a href="services.jsp">Services</a>
@@ -146,17 +146,17 @@
                                 <div class="about-introduction__content about-introduction__content--current">
                                     <p class="about-introduction__desc">
                                         Gửi tiết kiệm ngân hàng là một hình thức đầu tư an toàn, trong đó khách hàng gửi một khoản tiền vào ngân hàng trong một khoảng thời gian nhất định để nhận lãi suất. Đây là một trong những cách phổ biến nhất để bảo vệ và gia tăng giá trị tài sản một cách ổn định, đặc biệt là đối với những người không muốn chịu rủi ro cao từ các kênh đầu tư khác như chứng khoán hay bất động sản.                                        </p>
-                                    <ul class="about-introduction__more">
+                                    <ul class="about-introduction__more send-money__more">
                                         <li class="about-introduction__more-item">
-                                          An toàn cao: Tiền gửi được bảo hiểm theo quy định của Ngân hàng Nhà nước.    </li>
+                                            An toàn cao: Tiền gửi được bảo hiểm theo quy định của Ngân hàng Nhà nước.    </li>
                                         <li class="about-introduction__more-item">
-                                           Lãi suất ổn định: Giúp bảo toàn và gia tăng giá trị tài sản theo thời gian.  </li>
-                                         <li class="about-introduction__more-item">
+                                            Lãi suất ổn định: Giúp bảo toàn và gia tăng giá trị tài sản theo thời gian.  </li>
+                                        <li class="about-introduction__more-item">
                                             Tính thanh khoản: Dễ dàng rút tiền khi cần thiết, đặc biệt là với tiết kiệm không kỳ hạn. </li>
-                                         <li class="about-introduction__more-item">
+                                        <li class="about-introduction__more-item">
                                             Lựa chọn linh hoạt: Có nhiều kỳ hạn và hình thức gửi phù hợp với từng nhu cầu. </li>
                                     </ul>
-                                    <button type="button" class="about-history__btn-more mil-btn mil-ssm mil-empty history--toggle--btn" onclick="toggleHistory()">
+                                    <button type="button" class="about-history__btn-more mil-btn mil-ssm mil-empty send-money__toggle--btn">
                                         <span class="text-collapsed" style="display: none">Thu gọn</span>
                                         <span class="text-expand" >Xem thêm</span>
 
@@ -187,7 +187,7 @@
                                 <div class="about-introduction__content about-introduction__content--current">
                                     <p class="about-introduction__desc">
                                         Vay ngân hàng là dịch vụ tài chính mà ngân hàng cung cấp cho cá nhân hoặc doanh nghiệp một khoản tiền để sử dụng cho các mục đích khác nhau, với cam kết hoàn trả trong một khoảng thời gian nhất định cùng với lãi suất. Đây là một phương thức giúp khách hàng đáp ứng nhu cầu tài chính như mua nhà, mua xe, kinh doanh hoặc tiêu dùng cá nhân.</p>
-                                    <ul class="about-introduction__more">
+                                    <ul class="about-introduction__more borrow-money__more">
                                         <li class="about-introduction__more-item">
                                             Hỗ trợ tài chính linh hoạt: Giúp cá nhân và doanh nghiệp tiếp cận vốn nhanh chóng.</li>
                                         <li class="about-introduction__more-item">
@@ -197,7 +197,7 @@
                                         <li class="about-introduction__more-item">
                                             Lãi suất cạnh tranh: Thấp hơn so với các hình thức vay bên ngoài như tín dụng đen.</li>
                                     </ul>
-                                    <button type="button" class="about-history__btn-more mil-btn mil-ssm mil-empty history--toggle--btn" onclick="toggleHistory()">
+                                    <button type="button" class="about-history__btn-more mil-btn mil-ssm mil-empty borrow-money__toggle--btn">
                                         <span class="text-collapsed" style="display: none">Thu gọn</span>
                                         <span class="text-expand" >Xem thêm</span>
 
@@ -262,155 +262,155 @@
                 </div>
                 <!-- call to action end -->
 
-               <!-- quote -->
-                    <div class="mil-quote mil-p-160-130">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-xl-10">
-                                    <h2 class="mil-mb-30">"Tại TIMIBANK, tính minh bạch không chỉ là lời hứa; Đó là nền tảng cho mối quan hệ của chúng tôi với bạn. Chúng tôi tin rằng niềm tin được xây dựng bằng chính sách rõ ràng và hành động nhất quán."</h2>
-                                    <p class="mil-text-m mil-soft mil-mb-60">- TIMI Team</p>
-                                    <div class="row">
-                                        <div class="col-xl-6">
-                                            <ul class="mil-list-2 mil-type-2 mil-mb-30">
-                                                <li>
-                                                    <div class="mil-up">
-                                                        <h5 class="mil-mb-15">Chính sách bảo mật</h5>
-                                                        <p class="mil-text-m mil-soft">Quyền riêng tư của bạn là ưu tiên hàng đầu của chúng tôi. Chúng tôi không bao giờ chia sẻ thông tin của bạn với bên thứ ba mà không có sự đồng ý rõ ràng của bạn.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <ul class="mil-list-2 mil-type-2 mil-mb-30">
-                                                <li>
-                                                    <div class="mil-up">
-                                                        <h5 class="mil-mb-15">Bảo vệ dữ liệu</h5>
-                                                        <p class="mil-text-m mil-soft">Chúng tôi cam kết bảo vệ dữ liệu cá nhân và tài chính của bạn bằng các biện pháp bảo mật cao nhất</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- quote end -->
-
-                    <!-- call to action -->
-                    <div class="mil-cta mil-up">
-                        <div class="container">
-                            <div class="mil-out-frame mil-p-160-160" style="background-image: url(img/home-3/5.png)">
-                                <div class="row justify-content-between align-items-center">
-                                    <div class="col-xl-7 mil-sm-text-center">
-                                        <h2 class="mil-light mil-mb-30 mil-up">Khám phá sự tự do của <br>Kiểm soát tài chính toàn diện</h2>
-                                        <p class="mil-text-m mil-mb-60 mil-dark-soft mil-up">Hãy tham gia TIMIBANK và thực hiện bước đầu tiên hướng đến một cuộc sống  <br> tài chính cân bằng và ít rắc rối hơn.</p>
-                                        <div class="mil-buttons-frame mil-up">
-                                            <a href="https://apps.apple.com/vn/app/vcb-digibank/id561433133?l=vi" class="mil-btn mil-md">App Store</a>
-                                            <a href="https://play.google.com/store/apps/details?id=com.VCB" class="mil-btn mil-border mil-md">Google Play</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br/>
-
-                <!-- footer -->
-                 <footer class="mil-p-160-0 footer" id="footer">
-                        <div class="container">
-                            <div class="row mil-footer-top">
-                                <div class="col-xl-2">
-                                    <a href="#." class=" mil-footer-logo mil-mb-60">
-                                        <img src="img/logo1.png" alt="Plax" width="150">
-                                    </a>
-                                </div>
-                                <div class="col-xl-3 mil-mb-60">
-                                    <h6 class="mil-mb-60">Liên kết hữu ích</h6>
-                                    <ul class="mil-footer-list">
-                                        <li class="mil-text-m mil-soft mil-mb-15">
-                                            <a href="index.jsp">Home</a>
-                                        </li>
-                                        <li class="mil-text-m mil-soft mil-mb-15">
-                                            <a href="about.jsp">About Us</a>
-                                        </li>
-                                        <li class="mil-text-m mil-soft mil-mb-15">
-                                            <a href="contact.jsp">Contact Us</a>
-                                        </li>
-                                        <li class="mil-text-m mil-soft mil-mb-15">
-                                            <a href="faq.jsp">FAQs</a>
-                                        </li>
-                                        <li class="mil-text-m mil-soft mil-mb-15">
-                                            <a href="price.jsp">Pricing</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-xl-3 mil-mb-60">
-                                    <h6 class="mil-mb-60">Hỗ trợ</h6>
-                                    <ul class="mil-footer-list">
-                                        <li class="mil-text-m mil-soft mil-mb-15" >
-                                            <a href="mailto:nguyenquangthoai04@gmail.com" class="modal__link">Email: nguyenquangthoai04@gmail.com</a> 
-                                        </li>
-                                        <li class="mil-text-m mil-soft mil-mb-15">
-                                            <a href="tel:0967368980" class="modal__link">Liên hệ: 0967368980</a>                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class="col-xl-4 mil-mb-80">
-                                    <h6 class="mil-mb-60">Gửi Hỗ trợ</h6>
-                                    <p class="mil-text-xs mil-soft mil-mb-15">Hãy miêu tả những thứ bạn cần hỗ trợ </p>
-                                    <form action="showfb" method="post" class="mil-subscripe-form-footer">
-                                        <!-- Email Input -->
-                                        <div class="mb-3">
-                                            <input class="form-control form-control__input mil-input" type="email" placeholder="Email" name="email" required>
-                                        </div>
-                                        <!-- Tiêu đề Input -->
-                                        <div class="mb-3">
-                                            <input  class="form-control form-control__input mil-input" type="text" placeholder="Tiêu đề" name="tieude" required>
-                                        </div>
-                                        <!-- Nội dung Input -->
-                                        <div class="mb-3">
-                                            <textarea class="form-control form-control__textarea" rows="3" placeholder="Nội dung" name="noidung" required></textarea>                                    
-                                        </div>
-
-                                        <div class="form-control__row--reverse">
-                                            <!-- Submit Button -->
-                                            <button type="submit" class="form-control__btn form-control__btn--green mil-btn mil-ssm">
-                                                <i class="far fa-envelope-open form-control__icon"></i> Gửi
-                                            </button>
-                                            <!-- Checkbox -->
-                                            <div class="mil-checkbox-frame">
-                                                <div class="mil-checkbox">
-                                                    <input type="checkbox" id="checkbox" checked>
-                                                    <label for="checkbox"></label>
-                                                </div>
-                                                <p class="mil-text-xs mil-soft">Đăng ký để nhận tin tức mới nhất</p>
-
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                </div>
-
-                            </div>
-                            <div class="mil-footer-bottom">
+                <!-- quote -->
+                <div class="mil-quote mil-p-160-130">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-10">
+                                <h2 class="mil-mb-30">"Tại TIMIBANK, tính minh bạch không chỉ là lời hứa; Đó là nền tảng cho mối quan hệ của chúng tôi với bạn. Chúng tôi tin rằng niềm tin được xây dựng bằng chính sách rõ ràng và hành động nhất quán."</h2>
+                                <p class="mil-text-m mil-soft mil-mb-60">- TIMI Team</p>
                                 <div class="row">
                                     <div class="col-xl-6">
-                                        <p class="mil-text-s mil-soft">© 2025 TIMI Finance & Fintech Design</p>
+                                        <ul class="mil-list-2 mil-type-2 mil-mb-30">
+                                            <li>
+                                                <div class="mil-up">
+                                                    <h5 class="mil-mb-15">Chính sách bảo mật</h5>
+                                                    <p class="mil-text-m mil-soft">Quyền riêng tư của bạn là ưu tiên hàng đầu của chúng tôi. Chúng tôi không bao giờ chia sẻ thông tin của bạn với bên thứ ba mà không có sự đồng ý rõ ràng của bạn.</p>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <div class="col-xl-6">
-                                        <button type="button" class=" mil-btn mil-ssm footer--toggle--btn" onclick="toggleFooter()">
-                                            <span class="text-expand">Thu gọn chân trang</span>
-                                            <span class="text-collapsed" style="display: none">Mở rộng chân trang</span>
-                                            <span class="icon-arrow-right">
-
-                                            </span>
-                                        </button>
+                                        <ul class="mil-list-2 mil-type-2 mil-mb-30">
+                                            <li>
+                                                <div class="mil-up">
+                                                    <h5 class="mil-mb-15">Bảo vệ dữ liệu</h5>
+                                                    <p class="mil-text-m mil-soft">Chúng tôi cam kết bảo vệ dữ liệu cá nhân và tài chính của bạn bằng các biện pháp bảo mật cao nhất</p>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </footer>
+                    </div>
+                </div>
+                <!-- quote end -->
+
+                <!-- call to action -->
+                <div class="mil-cta mil-up">
+                    <div class="container">
+                        <div class="mil-out-frame mil-p-160-160" style="background-image: url(img/home-3/5.png)">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-xl-7 mil-sm-text-center">
+                                    <h2 class="mil-light mil-mb-30 mil-up">Khám phá sự tự do của <br>Kiểm soát tài chính toàn diện</h2>
+                                    <p class="mil-text-m mil-mb-60 mil-dark-soft mil-up">Hãy tham gia TIMIBANK và thực hiện bước đầu tiên hướng đến một cuộc sống  <br> tài chính cân bằng và ít rắc rối hơn.</p>
+                                    <div class="mil-buttons-frame mil-up">
+                                        <a href="https://apps.apple.com/vn/app/vcb-digibank/id561433133?l=vi" class="mil-btn mil-md">App Store</a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.VCB" class="mil-btn mil-border mil-md">Google Play</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+
+                <!-- footer -->
+                <footer class="mil-p-160-0 footer" id="footer">
+                    <div class="container">
+                        <div class="row mil-footer-top">
+                            <div class="col-xl-2">
+                                <a href="#." class=" mil-footer-logo mil-mb-60">
+                                    <img src="img/logo1.png" alt="Plax" width="150">
+                                </a>
+                            </div>
+                            <div class="col-xl-3 mil-mb-60">
+                                <h6 class="mil-mb-60">Liên kết hữu ích</h6>
+                                <ul class="mil-footer-list">
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="index.jsp">Home</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="about.jsp">About Us</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="contact.jsp">Contact Us</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="faq.jsp">FAQs</a>
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="price.jsp">Pricing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-3 mil-mb-60">
+                                <h6 class="mil-mb-60">Hỗ trợ</h6>
+                                <ul class="mil-footer-list">
+                                    <li class="mil-text-m mil-soft mil-mb-15" >
+                                        <a href="mailto:nguyenquangthoai04@gmail.com" class="modal__link">Email: nguyenquangthoai04@gmail.com</a> 
+                                    </li>
+                                    <li class="mil-text-m mil-soft mil-mb-15">
+                                        <a href="tel:0967368980" class="modal__link">Liên hệ: 0967368980</a>                                        </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-xl-4 mil-mb-80">
+                                <h6 class="mil-mb-60">Gửi Hỗ trợ</h6>
+                                <p class="mil-text-xs mil-soft mil-mb-15">Hãy miêu tả những thứ bạn cần hỗ trợ </p>
+                                <form action="showfb" method="post" class="mil-subscripe-form-footer">
+                                    <!-- Email Input -->
+                                    <div class="mb-3">
+                                        <input class="form-control form-control__input mil-input" type="email" placeholder="Email" name="email" required>
+                                    </div>
+                                    <!-- Tiêu đề Input -->
+                                    <div class="mb-3">
+                                        <input  class="form-control form-control__input mil-input" type="text" placeholder="Tiêu đề" name="tieude" required>
+                                    </div>
+                                    <!-- Nội dung Input -->
+                                    <div class="mb-3">
+                                        <textarea class="form-control form-control__textarea" rows="3" placeholder="Nội dung" name="noidung" required></textarea>                                    
+                                    </div>
+
+                                    <div class="form-control__row--reverse">
+                                        <!-- Submit Button -->
+                                        <button type="submit" class="form-control__btn form-control__btn--green mil-btn mil-ssm">
+                                            <i class="far fa-envelope-open form-control__icon"></i> Gửi
+                                        </button>
+                                        <!-- Checkbox -->
+                                        <div class="mil-checkbox-frame">
+                                            <div class="mil-checkbox">
+                                                <input type="checkbox" id="checkbox" checked>
+                                                <label for="checkbox"></label>
+                                            </div>
+                                            <p class="mil-text-xs mil-soft">Đăng ký để nhận tin tức mới nhất</p>
+
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="mil-footer-bottom">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <p class="mil-text-s mil-soft">© 2025 TIMI Finance & Fintech Design</p>
+                                </div>
+                                <div class="col-xl-6">
+                                    <button type="button" class=" mil-btn mil-ssm footer--toggle--btn" onclick="toggleFooter()">
+                                        <span class="text-expand">Thu gọn chân trang</span>
+                                        <span class="text-collapsed" style="display: none">Mở rộng chân trang</span>
+                                        <span class="icon-arrow-right">
+
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
 
                 <!-- footer end -->
 

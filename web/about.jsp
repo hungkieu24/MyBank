@@ -82,7 +82,7 @@
                                 </ul>
                             </li>
                             <li class="mil-active">
-                                <a href="about.jsp">About</a>
+                                <a href="about">About</a>
                             </li>
                             <li>
                                 <a href="services.jsp">Services</a>
@@ -193,7 +193,7 @@
                 <!-- banner end -->
 
                 <!-- about content -->
-                <div class="mil-features mil-p-0-80 about-section">
+                <div class="mil-features about-section">
                     <div class="container">
                         <div class="about-introduction js-tabs">
                             <ul class="about-introduction__list">
@@ -346,7 +346,7 @@
                                                     Là ngân hàng thương mại nhà nước đầu tiên được Chính phủ lựa chọn thực hiện thí điểm cổ phần hóa, TIMIBANK chính thức hoạt động với tư cách là một ngân hàng thương mại cổ phần vào ngày 02/06/2023 sau khi thực hiện thành công kế hoạch cổ phần hóa thông qua việc phát hành cổ phiếu lần đầu ra công chúng. Ngày 30/6/2023, cổ phiếu TIMIBANK (mã chứng khoán TM) chính thức được niêm yết tại Sở Giao dịch chứng khoán TP.HN.
                                                 </li>
                                             </ul>
-                                            <button type="button" class="about-history__btn-more mil-btn mil-ssm mil-empty history--toggle--btn" onclick="toggleHistory()">
+                                            <button type="button" class="about-history__btn-more mil-btn mil-ssm mil-empty history__btn-more">
                                                 <span class="text-collapsed" style="display: none">Thu gọn</span>
                                                 <span class="text-expand" >Xem thêm</span>
 
@@ -467,18 +467,20 @@
                                 </c:if>
 
                                 <!-- Danh sách thành viên -->
-                                <div id="team-list" class="row team-list">
-                                    <c:forEach items="${teamMembers}" var="member" >
-                                        <div class="col-xl-3 col-md-6 col-sm-6 team-item">
-                                            <div class="mil-team-card mil-mb-30 mil-up team-item__wrap">
-                                                <div class="mil-portrait mil-mb-30 team-item__img-wrap">
-                                                    <img src="${empty member.getImage() ? 'img/inner-pages/team/1.png' : member.image}" alt="portrait" class="team-item__img">
+                                <div id="team-list-wrapper">
+                                    <div id="team-list" class="row team-list">
+                                        <c:forEach items="${teamMembers}" var="member" >
+                                            <div class="col-xl-3 col-md-6 col-sm-6 team-item">
+                                                <div class="mil-team-card mil-mb-30 mil-up team-item__wrap">
+                                                    <div class="mil-portrait mil-mb-30 team-item__img-wrap">
+                                                        <img src="${empty member.getImage() ? 'img/inner-pages/team/1.png' : member.image}" alt="portrait" class="team-item__img">
+                                                    </div>
+                                                    <h5 class="mil-light mil-mb-15 team-item__name">${member.getFullName()}</h5>
+                                                    <button class="team-item__btn mil-btn mil-ssm js-toggle" toggle-target="#modal-${member.getUserID()}">Xem thêm</button>
                                                 </div>
-                                                <h5 class="mil-light mil-mb-15 team-item__name">${member.getFullName()}</h5>
-                                                <button class="team-item__btn mil-btn mil-ssm js-toggle" toggle-target="#modal-${member.getUserID()}">Xem thêm</button>
                                             </div>
-                                        </div>
-                                    </c:forEach>
+                                        </c:forEach>
+                                    </div>
                                 </div>
                                 <div class="navigation">
                                     <button disabled="" class="disabled navigation__prev"><i class="fa-solid fa-arrow-left-long navigation__icon"></i></button>

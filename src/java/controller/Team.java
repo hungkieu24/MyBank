@@ -19,7 +19,7 @@ import model.User;
  *
  * @author hungk
  */
-@WebServlet(name = "Team", urlPatterns = {"/team"})
+@WebServlet(name = "Team", urlPatterns = {"/about"})
 public class Team extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -52,7 +52,7 @@ public class Team extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        request.getRequestDispatcher("about.jsp").forward(request, response);
     }
 
     /**

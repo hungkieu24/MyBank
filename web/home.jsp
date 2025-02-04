@@ -77,10 +77,10 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="about.jsp">About</a>
+                                <a href="about">About</a>
                             </li>
                             <li>
-                                <a href="services.jsp">Services</a>
+                                <a href="services">Services</a>
                             </li>
                             <li class="mil-has-children">
                                 <a href="#.">Blog</a>

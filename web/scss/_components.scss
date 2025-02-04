@@ -2179,7 +2179,7 @@ footer
         }
 
         .icon-arrow-right.rotated {
-            
+
             transform: rotate(180deg); /* Xoay 180 độ */
         }
 
@@ -2302,24 +2302,24 @@ footer
 }
 
 .navigation {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 
-        &__prev, &__next {
-            padding: 5px 10px;
-            border: none;
-            background-color: #008000;
-            border-radius: 5px;
-            cursor: pointer;
+    &__prev, &__next {
+        padding: 5px 10px;
+        border: none;
+        background-color: #008000;
+        border-radius: 5px;
+        cursor: pointer;
 
-            &.disabled {
-                background-color: #d6d6d6;
-                cursor: not-allowed;
-            }
-        }
-
-        &__icon {
-            color: #fff;
+        &.disabled {
+            background-color: #d6d6d6;
+            cursor: not-allowed;
         }
     }
+
+    &__icon {
+        color: #fff;
+    }
+}
