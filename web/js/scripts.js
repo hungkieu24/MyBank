@@ -153,6 +153,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const tabsSelector = "faq-question__tab";
+    const contentsSelector = "faq-question__content";
+
+    const tabActive = `${tabsSelector}--current`;
+    const contentActive = `${contentsSelector}--current`;
+
+    // Chọn tất cả các container có class .js-tabs
+    const tabContainers = document.querySelectorAll(".js-tabs");
+    tabContainers.forEach((tabContainer) => {
+        const tabs = tabContainer.querySelectorAll(`.${tabsSelector}`);
+        const contents = tabContainer.querySelectorAll(`.${contentsSelector}`);
+        tabs.forEach((tab, index) => {
+            tab.addEventListener("click", () => {
+                // Xóa class active khỏi tab và nội dung hiện tại
+                tabContainer.querySelector(`.${tabActive}`)?.classList.remove(tabActive);
+                tabContainer.querySelector(`.${contentActive}`)?.classList.remove(contentActive);
+
+                // Thêm class active vào tab và nội dung được chọn
+                tab.classList.add(tabActive);
+                contents[index].classList.add(contentActive);
+            });
+        });
+    });
+});
+
 const dataSections = {
     vision: [
         { text: "Số 1 về quy mô lợi nhuận", img: "./img/about/number1.svg" },
