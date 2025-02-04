@@ -149,10 +149,10 @@
                                             <ul class="sub-menu-item">
                                                 <li>
 
-                                                    <a class="sub-menu-link" href="calSaving.jsp">Thẻ TIMI - Chi tiêu giảm giá hàng đầu Việt Nam</a>
+                                                    <a class="sub-menu-link" href="prefer-card.jsp">Thẻ TIMI - Chi tiêu giảm giá hàng đầu Việt Nam</a>
                                                 </li>
                                                 <li>
-                                                    <a class="sub-menu-link" href="calLoan.jsp">Tất cả ưu đãi</a>
+                                                    <a class="sub-menu-link" href="prefer.jsp">Tất cả ưu đãi</a>
                                                 </li>
                                             </ul>
                                         </li>
