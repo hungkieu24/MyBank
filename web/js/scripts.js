@@ -308,109 +308,159 @@ function initJsToggle() {
 //    }
 //});
 
-document.addEventListener("DOMContentLoaded", async function () {
-    try {
-        const response = await fetch("data/team.json");
-        const teamMembers = await response.json();
+//document.addEventListener("DOMContentLoaded", async function () {
+//    try {
+//        const response = await fetch("data/team.json");
+//        const teamMembers = await response.json();
+//
+//        const itemsPerPage = 4; // Số lượng thành viên hiển thị mỗi lần
+//        let currentIndex = 0;
+//
+//        // Hàm hiển thị các thành viên
+//        function renderCards() {
+//            const teamList = document.getElementById("team-list");
+//            teamList.innerHTML = ''; // Xóa tất cả các phần tử hiện tại
+//
+//            // Lấy danh sách các thành viên cần hiển thị trong phạm vi
+//            const visibleMembers = teamMembers.slice(currentIndex, currentIndex + itemsPerPage);
+//
+//            // Hiển thị các thành viên trong phạm vi
+//            const teamHTML = visibleMembers.map((member, index) => `
+//                <div class="col-xl-3 col-md-6 col-sm-6 team-item">
+//                    <div class="mil-team-card mil-mb-30 mil-up team-item__wrap">
+//                        <div class="mil-portrait mil-mb-30 team-item__img-wrap">
+//                            <img src="${member.image}" alt="portrait" class="team-item__img">
+//                        </div>
+//                        <h5 class="mil-light mil-mb-15 team-item__name">${member.name}</h5>
+//                        <button class="team-item__btn mil-btn mil-ssm js-toggle" toggle-target="#modal-${index}">Xem thêm</button>
+//                    </div>
+//                </div>
+//            `).join("");
+//
+//            // Cập nhật danh sách thành viên
+//            teamList.innerHTML = teamHTML;
+//            initJsToggle();
+//        }
+//
+//        // Hàm hiển thị các modal
+//        function renderModals() {
+//            const modalHTML = teamMembers.map((member, index) => `
+//                <div id="modal-${index}" class="modal modal--large hide">
+//                    <div class="modal__content">
+//                        <button class="modal__close js-toggle" toggle-target="#modal-${index}">&times;</button>
+//                        <div class="row">
+//                            <div class="col-5">
+//                                <div class="modal__img-wrap">
+//                                    <img class="modal__img" src="${member.image}" alt="portrait">
+//                                </div>
+//                            </div>
+//                            <div class="col-7">
+//                                <div class="modal__info">
+//                                    <div class="modal__text">${member.name}</div>
+//                                    <div class="modal__text">${member.group}</div>
+//                                    <a href="tel:${member.phone}" class="modal__link">Liên hệ: ${member.phone}</a>
+//                                    <a href="mailto:${member.email}" class="modal__link">Email: ${member.email}</a>
+//                                </div>
+//                            </div>
+//                        </div>
+//                    </div>
+//                    <div class="modal__overlay js-toggle" toggle-target="#modal-${index}"></div>
+//                </div>
+//            `).join("");
+//
+//            document.getElementById("modal-container").innerHTML = modalHTML;
+//            initJsToggle(); // Khởi tạo lại sự kiện toggle cho các modal
+//        }
+//
+//        // Hàm hiển thị các nút điều hướng
+//        function renderPagination() {
+//            const prevButton = document.querySelector(".navigation__prev");
+//            const nextButton = document.querySelector(".navigation__next");
+//
+//            prevButton.disabled = currentIndex === 0;
+//            prevButton.classList.toggle("disabled", currentIndex === 0);
+//
+//            nextButton.disabled = currentIndex + itemsPerPage >= teamMembers.length;
+//            nextButton.classList.toggle("disabled", currentIndex + itemsPerPage >= teamMembers.length);
+//
+//            prevButton.addEventListener("click", () => {
+//                if (currentIndex > 0) {
+//                    currentIndex--;
+//                    renderCards();
+//                    renderModals();
+//                    renderPagination();
+//                }
+//            });
+//
+//            nextButton.addEventListener("click", () => {
+//                if (currentIndex + itemsPerPage < teamMembers.length) {
+//                    currentIndex++;
+//                    renderCards();
+//                    renderModals();
+//                    renderPagination();
+//                }
+//            });
+//        }
+//
+//        // Khởi tạo trang với dữ liệu ban đầu
+//        renderCards();
+//        renderModals();
+//        renderPagination();
+//
+//    } catch (error) {
+//        console.error("Lỗi khi tải dữ liệu:", error);
+//    }
+//});
 
-        const itemsPerPage = 4; // Số lượng thành viên hiển thị mỗi lần
-        let currentIndex = 0;
+let currentIndex = 0; // Chỉ số của trang hiện tại
+const itemsPerPageLimit = 4; // Số phần tử hiển thị mỗi lần
+const teamItems = document.querySelectorAll(".team-item"); // Lấy tất cả các team-item
+const prevButton = document.querySelector(".navigation__prev");
+const nextButton = document.querySelector(".navigation__next");
 
-        // Hàm hiển thị các thành viên
-        function renderCards() {
-            const teamList = document.getElementById("team-list");
-            teamList.innerHTML = ''; // Xóa tất cả các phần tử hiện tại
+// Hàm render các team-item dựa trên trang hiện tại
+function renderTeamItems() {
+    const start = currentIndex * itemsPerPageLimit;
+    const end = Math.min(start + itemsPerPageLimit, teamItems.length);
 
-            // Lấy danh sách các thành viên cần hiển thị trong phạm vi
-            const visibleMembers = teamMembers.slice(currentIndex, currentIndex + itemsPerPage);
+    // Ẩn tất cả các team-item
+    teamItems.forEach(item => {
+        item.style.display = "none";
+    });
 
-            // Hiển thị các thành viên trong phạm vi
-            const teamHTML = visibleMembers.map((member, index) => `
-                <div class="col-xl-3 col-md-6 col-sm-6 team-item">
-                    <div class="mil-team-card mil-mb-30 mil-up team-item__wrap">
-                        <div class="mil-portrait mil-mb-30 team-item__img-wrap">
-                            <img src="${member.image}" alt="portrait" class="team-item__img">
-                        </div>
-                        <h5 class="mil-light mil-mb-15 team-item__name">${member.name}</h5>
-                        <button class="team-item__btn mil-btn mil-ssm js-toggle" toggle-target="#modal-${index}">Xem thêm</button>
-                    </div>
-                </div>
-            `).join("");
+    // Hiển thị các team-item trong phạm vi phân trang
+    for (let i = start; i < end; i++) {
+        teamItems[i].style.display = "block";
+    }
 
-            // Cập nhật danh sách thành viên
-            teamList.innerHTML = teamHTML;
-            initJsToggle();
-        }
+    // Điều chỉnh trạng thái của nút Prev
+    prevButton.disabled = currentIndex === 0;
+    prevButton.classList.toggle("disabled", currentIndex === 0);
 
-        // Hàm hiển thị các modal
-        function renderModals() {
-            const modalHTML = teamMembers.map((member, index) => `
-                <div id="modal-${index}" class="modal modal--large hide">
-                    <div class="modal__content">
-                        <button class="modal__close js-toggle" toggle-target="#modal-${index}">&times;</button>
-                        <div class="row">
-                            <div class="col-5">
-                                <div class="modal__img-wrap">
-                                    <img class="modal__img" src="${member.image}" alt="portrait">
-                                </div>
-                            </div>
-                            <div class="col-7">
-                                <div class="modal__info">
-                                    <div class="modal__text">${member.name}</div>
-                                    <div class="modal__text">${member.group}</div>
-                                    <a href="tel:${member.phone}" class="modal__link">Liên hệ: ${member.phone}</a>
-                                    <a href="mailto:${member.email}" class="modal__link">Email: ${member.email}</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal__overlay js-toggle" toggle-target="#modal-${index}"></div>
-                </div>
-            `).join("");
+    // Điều chỉnh trạng thái của nút Next
+    nextButton.disabled = currentIndex + 1 >= Math.ceil(teamItems.length / itemsPerPageLimit);
+    nextButton.classList.toggle("disabled", currentIndex + 1 >= Math.ceil(teamItems.length / itemsPerPageLimit));
+}
 
-            document.getElementById("modal-container").innerHTML = modalHTML;
-            initJsToggle(); // Khởi tạo lại sự kiện toggle cho các modal
-        }
-
-        // Hàm hiển thị các nút điều hướng
-        function renderPagination() {
-            const prevButton = document.querySelector(".navigation__prev");
-            const nextButton = document.querySelector(".navigation__next");
-
-            prevButton.disabled = currentIndex === 0;
-            prevButton.classList.toggle("disabled", currentIndex === 0);
-
-            nextButton.disabled = currentIndex + itemsPerPage >= teamMembers.length;
-            nextButton.classList.toggle("disabled", currentIndex + itemsPerPage >= teamMembers.length);
-
-            prevButton.addEventListener("click", () => {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    renderCards();
-                    renderModals();
-                    renderPagination();
-                }
-            });
-
-            nextButton.addEventListener("click", () => {
-                if (currentIndex + itemsPerPage < teamMembers.length) {
-                    currentIndex++;
-                    renderCards();
-                    renderModals();
-                    renderPagination();
-                }
-            });
-        }
-
-        // Khởi tạo trang với dữ liệu ban đầu
-        renderCards();
-        renderModals();
-        renderPagination();
-
-    } catch (error) {
-        console.error("Lỗi khi tải dữ liệu:", error);
+// Lắng nghe sự kiện khi nhấn "Prev"
+prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        renderTeamItems(); // Gọi lại để render lại các team-item
     }
 });
+
+// Lắng nghe sự kiện khi nhấn "Next"
+nextButton.addEventListener("click", () => {
+    if (currentIndex + 1 < Math.ceil(teamItems.length / itemsPerPageLimit)) {
+        currentIndex++;
+        renderTeamItems(); // Gọi lại để render lại các team-item
+    }
+});
+
+// Gọi hàm render lần đầu tiên khi trang được tải
+renderTeamItems();
+
 
 
 
@@ -424,7 +474,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 
 // Khi nhấn vào liên kết, cuộn tới form tìm feedback
 document.getElementById('feedback-link').addEventListener('click', function (event) {

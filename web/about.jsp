@@ -7,6 +7,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="java.util.List, model.User" %>
 
 <!DOCTYPE html>
 <html>
@@ -459,9 +460,25 @@
                                         <h2 class="mil-light mil-up">Gặp gỡ những người tạo nên TIMIBANK</h2>
                                     </div>
                                 </div>
+
+                                <!-- Kiểm tra xem teamMembers có rỗng hay không -->
+                                <c:if test="${empty teamMembers}">
+                                    <p>No team members found.</p>
+                                </c:if>
+
                                 <!-- Danh sách thành viên -->
                                 <div id="team-list" class="row team-list">
-                                    
+                                    <c:forEach items="${teamMembers}" var="member" >
+                                        <div class="col-xl-3 col-md-6 col-sm-6 team-item">
+                                            <div class="mil-team-card mil-mb-30 mil-up team-item__wrap">
+                                                <div class="mil-portrait mil-mb-30 team-item__img-wrap">
+                                                    <img src="${empty member.getImage() ? 'img/inner-pages/team/1.png' : member.image}" alt="portrait" class="team-item__img">
+                                                </div>
+                                                <h5 class="mil-light mil-mb-15 team-item__name">${member.getFullName()}</h5>
+                                                <button class="team-item__btn mil-btn mil-ssm js-toggle" toggle-target="#modal-${member.getUserID()}">Xem thêm</button>
+                                            </div>
+                                        </div>
+                                    </c:forEach>
                                 </div>
                                 <div class="navigation">
                                     <button disabled="" class="disabled navigation__prev"><i class="fa-solid fa-arrow-left-long navigation__icon"></i></button>
@@ -474,7 +491,30 @@
 
                     <!-- Modal team -->
                     <!-- Modal: show info của thành viên -->
-                    <div id="modal-container"></div>
+                    <div id="modal-container">
+                        <c:forEach items="${teamMembers}" var="member" >
+                            <div id="modal-${member.getUserID()}" class="modal modal--large hide">
+                                <div class="modal__content">
+                                    <button class="modal__close js-toggle" toggle-target="#modal-${member.getUserID()}">&times;</button>
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="modal__img-wrap">
+                                                <img src="${empty member.getImage() ? 'img/inner-pages/team/1.png' : member.image}" alt="portrait" class="team-item__img">
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <div class="modal__info">
+                                                <div class="modal__text">${member.getFullName()}</div>
+                                                <a href="tel:${member.phone}" class="modal__link">Liên hệ: ${member.getPhone()}</a>
+                                                <a href="mailto:${member.email}" class="modal__link">Email: ${member.getEmail()}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__overlay js-toggle" toggle-target="#modal-${member.getUserID()}"></div>
+                            </div>
+                        </c:forEach>
+                    </div>
 
                     <!-- end Modal team -->
 
