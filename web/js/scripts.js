@@ -366,3 +366,18 @@ document.getElementById('feedback-link').addEventListener('click', function (eve
     }, 100); // Thời gian trễ để cuộn trang trước khi chuyển hướng
 });
 
+//trang prefer
+
+        function showInfo() {
+            var selectBox = document.getElementById("serviceSelect");
+            var selectedValue = selectBox.value;
+            var resultBox = document.getElementById("resultBox");
+
+            if (selectedValue) {
+                resultBox.innerHTML = "<strong>Bạn đã chọn:</strong> " + selectedValue;
+                resultBox.style.display = "block";
+            } else {
+                resultBox.style.display = "none";
+            }
+        }
+   
