@@ -111,7 +111,7 @@ public class FindFeedback extends HttpServlet {
 
             // Chuyển tiếp request tới JSP
             request.getRequestDispatcher("about").forward(request, response);
-
+           
         } catch (Exception e) {
 //            e.printStackTrace();
 //            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid request parameters.");

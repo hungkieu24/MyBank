@@ -298,16 +298,16 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-4 mil-sm-text-center mil-mb-30 mil-up">
-                                    <p class="h1 mil-display mil-mb-15"><span class="mil-accent mil-counter" data-number="7">7</span><span class="mil-pale">M</span></p>
-                                    <h5>Registered Users</h5>
+                                    <p class="h1 mil-display mil-mb-15"><span class="mil-accent mil-counter" data-number="${teamCustomer}" >${teamCustomer}</span><span class="mil-pale">+</span></p>
+                                    <h5>Số Khách Hàng</h5>
                                 </div>
                                 <div class="col-xl-4 mil-sm-text-center mil-mb-30 mil-up">
-                                    <p class="h1 mil-display mil-mb-15"><span class="mil-accent mil-counter" data-number="1.6">1.6</span><span class="mil-pale">M</span></p>
-                                    <h5>Regular Users</h5>
+                                    <p class="h1 mil-display mil-mb-15"><span class="mil-accent mil-counter" data-number="${teamSeller}">${teamSeller}</span><span class="mil-pale">+</span></p>
+                                    <h5>Số Nhân Viên </h5>
                                 </div>
                                 <div class="col-xl-4 mil-sm-text-center mil-mb-30 mil-up">
-                                    <p class="h1 mil-display mil-mb-15"><span class="mil-accent mil-counter" data-number="170">170</span><span class="mil-pale">+</span></p>
-                                    <h5>Countries with our coverage</h5>
+                                    <p class="h1 mil-display mil-mb-15"><span class="mil-accent mil-counter" data-number="${teamManage}">${teamManage}</span><span class="mil-pale">+</span></p>
+                                    <h5>Số Quản Lý</h5>
                                 </div>
                             </div>
                         </div>

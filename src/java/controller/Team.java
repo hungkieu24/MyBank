@@ -44,7 +44,12 @@ public class Team extends HttpServlet {
             throws ServletException, IOException {
         UserDAO userDAO = new UserDAO();
         List<User> teamMembers = userDAO.selectAllUsersByRole(2); // Lấy user có roleID = 2
-
+   int teamSeller = userDAO.countUsersByRole(2); // seller
+        int teamManage = userDAO.countUsersByRole(3);//mânger
+        int teamCustomer = userDAO.countUsersByRole(5);// customer
+        request.setAttribute("teamSeller", teamSeller);
+        request.setAttribute("teamManage", teamManage);
+        request.setAttribute("teamCustomer", teamCustomer);
         request.setAttribute("teamMembers", teamMembers);
         request.getRequestDispatcher("about.jsp").forward(request, response); // Đẩy sang JSP
     }
@@ -52,7 +57,16 @@ public class Team extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("about.jsp").forward(request, response);
+         UserDAO userDAO = new UserDAO();
+        List<User> teamMembers = userDAO.selectAllUsersByRole(2); // Lấy user có roleID = 2
+   int teamSeller = userDAO.countUsersByRole(2); // seller
+        int teamManage = userDAO.countUsersByRole(3);//mânger
+        int teamCustomer = userDAO.countUsersByRole(5);// customer
+        request.setAttribute("teamSeller", teamSeller);
+        request.setAttribute("teamManage", teamManage);
+        request.setAttribute("teamCustomer", teamCustomer);
+        request.setAttribute("teamMembers", teamMembers);
+        request.getRequestDispatcher("about.jsp").forward(request, response); // Đẩy sang JSP
     }
 
     /**
