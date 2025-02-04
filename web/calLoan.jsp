@@ -308,6 +308,12 @@
                         Công cụ tính lãi suất vay ngân hàng của LuatVietnam giúp bạn dự tính được số tiền lãi phải trả định kỳ, 
                         tổng gốc và lãi trong từng thời điểm. Từ đó dễ dàng hoạch định tài chính tốt nhất cho mình.<br/><br/>
                     </div>
+                    <c:if test="${not empty error}">
+                        <div class="error-message" style="color: red; font-weight: bold;">
+                            ${error}
+                        </div>
+                    </c:if>
+
                     <div class="cal-content ">
                         <form action="congcu2" method="post" class="cal-form">
                             <div class="form-group">
@@ -334,11 +340,15 @@
                             <div class="form-group" >
                                 <label class="form-group__label">Phương pháp tính:</label>
                                 <div class="radio-group">
-                                    <input type="radio" id="reducingBalance" name="calculationMethod" value="reducing" checked>
+                                    <input type="radio" id="reducingBalance" name="calculationMethod" value="reducing" 
+                                           ${calculationMethod == 'reducing' ? 'checked' : ''}>
                                     <label for="reducingBalance" class="radio-label">Trả trên dư nợ giảm dần</label>
-                                    <input type="radio" id="initialBalance" name="calculationMethod" value="initial">
+
+                                    <input type="radio" id="initialBalance" name="calculationMethod" value="initial"
+                                           ${calculationMethod == 'initial' ? 'checked' : ''}>
                                     <label for="initialBalance" class="radio-label">Trả trên dư nợ ban đầu</label>
                                 </div>
+
                             </div>
                             <button type="submit" class="btn-submit">THỰC HIỆN</button>
                         </form>

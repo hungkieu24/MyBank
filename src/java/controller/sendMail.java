@@ -24,7 +24,9 @@ public class sendMail {
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.port", Mail.TSL_PORT);
 
-        Session session = Session.getInstance(props, new jakarta.mail.Authenticator() {
+        Session session;
+        session = Session.getInstance(props, new jakarta.mail.Authenticator() {
+            @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 System.out.println("Xác minh gg thành công" + System.currentTimeMillis());
                 return new PasswordAuthentication(Mail.APP_EMAIL, Mail.APP_PASSWORD);
@@ -136,7 +138,9 @@ public class sendMail {
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.port", Mail.TSL_PORT);
 
-        Session session = Session.getInstance(props, new jakarta.mail.Authenticator() {
+        Session session;
+        session = Session.getInstance(props, new jakarta.mail.Authenticator() {
+            @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 System.out.println("Xác minh gg thành công" + System.currentTimeMillis());
                 return new PasswordAuthentication(Mail.APP_EMAIL, Mail.APP_PASSWORD);

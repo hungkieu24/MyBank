@@ -288,7 +288,14 @@
                         Công cụ tính lãi suất vay ngân hàng của LuatVietnam giúp bạn dự tính được số tiền lãi phải trả định kỳ, 
                         tổng gốc và lãi trong từng thời điểm. Từ đó dễ dàng hoạch định tài chính tốt nhất cho mình.<br/><br/>
                     </div>
+                      <c:if test="${not empty error}">
+                            <div class="error-message" style="color: red; font-weight: bold;">
+                                ${error}
+                            </div>
+                        </c:if>
                     <div class="cal-content">
+                        
+                      
                         <form action="congcu" method="post" class="cal-form">
                             <div class="form-group">
                                 <label for="loanAmount" class="form-group__label">Số tiền gửi</label>
