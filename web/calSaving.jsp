@@ -352,13 +352,13 @@
                 <footer class="mil-p-160-0 footer" id="footer">
                     <div class="container">
                         <div class="row mil-footer-top">
-                            <div class="col-xl-3">
+                            <div class="col-xl-2">
                                 <a href="#." class=" mil-footer-logo mil-mb-60">
                                     <img src="img/logo1.png" alt="Plax" width="150">
                                 </a>
                             </div>
                             <div class="col-xl-3 mil-mb-60">
-                                <h6 class="mil-mb-60">Usefull Links</h6>
+                                <h6 class="mil-mb-60">Liên kết hữu ích</h6>
                                 <ul class="mil-footer-list">
                                     <li class="mil-text-m mil-soft mil-mb-15">
                                         <a href="index.jsp">Home</a>
@@ -370,7 +370,7 @@
                                         <a href="contact.jsp">Contact Us</a>
                                     </li>
                                     <li class="mil-text-m mil-soft mil-mb-15">
-                                        <a href="services.jsp">Services</a>
+                                        <a href="faq.jsp">FAQs</a>
                                     </li>
                                     <li class="mil-text-m mil-soft mil-mb-15">
                                         <a href="price.jsp">Pricing</a>
@@ -378,42 +378,60 @@
                                 </ul>
                             </div>
                             <div class="col-xl-3 mil-mb-60">
-                                <h6 class="mil-mb-60">Help</h6>
+                                <h6 class="mil-mb-60">Hỗ trợ</h6>
                                 <ul class="mil-footer-list">
-                                    <li class="mil-text-m mil-soft mil-mb-15">
-                                        999 Rue du Cherche-Midi, 7755500666 Paris, <br>France
+                                    <li class="mil-text-m mil-soft mil-mb-15" >
+                                        <a href="mailto:nguyenquangthoai04@gmail.com" class="modal__link">Email: nguyenquangthoai04@gmail.com</a> 
                                     </li>
                                     <li class="mil-text-m mil-soft mil-mb-15">
-                                        +001 (808) 555-0111
-                                    </li>
-                                    <li class="mil-text-m mil-soft mil-mb-15">
-                                        support@plax.network
-                                    </li>
+                                        <a href="tel:0967368980" class="modal__link">Liên hệ: 0967368980</a>                                        </li>
+
                                 </ul>
                             </div>
-                            <div class="col-xl-3 mil-mb-80">
-                                <h6 class="mil-mb-60">Newsletter</h6>
-                                <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news form us</p>
-                                <form class="mil-subscripe-form-footer">
-                                    <input class="mil-input" type="email" placeholder="Email">
-                                    <button type="submit"><i class="far fa-envelope-open mil-dark"></i></button>
-                                    <div class="mil-checkbox-frame mil-mt-15">
-                                        <div class="mil-checkbox">
-                                            <input type="checkbox" id="checkbox" checked>
-                                            <label for="checkbox"></label>
-                                        </div>
-                                        <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
+                            <div class="col-xl-4 mil-mb-80">
+                                <h6 class="mil-mb-60">Gửi Hỗ trợ</h6>
+                                <p class="mil-text-xs mil-soft mil-mb-15">Hãy miêu tả những thứ bạn cần hỗ trợ </p>
+                                <form action="showfb" method="post" class="mil-subscripe-form-footer">
+                                    <!-- Email Input -->
+                                    <div class="mb-3">
+                                        <input class="form-control form-control__input mil-input" type="email" placeholder="Email" name="email" required>
                                     </div>
+                                    <!-- Tiêu đề Input -->
+                                    <div class="mb-3">
+                                        <input  class="form-control form-control__input mil-input" type="text" placeholder="Tiêu đề" name="tieude" required>
+                                    </div>
+                                    <!-- Nội dung Input -->
+                                    <div class="mb-3">
+                                        <textarea class="form-control form-control__textarea" rows="3" placeholder="Nội dung" name="noidung" required></textarea>                                    
+                                    </div>
+
+                                    <div class="form-control__row--reverse">
+                                        <!-- Submit Button -->
+                                        <button type="submit" class="form-control__btn form-control__btn--green mil-btn mil-ssm">
+                                            <i class="far fa-envelope-open form-control__icon"></i> Gửi
+                                        </button>
+                                        <!-- Checkbox -->
+                                        <div class="mil-checkbox-frame">
+                                            <div class="mil-checkbox">
+                                                <input type="checkbox" id="checkbox" checked>
+                                                <label for="checkbox"></label>
+                                            </div>
+                                            <p class="mil-text-xs mil-soft">Đăng ký để nhận tin tức mới nhất</p>
+
+                                        </div>
+                                    </div>
+
                                 </form>
                             </div>
+
                         </div>
                         <div class="mil-footer-bottom">
                             <div class="row">
                                 <div class="col-xl-6">
-                                    <p class="mil-text-s mil-soft">© 2024 Plax Finance & Fintech Design</p>
+                                    <p class="mil-text-s mil-soft">© 2025 TIMI Finance & Fintech Design</p>
                                 </div>
                                 <div class="col-xl-6">
-                                    <button type="button" class=" mil-btn mil-ssm btn btn-fade footer--toggle--btn" onclick="toggleFooter()">
+                                    <button type="button" class=" mil-btn mil-ssm footer--toggle--btn" onclick="toggleFooter()">
                                         <span class="text-expand">Thu gọn chân trang</span>
                                         <span class="text-collapsed" style="display: none">Mở rộng chân trang</span>
                                         <span class="icon-arrow-right">

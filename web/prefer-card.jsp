@@ -263,7 +263,7 @@
                 </div>
         <div class="container">
    <div class="title">
-    THẺ MB - CHI TIÊU GIẢM GIÁ HÀNG ĐẦU VIỆT NAM THÁNG 12
+    THẺ TIMI - CHI TIÊU GIẢM GIÁ HÀNG ĐẦU VIỆT NAM THÁNG 12
    </div>
    <div class="date">
     <i class="fas fa-calendar-alt">
@@ -273,11 +273,11 @@
     </span>
    </div>
    <div class="content">
-    Biết tin gì chưa? Sở hữu thẻ MB là sở hữu ngay kho deal chi tiêu giảm giá siêu khủng!
+    Biết tin gì chưa? Sở hữu thẻ TIMI là sở hữu ngay kho deal chi tiêu giảm giá siêu khủng!
    </div>
    <div class="content">
-    Lưu ngay toàn bộ ưu đãi thẻ MB - chi tiêu giảm giá hàng đầu Việt Nam
-    <a href="#">
+    Lưu ngay toàn bộ ưu đãi thẻ TIMI - chi tiêu giảm giá hàng đầu Việt Nam
+    <a href="prefer.jsp">
      tại đây
     </a>
     <br/>
@@ -310,9 +310,9 @@ Chủ thẻ Timi Bank thì không thể bỏ qua top deal đỉnh sau:          
                 <br/><!-- comment -->
                 
                 <div>
-                    Đừng quên update lịch chi tiêu giảm giá cùng thẻ MB để “chạm là giảm giá – quẹt là hoàn tiền” nha!
+                    Đừng quên update lịch chi tiêu giảm giá cùng thẻ TM để “chạm là giảm giá – quẹt là hoàn tiền” nha!
 
-Khám phá thêm tại mục Ưu đãi/App MBBank: 
+Khám phá thêm tại mục Ưu đãi/App TMBank: 
  
 <a class="highlight" href="prefer.jsp">
      tại đây

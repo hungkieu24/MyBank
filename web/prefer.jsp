@@ -357,8 +357,9 @@
                     <h2>
                         Sản phẩm Khách hàng Cá nhân nổi bật
                     </h2>
-                    <button>
-                        XEM TOÀN BỘ SẢN PHẨM
+                    <button>'
+                        <a href="allprefer.jsp">XEM TOÀN BỘ SẢN PHẨM</a>
+                        
                     </button>
                     <div class="product-list">
                         <div class="product-item">
@@ -369,9 +370,22 @@
                             <p>
                                 Ứng dụng ngân hàng của MB trên điện thoại di động, thực hiện các giao dịch tài chính, thanh toán, theo dõi tài khoản dễ dàng, thuận tiện.
                             </p>
-                            <a href="#">
-                                XEM CHI TIẾT
-                            </a>
+                            <button class="team-item__btn mil-btn mil-ssm js-toggle" toggle-target="#modal-1">Xem chi tiết </button>
+                           
+                            <div id="modal-container">
+                                <div id="modal-1" class="modal modal--large hide">
+                                    <div class="modal__content">
+                                        <button class="modal__close js-toggle" toggle-target="#modal-1">&times;</button>
+                                        daaaaaaaaaaaaaaaaaa
+
+                                    </div>
+                                    <div class="modal__overlay js-toggle" toggle-target="#modal-1"></div>
+
+
+                                </div>
+
+                            </div>
+
                         </div>
                         <div class="product-item">
                             <img alt="Remittance Service Icon" height="50" src="https://storage.googleapis.com/a1aa/image/w0fgVraIc-5YFqFXjP1ZySO0toeeX7kx9lj-Ri0qc2w.jpg" width="50"/>
@@ -397,15 +411,18 @@
                                 XEM CHI TIẾT
                             </a>
                         </div>
+                                 
                     </div>
-                    <div class="pagination">
-                        <button>
-                            &lt;
-                        </button>
-                        <button>
-                            &gt;
-                        </button>
-                    </div>
+                    <div class="pagi"> 
+                                        <div class="container1" id="container-vision"></div>
+                                        <div class="pagination" id="pagination-vision"></div>
+                                    </div>
+<!--                    <div class="pagination">
+                                 <div class="navigation">
+                                    <button disabled="" class="disabled navigation__prev"><i class="fa-solid fa-arrow-left-long navigation__icon"></i></button>
+                                    <button class="navigation__next"><i class="fa-solid fa-arrow-right-long navigation__icon"></i></button>
+                                </div>
+                    </div>-->
 
 
                     <footer class="mil-p-160-0 footer" id="footer">
