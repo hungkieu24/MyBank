@@ -78,10 +78,10 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="about.jsp">About</a>
+                            <a href="about">About</a>
                         </li>
                         <li>
-                            <a href="services.jsp">Services</a>
+                            <a href="faq.jsp">FAQ</a>
                         </li>
                         <li class="mil-has-children mil-active">
                             <a href="#.">Blog</a>

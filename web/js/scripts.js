@@ -46,28 +46,21 @@ function toggleFooter() {
     }
 }
 
-//function toggleHistory() {
-//    const toggleButton = document.querySelector(".history--toggle--btn");
-//    const aboutIntroductionMore = document.querySelector(".about-introduction__more");
-//    const textExpand = toggleButton.querySelector(".text-expand");
-//    const textCollapsed = toggleButton.querySelector(".text-collapsed");
-//    const iconArrowRight = toggleButton.querySelector(".icon-arrow-right");
-//
-//    // Toggle class để chuyển đổi trạng thái ẩn/hiện
-//    aboutIntroductionMore.classList.toggle("show");
-//
-//    if (aboutIntroductionMore.classList.contains("show")) {
-//        // Khi hiển thị nội dung
-//        textExpand.style.display = "none";
-//        textCollapsed.style.display = "inline";
-//        iconArrowRight.classList.add("rotated"); // Thêm class để xoay
-//    } else {
-//        // Khi ẩn nội dung
-//        textExpand.style.display = "inline";
-//        textCollapsed.style.display = "none";
-//        iconArrowRight.classList.remove("rotated"); // Xóa class để về ban đầu
-//    }
-//}
+document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-question__ques-item");
+    
+    faqItems.forEach(item => {
+        const wrap = item.querySelector(".faq-question__ques-wrap");
+        const answer = item.querySelector(".faq-question__ques-ans");
+        const icon = item.querySelector(".faq-question__ques-icon");
+
+        wrap.addEventListener("click", function () {
+            answer.classList.toggle("show");
+            icon.classList.toggle("rotated");
+        });
+    });
+});
+
 
 function toggleContent(toggleButton, contentSelector) {
     if (!toggleButton) return; // Đảm bảo nút tồn tại trước khi xử lý

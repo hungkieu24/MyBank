@@ -73,11 +73,11 @@
 
                                 </ul>
                             </li>
-                            <li class="mil-active">
+                            <li>
                                 <a href="about">About</a>
                             </li>
-                            <li>
-                                <a href="services.jsp">Services</a>
+                            <li class="mil-active">
+                                <a href="faq.jsp">FAQ</a>
                             </li>
                             <li class="mil-has-children">
                                 <a href="#.">Blog</a>
@@ -164,7 +164,7 @@
                     </div>
                 </div>
                 <!-- Menu end -->
-                
+
                 <div class="mil-features faq-wrap">
                     <div class="container">
                         <div class="row row-cols-2 g-5">
@@ -203,54 +203,86 @@
                         </div>
                     </div>
                 </div>
-                
+
+
+
                 <div class="mil-features faq-wrap">
                     <div class="container">
-                         <div class="faq-question js-tabs">
+                        <h2 class="faq-heading">Quan tâm nhiều nhất</h2>
+                        <div class="faq-question js-tabs">
                             <ul class="faq-question__tab-list">
-                                    <li class="faq-question__tab faq-question__tab--current">
-                                    Tầm nhìn & Sứ mệnh
+                                <li class="faq-question__tab faq-question__tab--current">
+                                    Ngân hàng số
                                 </li>
                                 <li class="faq-question__tab">
-                                    Giá trị cốt lõi
+                                    Thẻ
                                 </li>
                                 <li class="faq-question__tab">
-                                    Bản sắc văn hóa
+                                    Vay
                                 </li>
                             </ul>
 
                             <div class="faq-question__contents">
                                 <div class="faq-question__content faq-question__content--current" >
-                                    <div class="faq-question__ques">
-                                        <p class="faq-question__title">Tầm nhìn & Sứ mệnh</p>
-                                        <i class="fa-solid fa-angle-down faq-question__icon"></i>
-                                    </div>
-                                    
-                                    <p class="faq-question__ans">
-                                        Ngân hàng số 1 tại Việt Nam, một trong 100 ngân hàng lớn nhất khu vực Châu Á, một trong 300 tập đoàn tài chính ngân hàng lớn nhất thế giới, một trong 1000 doanh nghiệp niêm yết lớn nhất toàn cầu, đóng góp lớn vào sự phát triển bền vững của Việt Nam
-                                    </p>
+                                    <ol class="faq-question__ques-list">
+                                        <li class="faq-question__ques-item">
+                                            <div class="faq-question__ques-wrap">
+                                                <p class="faq-question__ques-title">Tôi là chủ Doanh nghiệp tư nhân, tôi có được vay đầu tư tài sản cố định theo sản phẩm này không?</p>
+                                                <i class="fa-solid fa-angle-down faq-question__ques-icon"></i>
+                                            </div>
+
+                                            <div class="faq-question__ques-ans">
+                                                Đối tượng khách hàng của Sản phẩm An tâm kinh doanh là cá nhân tự kinh doanh, chủ Hộ kinh doanh, chủ sở hữu Doanh nghiệp tư nhân. Khách hàng vui lòng liên hệ hotline 1900 54 54 13 hoặc điểm giao dịch Vietcombank gần nhất để được tư vấn thêm thông tin chi tiết thủ tục vay vốn thực hiện phương án đầu tư tài sản cố định, mở rộng sản xuất kinh doanh của mình.
+                                            </div>
+                                        </li>
+
+                                        <li class="faq-question__ques-item">
+                                            <div class="faq-question__ques-wrap">
+                                                <p class="faq-question__ques-title">Số tiền tuyệt đối tối đa mà tôi có thể vay đầu tư để mở rộng sản xuất kinh doanh trung hạn tại Vietcombank?</p>
+                                                <i class="fa-solid fa-angle-down faq-question__ques-icon"></i>
+                                            </div>
+
+                                            <div class="faq-question__ques-ans">
+                                                Khách hàng có thể vay tối đa 70% phương án kinh doanh. Vietcombank xác định số tiền vay tối đa tuyệt đối trên cơ sở đánh giá nhiều tiêu chí khác nhau bao gồm:
+                                                <ul>
+                                                    <li>Phương án mở rộng hoạt động sản xuất kinh doanh mà bạn có nhu cầu vay vốn.</li>
+                                                    <li>Hoạt động sản xuất kinh doanh hiện tại.</li>
+                                                    <li>Hoạt động sản xuất kinh doanh hiện tại.</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ol>
+
                                 </div>  
 
                                 <div class="faq-question__content " >
-                                    <div class="faq-question__ques">
-                                        <p class="faq-question__title">Tầm nhìn </p>
-                                        <i class="fa-solid fa-angle-down faq-question__icon"></i>
-                                    </div>
-                                    
-                                    <p class="faq-question__ans">
-                                        Ngân hàng số 1 tại Việt Nam, một trong 100 ngân hàng lớn nhất khu vực Châu Á, một trong 300 tập đoàn tài chính ngân hàng lớn nhất thế giới, một trong 1000 doanh nghiệp niêm yết lớn nhất toàn cầu, đóng góp lớn vào sự phát triển bền vững của Việt Nam
-                                    </p>
+                                    <ol class="faq-question__ques-list">
+                                        <li class="faq-question__ques-item">
+                                            <div class="faq-question__ques-wrap">
+                                                <p class="faq-question__ques-title">Tôi là chủ Doanh nghiệp tư nhân, tôi có được vay đầu tư tài sản cố định theo sản phẩm này không?</p>
+                                                <i class="fa-solid fa-angle-down faq-question__ques-icon"></i>
+                                            </div>
+
+                                            <div class="faq-question__ques-ans">
+                                                Đối tượng khách hàng của Sản phẩm An tâm kinh doanh là cá nhân tự kinh doanh, chủ Hộ kinh doanh, chủ sở hữu Doanh nghiệp tư nhân. Khách hàng vui lòng liên hệ hotline 1900 54 54 13 hoặc điểm giao dịch Vietcombank gần nhất để được tư vấn thêm thông tin chi tiết thủ tục vay vốn thực hiện phương án đầu tư tài sản cố định, mở rộng sản xuất kinh doanh của mình.
+                                            </div>
+                                        </li>
+                                    </ol>
                                 </div>   
 
-                               <div class="faq-question__content " >
-                                    <div class="faq-question__ques">
-                                        <p class="faq-question__title">Sứ mệnh</p>
-                                        <i class="fa-solid fa-angle-down faq-question__icon"></i>
-                                    </div>
-                                    
-                                    <p class="faq-question__ans">
-                                        Ngân hàng số 1 tại Việt Nam, một trong 100 ngân hàng lớn nhất khu vực Châu Á, một trong 300 tập đoàn tài chính ngân hàng lớn nhất thế giới, một trong 1000 doanh nghiệp niêm yết lớn nhất toàn cầu, đóng góp lớn vào sự phát triển bền vững của Việt Nam
-                                    </p>
+                                <div class="faq-question__content " >
+                                    <ol class="faq-question__ques-list">
+                                        <li class="faq-question__ques-item">
+                                            <div class="faq-question__ques-wrap">
+                                                <p class="faq-question__ques-title">Tôi là chủ Doanh nghiệp tư nhân, tôi có được vay đầu tư tài sản cố định theo sản phẩm này không?</p>
+                                                <i class="fa-solid fa-angle-down faq-question__ques-icon"></i>
+                                            </div>
+
+                                            <div class="faq-question__ques-ans">
+                                                Đối tượng khách hàng của Sản phẩm An tâm kinh doanh là cá nhân tự kinh doanh, chủ Hộ kinh doanh, chủ sở hữu Doanh nghiệp tư nhân. Khách hàng vui lòng liên hệ hotline 1900 54 54 13 hoặc điểm giao dịch Vietcombank gần nhất để được tư vấn thêm thông tin chi tiết thủ tục vay vốn thực hiện phương án đầu tư tài sản cố định, mở rộng sản xuất kinh doanh của mình.
+                                            </div>
+                                        </li>
+                                    </ol>
                                 </div> 
 
 
@@ -258,10 +290,10 @@
                         </div>
                     </div>
                 </div>
-                
-                
-                
-                
+
+
+
+
 
                 <!-- footer -->
                 <footer class="mil-p-160-0 footer" id="footer">

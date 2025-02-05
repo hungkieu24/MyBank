@@ -3348,6 +3348,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
     Created on : Feb 5, 2025, 12:26:47 AM
     Author     : hungk
 */
+.faq-heading {
+  margin: 30px 0;
+}
 .faq-wrap {
   margin: 80px 0;
 }
@@ -3388,6 +3391,78 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit thi
 .faq-card__btn:hover {
   background-color: #2c6a2c;
   color: #fff;
+}
+.faq-question__tab-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.faq-question__tab {
+  color: #000;
+  min-width: 150px;
+  text-align: center;
+  background-color: #ccc;
+  border-radius: 99px;
+  padding: 10px 20px;
+  cursor: context-menu;
+}
+.faq-question__tab--current {
+  color: #fff;
+  background-color: green;
+}
+.faq-question__tab:hover:not(.faq-question__tab--current) {
+  color: #a1c76d;
+  background: #f8ffec;
+  cursor: pointer;
+}
+.faq-question__contents {
+  margin-top: 30px;
+}
+.faq-question__content {
+  display: none;
+}
+.faq-question__content--current {
+  display: block;
+}
+.faq-question__ques-list {
+  margin-left: 20px;
+}
+.faq-question__ques-item::marker {
+  color: #008000;
+  font-size: 20px;
+  font-weight: bold;
+}
+.faq-question__ques-item + .faq-question__ques-item {
+  margin-top: 20px;
+}
+.faq-question__ques-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.faq-question__ques-title {
+  font-weight: bold;
+}
+.faq-question__ques-ans {
+  text-align: justify;
+  margin: 20px;
+  height: 0;
+  overflow: hidden;
+  transition: height ease-in 0.5s;
+}
+.faq-question__ques-ans.show {
+  height: auto;
+}
+.faq-question__ques-icon {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+.faq-question__ques-icon.rotated {
+  transform: rotate(180deg);
 }
 
 /*# sourceMappingURL=style.css.map */

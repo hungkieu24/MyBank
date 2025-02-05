@@ -85,7 +85,7 @@
                                 <a href="about">About</a>
                             </li>
                             <li>
-                                <a href="services.jsp">Services</a>
+                                <a href="faq.jsp">FAQ</a>
                             </li>
                             <li class="mil-has-children">
                                 <a href="#.">Blog</a>
